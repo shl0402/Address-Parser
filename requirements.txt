@@ -1,0 +1,6 @@
+datasets==5.0.0
+ipywidgets==8.1.5
+pytorch-crf==0.7.2
+torch==2.7.1+cu118
+tqdm==4.68.4
+transformers==5.14.0

@@ -1,0 +1,6 @@
+python extract_compact_hk_address_jsonl.py --input hk_address_dataset/train.jsonl --output compact_train.jsonl --region-format text
+python extract_compact_hk_address_jsonl.py --input hk_address_dataset/test.jsonl --output compact_test.jsonl --region-format text
+python extract_compact_hk_address_jsonl.py --input hk_address_dataset/validation.jsonl --output compact_validation.jsonl --region-format text
+python build_hk_address_dataset.py --input-dir geojson --output-dir hk_address_dataset
+(Select-String -Pattern '"id":' -Path .\hk_address_dataset/validation.jsonl).Count
+(Select-String -Pattern '"input":' -Path .\compact_train.jsonl).Count
