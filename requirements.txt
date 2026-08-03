@@ -4,3 +4,6 @@ pytorch-crf==0.7.2
 torch==2.7.1+cu118
 tqdm==4.68.4
 transformers==5.14.0
+
+pytorch-crf==0.7.2
+torch==2.12.1
