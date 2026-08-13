@@ -1,0 +1,759 @@
+========================================================================
+Address JSONL Cleaning Report
+========================================================================
+
+File: train.jsonl
+  Total records     : 314210
+  Records changed   : 17149
+  Block tokens moved: 14742
+  Phase tokens moved: 1273
+  Cleared dup bname : 13461
+  JSON errors       : 0
+  Output            : data\train_cleaned.jsonl
+
+  --- Sample changes (first 40) ---
+  [1] line 12
+      input : 香港南區深水灣道63號深水灣道63號深水灣道63號3座地庫一層j房
+      before: {'building_name': '深水灣道63號3座', 'estate_name': '深水灣道63號', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '深水灣道63號', 'block': '3座', 'phase': ''}
+      ops   : ["block '3座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [2] line 21
+      input : 新界大埔区优景里20号新翠山庄新翠山庄十八座12房 62层
+      before: {'building_name': '新翠山庄十八座', 'estate_name': '新翠山庄', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '新翠山庄', 'block': '十八座', 'phase': ''}
+      ops   : ["block '十八座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [3] line 25
+      input : 新界元朗區80號碧豪苑碧豪苑A43座
+      before: {'building_name': '碧豪苑A43座', 'estate_name': '碧豪苑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '碧豪苑', 'block': 'A43座', 'phase': ''}
+      ops   : ["block 'A43座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [4] line 55
+      input : 九龍黃大仙區正德街101號黃大仙下邨(二區)龍昌樓閣樓3912室
+      before: {'building_name': '龍昌樓', 'estate_name': '黃大仙下邨(二區)', 'block': '', 'phase': ''}
+      after : {'building_name': '龍昌樓', 'estate_name': '黃大仙下邨', 'block': '', 'phase': '(二區)'}
+      ops   : ["phase '(二區)' ← estate_name"]
+
+  [5] line 105
+      input : 新界， 西貢區， 西貢公路380號， 匡湖居， 匡湖居57座， 地下， 19鋪
+      before: {'building_name': '匡湖居57座', 'estate_name': '匡湖居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '匡湖居', 'block': '57座', 'phase': ''}
+      ops   : ["block '57座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [6] line 131
+      input : 九龍深水埗區達之路88號德智苑德智苑一座10樓4a房
+      before: {'building_name': '德智苑一座', 'estate_name': '德智苑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '德智苑', 'block': '一座', 'phase': ''}
+      ops   : ["block '一座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [7] line 138
+      input : FLAT H  59 FL  rainbow villa block a12  rainbow villa  1 silver lake road  sai kung district  N.T.
+      before: {'building_name': 'rainbow villa block a12', 'estate_name': 'rainbow villa', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'rainbow villa', 'block': 'block a12', 'phase': ''}
+      ops   : ["block 'block a12' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [8] line 143
+      input : RM 11A, 50 floor, KOWLOON TSAI HOUSE OWNERS ASSOCIATION, 10A CAMBRIDGE ROAD, KOWLOON CITY DISTRICT, 
+      before: {'building_name': 'KOWLOON TSAI HOUSE OWNERS ASSOCIATION', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': 'KOWLOON TSAI ASSOCIATION', 'estate_name': '', 'block': 'HOUSE OWNERS', 'phase': ''}
+      ops   : ["block 'HOUSE OWNERS' ← building_name"]
+
+  [9] line 154
+      input : 02, 1/F, MARINA COVE BLOCK J59, MARINA COVE, 380 HIRAM'S HIGHWAY, SAI KUNG DISTRICT, New Territories
+      before: {'building_name': 'MARINA COVE BLOCK J59', 'estate_name': 'MARINA COVE', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'MARINA COVE', 'block': 'BLOCK J59', 'phase': ''}
+      ops   : ["block 'BLOCK J59' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [10] line 167
+      input : Flat 1d, 47 FLOOR, CASA DEL SOL BLOCK C, CASA DEL SOL, 33 CHING SAU LANE, SOUTHERN DISTRICT, Hong Ko
+      before: {'building_name': 'CASA DEL SOL BLOCK C', 'estate_name': 'CASA DEL SOL', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'CASA DEL SOL', 'block': 'BLOCK C', 'phase': ''}
+      ops   : ["block 'BLOCK C' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [11] line 199
+      input : Room 12A, 14 floor, VILLA CASTELL HOUSE 25, VILLA CASTELL, 20 YAU KING LANE, TAI PO DISTRICT, New Te
+      before: {'building_name': 'VILLA CASTELL HOUSE 25', 'estate_name': 'VILLA CASTELL', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'VILLA CASTELL', 'block': 'HOUSE 25', 'phase': ''}
+      ops   : ["block 'HOUSE 25' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [12] line 202
+      input : 新界大埔區燕子里18號海景山莊海景山莊第18座26樓F房
+      before: {'building_name': '海景山莊第18座', 'estate_name': '海景山莊', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '海景山莊', 'block': '第18座', 'phase': ''}
+      ops   : ["block '第18座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [13] line 216
+      input : FLAT 13c, 6 FLOOR, Bahama Garden Block 6, Bahama Garden, 10-20 Cheung Fu Street, Islands District, N
+      before: {'building_name': 'Bahama Garden Block 6', 'estate_name': 'Bahama Garden', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'Bahama Garden', 'block': 'Block 6', 'phase': ''}
+      ops   : ["block 'Block 6' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [14] line 243
+      input : 新界大埔区16号嘉熙嘉熙第2座12层1209室
+      before: {'building_name': '嘉熙第2座', 'estate_name': '嘉熙', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '嘉熙', 'block': '第2座', 'phase': ''}
+      ops   : ["block '第2座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [15] line 255
+      input : 新界元朗區64號娛苑娛苑8 樓，8a房
+      before: {'building_name': '娛苑', 'estate_name': '娛苑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '娛苑', 'block': '', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [16] line 259
+      input : 九龙区 黄大仙区 正德街98号 黄大仙下邨(二区) 龙兴楼 31层 8C房
+      before: {'building_name': '龙兴楼', 'estate_name': '黄大仙下邨(二区)', 'block': '', 'phase': ''}
+      after : {'building_name': '龙兴楼', 'estate_name': '黄大仙下邨', 'block': '', 'phase': '(二区)'}
+      ops   : ["phase '(二区)' ← estate_name"]
+
+  [17] line 271
+      input : 香港  南区  东头湾里11号  惩教署职员宿舍  惩教署职员宿舍L座  16层  d室
+      before: {'building_name': '惩教署职员宿舍L座', 'estate_name': '惩教署职员宿舍', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '惩教署职员宿舍', 'block': 'L座', 'phase': ''}
+      ops   : ["block 'L座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [18] line 278
+      input : 新界北区保荣路9号上水纪律部队宿舍上水纪律部队宿舍A座
+      before: {'building_name': '上水纪律部队宿舍A座', 'estate_name': '上水纪律部队宿舍', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '上水纪律部队宿舍', 'block': 'A座', 'phase': ''}
+      ops   : ["block 'A座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [19] line 301
+      input : 新界、西貢區、西貢公路380號、匡湖居、匡湖居J29座、9樓、i室
+      before: {'building_name': '匡湖居J29座', 'estate_name': '匡湖居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '匡湖居', 'block': 'J29座', 'phase': ''}
+      ops   : ["block 'J29座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [20] line 320
+      input : G/F blossom villas phase ii 168 nam wa po tai po district new territories
+      before: {'building_name': '', 'estate_name': 'blossom villas phase ii', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'blossom villas', 'block': '', 'phase': 'phase ii'}
+      ops   : ["phase 'phase ii' ← estate_name"]
+
+  [21] line 340
+      input : room 2485  56 FL  bella vista block 28  bella vista  15 silver terrace road  sai kung district  new 
+      before: {'building_name': 'bella vista block 28', 'estate_name': 'bella vista', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'bella vista', 'block': 'block 28', 'phase': ''}
+      ops   : ["block 'block 28' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [22] line 361
+      input : 九龍九龍城區衛環里8號西九龍交通行動基地西九龍交通行動基地45樓08室
+      before: {'building_name': '西九龍交通行動基地', 'estate_name': '西九龍交通行動基地', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '西九龍交通行動基地', 'block': '', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [23] line 365
+      input : Suite 5809 58/F scenic garden block 22c scenic garden 9 cheung kwai road islands new territories
+      before: {'building_name': 'scenic garden block 22c', 'estate_name': 'scenic garden', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'scenic garden', 'block': 'block 22c', 'phase': ''}
+      ops   : ["block 'block 22c' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [24] line 377
+      input : rm 8, PODIUM, HOI FUK VILLA BLOCK D2, HOI FUK VILLA, 29 CHEUNG SHEK ROAD, ISLANDS DISTRICT, New Terr
+      before: {'building_name': 'HOI FUK VILLA BLOCK D2', 'estate_name': 'HOI FUK VILLA', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'HOI FUK VILLA', 'block': 'BLOCK D2', 'phase': ''}
+      ops   : ["block 'BLOCK D2' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [25] line 396
+      input : 九龙  九龙城  承景街2号  柏蔚森  柏蔚森第六座  8层  318号室
+      before: {'building_name': '柏蔚森第六座', 'estate_name': '柏蔚森', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '柏蔚森', 'block': '第六座', 'phase': ''}
+      ops   : ["block '第六座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [26] line 416
+      input : 香港东区康盛街23号康怡花园康怡花园C座50层16房
+      before: {'building_name': '康怡花园C座', 'estate_name': '康怡花园', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '康怡花园', 'block': 'C座', 'phase': ''}
+      ops   : ["block 'C座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [27] line 443
+      input : 新界元朗區濕地公園路9號WETLAND SEASONS PARK第7座24樓10室
+      before: {'building_name': 'WETLAND SEASONS PARK第7座', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': 'WETLAND SEASONS PARK', 'estate_name': '', 'block': '第7座', 'phase': ''}
+      ops   : ["block '第7座' ← building_name"]
+
+  [28] line 479
+      input : unit 6A, 27/F, ALTO RESIDENCES HOUSE 23, ALTO RESIDENCES, 29 TONG YIN STREET, SAI KUNG DISTRICT, New
+      before: {'building_name': 'ALTO RESIDENCES HOUSE 23', 'estate_name': 'ALTO RESIDENCES', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'ALTO RESIDENCES', 'block': 'HOUSE 23', 'phase': ''}
+      ops   : ["block 'HOUSE 23' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [29] line 489
+      input : 新界葵青区昌荣路9-11号同珍工业大厦A座52层4c房
+      before: {'building_name': '同珍工业大厦A座', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': '同珍工业大厦', 'estate_name': '', 'block': 'A座', 'phase': ''}
+      ops   : ["block 'A座' ← building_name"]
+
+  [30] line 501
+      input : 新界元朗区深湾路231号流浮.东寓流浮‧东寓D座14层14A室
+      before: {'building_name': '流浮‧东寓D座', 'estate_name': '流浮.东寓', 'block': '', 'phase': ''}
+      after : {'building_name': '流浮‧东寓', 'estate_name': '流浮.东寓', 'block': 'D座', 'phase': ''}
+      ops   : ["block 'D座' ← building_name"]
+
+  [31] line 524
+      input : 新界西貢區西貢公路380號匡湖居匡湖居K59座51樓F室
+      before: {'building_name': '匡湖居K59座', 'estate_name': '匡湖居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '匡湖居', 'block': 'K59座', 'phase': ''}
+      ops   : ["block 'K59座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [32] line 527
+      input : 新界大埔区4283号翡翠花园翡翠花园第28座
+      before: {'building_name': '翡翠花园第28座', 'estate_name': '翡翠花园', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '翡翠花园', 'block': '第28座', 'phase': ''}
+      ops   : ["block '第28座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [33] line 531
+      input : 新界元朗区131号绿悦绿悦M屋
+      before: {'building_name': '绿悦M屋', 'estate_name': '绿悦', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '绿悦', 'block': 'M屋', 'phase': ''}
+      ops   : ["block 'M屋' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [34] line 548
+      input : 新界，离岛，南山路15号，海景花园，海景花园B5座，1502号 55层
+      before: {'building_name': '海景花园B5座', 'estate_name': '海景花园', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '海景花园', 'block': 'B5座', 'phase': ''}
+      ops   : ["block 'B5座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [35] line 550
+      input : rm 13, 46A/F, PINE GROVE BLOCK 7, PINE GROVE, 23 SHA WAN DRIVE, SOUTHERN DISTRICT, Hong Kong
+      before: {'building_name': 'PINE GROVE BLOCK 7', 'estate_name': 'PINE GROVE', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'PINE GROVE', 'block': 'BLOCK 7', 'phase': ''}
+      ops   : ["block 'BLOCK 7' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [36] line 551
+      input : 九龍，九龍城，漆咸道北388號，昇御門，1座，昇御門，11樓，3a房
+      before: {'building_name': '昇御門', 'estate_name': '昇御門', 'block': '1座', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '昇御門', 'block': '1座', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [37] line 581
+      input : ROOM 05 22 FLOOR GREENLAND VILLAS BLOCK F GREENLAND VILLAS 8-12 MA YEUNG PATH SHA TIN DISTRICT N T
+      before: {'building_name': 'GREENLAND VILLAS BLOCK F', 'estate_name': 'GREENLAND VILLAS', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'GREENLAND VILLAS', 'block': 'BLOCK F', 'phase': ''}
+      ops   : ["block 'BLOCK F' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [38] line 582
+      input : 九龍  九龍城區  沐泰街12號  低座B座  47樓
+      before: {'building_name': '低座B座', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': '低座', 'estate_name': '', 'block': 'B座', 'phase': ''}
+      ops   : ["block 'B座' ← building_name"]
+
+  [39] line 630
+      input : 新界西貢區輋徑篤路17-18號白沙灣花園白沙灣花園B8座地庫一層324車位
+      before: {'building_name': '白沙灣花園B8座', 'estate_name': '白沙灣花園', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '白沙灣花園', 'block': 'B8座', 'phase': ''}
+      ops   : ["block 'B8座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [40] line 671
+      input : room 13，24/F，belair villa block 50，belair villa，9 yu tai road，north district，N.T
+      before: {'building_name': 'belair villa block 50', 'estate_name': 'belair villa', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'belair villa', 'block': 'block 50', 'phase': ''}
+      ops   : ["block 'block 50' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+------------------------------------------------------------------------
+
+File: test.jsonl
+  Total records     : 39277
+  Records changed   : 2159
+  Block tokens moved: 1829
+  Phase tokens moved: 176
+  Cleared dup bname : 1694
+  JSON errors       : 0
+  Output            : data\test_cleaned.jsonl
+
+  --- Sample changes (first 40) ---
+  [1] line 5
+      input : GF, PHOENIX PALM VILLA HOUSE 12, PHOENIX PALM VILLA, 70 LUNG MEI, SAI KUNG DISTRICT, New Territories
+      before: {'building_name': 'PHOENIX PALM VILLA HOUSE 12', 'estate_name': 'PHOENIX PALM VILLA', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'PHOENIX PALM VILLA', 'block': 'HOUSE 12', 'phase': ''}
+      ops   : ["block 'HOUSE 12' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [2] line 28
+      input : 新界 西贡区 嘉澍路8号 清水湾大厦 清水湾大厦F座 44层 9C单位
+      before: {'building_name': '清水湾大厦F座', 'estate_name': '清水湾大厦', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '清水湾大厦', 'block': 'F座', 'phase': ''}
+      ops   : ["block 'F座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [3] line 63
+      input : 新界西贡区西贡公路380号匡湖居匡湖居21座a室
+      before: {'building_name': '匡湖居21座', 'estate_name': '匡湖居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '匡湖居', 'block': '21座', 'phase': ''}
+      ops   : ["block '21座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [4] line 84
+      input : 523C constellation cove house 15 constellation cove 1 hung lam drive tai po district new territories
+      before: {'building_name': 'constellation cove house 15', 'estate_name': 'constellation cove', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'constellation cove', 'block': 'house 15', 'phase': ''}
+      ops   : ["block 'house 15' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [5] line 99
+      input : 新界屯门区恒富街23号南浪海湾南浪海湾六座23层  J室
+      before: {'building_name': '南浪海湾六座', 'estate_name': '南浪海湾', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '南浪海湾', 'block': '六座', 'phase': ''}
+      ops   : ["block '六座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [6] line 151
+      input : Apt 11A, 26 FLOOR, VILLA TAHOE BLOCK B, VILLA TAHOE, 3 PIK SHA ROAD, SAI KUNG DISTRICT, New Territor
+      before: {'building_name': 'VILLA TAHOE BLOCK B', 'estate_name': 'VILLA TAHOE', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'VILLA TAHOE', 'block': 'BLOCK B', 'phase': ''}
+      ops   : ["block 'BLOCK B' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [7] line 153
+      input : 新界元朗区80号碧豪苑碧豪苑D5座33层C办公室
+      before: {'building_name': '碧豪苑D5座', 'estate_name': '碧豪苑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '碧豪苑', 'block': 'D5座', 'phase': ''}
+      ops   : ["block 'D5座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [8] line 163
+      input : 九龍  深水埗區  南昌街270號  石硤尾公園第三期變電站  58樓  11b房
+      before: {'building_name': '石硤尾公園第三期變電站', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': '石硤尾公園 變電站', 'estate_name': '', 'block': '', 'phase': '第三期'}
+      ops   : ["phase '第三期' ← building_name"]
+
+  [9] line 191
+      input : 新界、西贡区、竹洋路93号、西沙小筑、西沙小筑D1座、51层、W单位
+      before: {'building_name': '西沙小筑D1座', 'estate_name': '西沙小筑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '西沙小筑', 'block': 'D1座', 'phase': ''}
+      ops   : ["block 'D1座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [10] line 193
+      input : 新界、沙田區、恆樂里1號、安定臺、安定臺第11座、19樓、1901房
+      before: {'building_name': '安定臺第11座', 'estate_name': '安定臺', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '安定臺', 'block': '第11座', 'phase': ''}
+      ops   : ["block '第11座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [11] line 199
+      input : 九龍黃大仙區大成街3號黃大仙下邨(一區)龍華樓23樓2313室
+      before: {'building_name': '龍華樓', 'estate_name': '黃大仙下邨(一區)', 'block': '', 'phase': ''}
+      after : {'building_name': '龍華樓', 'estate_name': '黃大仙下邨', 'block': '', 'phase': '(一區)'}
+      ops   : ["phase '(一區)' ← estate_name"]
+
+  [12] line 218
+      input : 新界西贡区西贡公路380号匡湖居匡湖居H4座11层12D房
+      before: {'building_name': '匡湖居H4座', 'estate_name': '匡湖居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '匡湖居', 'block': 'H4座', 'phase': ''}
+      ops   : ["block 'H4座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [13] line 224
+      input : 新界屯門區25號蒙地卡羅別墅蒙地卡羅別墅A4座
+      before: {'building_name': '蒙地卡羅別墅A4座', 'estate_name': '蒙地卡羅別墅', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '蒙地卡羅別墅', 'block': 'A4座', 'phase': ''}
+      ops   : ["block 'A4座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [14] line 235
+      input : 香港东区英皇道979号太古坊太古坊二座40层F室
+      before: {'building_name': '太古坊二座', 'estate_name': '太古坊', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '太古坊', 'block': '二座', 'phase': ''}
+      ops   : ["block '二座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [15] line 238
+      input : rm 3A  36 FL  KellETt ViEw town HOUses blOck 13  kElLetT vIew Town hOuseS  65-69 mOuNt keLlett RoAd 
+      before: {'building_name': 'KellETt ViEw town HOUses blOck 13', 'estate_name': 'kElLetT vIew Town hOuseS', 'block': '', 'phase': ''}
+      after : {'building_name': 'KellETt ViEw town HOUses', 'estate_name': 'kElLetT vIew Town hOuseS', 'block': 'blOck 13', 'phase': ''}
+      ops   : ["block 'blOck 13' ← building_name"]
+
+  [16] line 269
+      input : room 11b, 11/f, LAM TIN FIRE STATION, LAM TIN FIRE STATION, 125 KAI TIN ROAD, KWUN TONG DISTRICT, Ko
+      before: {'building_name': 'LAM TIN FIRE STATION', 'estate_name': 'LAM TIN FIRE STATION', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'LAM TIN FIRE STATION', 'block': '', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [17] line 283
+      input : 新界離島區長貴路9號桂濤花園桂濤花園第9A座38樓6室
+      before: {'building_name': '桂濤花園第9A座', 'estate_name': '桂濤花園', 'block': '', 'phase': ''}
+      after : {'building_name': '桂濤花園第9', 'estate_name': '桂濤花園', 'block': 'A座', 'phase': ''}
+      ops   : ["block 'A座' ← building_name"]
+
+  [18] line 284
+      input : Room 24, 1 FLR, HEBE VILLA BLOCK C1, HEBE VILLA, 17-18 CHE KENG TUK ROAD, SAI KUNG DISTRICT, New Ter
+      before: {'building_name': 'HEBE VILLA BLOCK C1', 'estate_name': 'HEBE VILLA', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'HEBE VILLA', 'block': 'BLOCK C1', 'phase': ''}
+      ops   : ["block 'BLOCK C1' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [19] line 294
+      input : flat 15 60/f Carrianna Sassoon Block 2 Carrianna Sassoon 41 Sassoon Road Southern District H K
+      before: {'building_name': 'Carrianna Sassoon Block 2', 'estate_name': 'Carrianna Sassoon', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'Carrianna Sassoon', 'block': 'Block 2', 'phase': ''}
+      ops   : ["block 'Block 2' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [20] line 315
+      input : 九龍九龍城區沐泰街8號低座C座55樓BA室
+      before: {'building_name': '低座C座', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': '低座', 'estate_name': '', 'block': 'C座', 'phase': ''}
+      ops   : ["block 'C座' ← building_name"]
+
+  [21] line 322
+      input : 新界離島區長洲山頂道西27A號碧濤苑碧濤苑第5座
+      before: {'building_name': '碧濤苑第5座', 'estate_name': '碧濤苑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '碧濤苑', 'block': '第5座', 'phase': ''}
+      ops   : ["block '第5座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [22] line 431
+      input : 新界西贡区培成路38号西贡将军澳政府综合大楼西贡将军澳政府综合大楼23层4/5室
+      before: {'building_name': '西贡将军澳政府综合大楼', 'estate_name': '西贡将军澳政府综合大楼', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '西贡将军澳政府综合大楼', 'block': '', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [23] line 462
+      input : Apt 810  8/F  SOLEMAR VILLAS BLOCK B7  SOLEMAR VILLAS  15 SILVER CAPE ROAD  SAI KUNG  N.T
+      before: {'building_name': 'SOLEMAR VILLAS BLOCK B7', 'estate_name': 'SOLEMAR VILLAS', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'SOLEMAR VILLAS', 'block': 'BLOCK B7', 'phase': ''}
+      ops   : ["block 'BLOCK B7' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [24] line 499
+      input : 新界西贡区早禾路18号早禾居早禾居A3座38 层 / L房
+      before: {'building_name': '早禾居A3座', 'estate_name': '早禾居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '早禾居', 'block': 'A3座', 'phase': ''}
+      ops   : ["block 'A3座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [25] line 519
+      input : ROOM 3808 38 FL maple gardens block f7 maple gardens 80 yuen long district new territories
+      before: {'building_name': 'maple gardens block f7', 'estate_name': 'maple gardens', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'maple gardens', 'block': 'block f7', 'phase': ''}
+      ops   : ["block 'block f7' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [26] line 528
+      input : 新界，屯门区，青泰路26号，南海小筑，南海小筑C座，06房57
+      before: {'building_name': '南海小筑C座', 'estate_name': '南海小筑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '南海小筑', 'block': 'C座', 'phase': ''}
+      ops   : ["block 'C座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [27] line 561
+      input : rm 9B, 31 FL, THE MOUNT AUSTIN HOUSE G, THE MOUNT AUSTIN, 8 MOUNT AUSTIN ROAD, CENTRAL & WESTERN DIS
+      before: {'building_name': 'THE MOUNT AUSTIN HOUSE G', 'estate_name': 'THE MOUNT AUSTIN', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'THE MOUNT AUSTIN', 'block': 'HOUSE G', 'phase': ''}
+      ops   : ["block 'HOUSE G' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [28] line 573
+      input : FLAT 2578, 10 FL, BAYSIDE VILLA BLOCK C1, BAYSIDE VILLA, 1 PIK SHA ROAD, SAI KUNG DISTRICT, New Terr
+      before: {'building_name': 'BAYSIDE VILLA BLOCK C1', 'estate_name': 'BAYSIDE VILLA', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'BAYSIDE VILLA', 'block': 'BLOCK C1', 'phase': ''}
+      ops   : ["block 'BLOCK C1' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [29] line 606
+      input : 8 floor Room 2D,NORTH POINT GOVERNMENT PRIMARY SCHOOL,NORTH POINT GOVERNMENT PRIMARY SCHOOL,888 KING
+      before: {'building_name': 'NORTH POINT GOVERNMENT PRIMARY SCHOOL', 'estate_name': 'NORTH POINT GOVERNMENT PRIMARY SCHOOL', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'NORTH POINT GOVERNMENT PRIMARY SCHOOL', 'block': '', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [30] line 610
+      input : 36/F, ON LOK GARDEN, ON LOK GARDEN, 50 SHUNG HIM TONG, NORTH DISTRICT, New Territories
+      before: {'building_name': 'ON LOK GARDEN', 'estate_name': 'ON LOK GARDEN', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'ON LOK GARDEN', 'block': '', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [31] line 613
+      input : GROUND FLOOR, PARKVIEW GARDEN BLOCK 17, PARKVIEW GARDEN, 1 KAM YUE ROAD, YUEN LONG DISTRICT, New Ter
+      before: {'building_name': 'PARKVIEW GARDEN BLOCK 17', 'estate_name': 'PARKVIEW GARDEN', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'PARKVIEW GARDEN', 'block': 'BLOCK 17', 'phase': ''}
+      ops   : ["block 'BLOCK 17' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [32] line 620
+      input : HILL PARAMOUNT HOUSE 1, HILL PARAMOUNT, 18 HIN TAI STREET, SHA TIN DISTRICT, New Territories
+      before: {'building_name': 'HILL PARAMOUNT HOUSE 1', 'estate_name': 'HILL PARAMOUNT', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'HILL PARAMOUNT', 'block': 'HOUSE 1', 'phase': ''}
+      ops   : ["block 'HOUSE 1' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [33] line 688
+      input : 新界 西贡区 竹洋路93号 西沙小筑 西沙小筑C6座 49层 KZ单位
+      before: {'building_name': '西沙小筑C6座', 'estate_name': '西沙小筑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '西沙小筑', 'block': 'C6座', 'phase': ''}
+      ops   : ["block 'C6座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [34] line 710
+      input : 新界  西贡区  早禾路18号  早禾居  早禾居H11座  21层   2111室
+      before: {'building_name': '早禾居H11座', 'estate_name': '早禾居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '早禾居', 'block': 'H11座', 'phase': ''}
+      ops   : ["block 'H11座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [35] line 723
+      input : room A; 46 FL; Kaiser Estate Phase Iii; 11A Hok Yuen Street; Kowloon City District; Kln
+      before: {'building_name': 'Kaiser Estate Phase Iii', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': 'Kaiser Estate', 'estate_name': '', 'block': '', 'phase': 'Phase Iii'}
+      ops   : ["phase 'Phase Iii' ← building_name"]
+
+  [36] line 749
+      input : L, 46 FL, SIU HO WAN GOVERNMENT MAINTENANCE DEPOT, SIU HO WAN GOVERNMENT MAINTENANCE DEPOT, 520 CHEU
+      before: {'building_name': 'SIU HO WAN GOVERNMENT MAINTENANCE DEPOT', 'estate_name': 'SIU HO WAN GOVERNMENT MAINTENANCE DEPOT', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'SIU HO WAN GOVERNMENT MAINTENANCE DEPOT', 'block': '', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [37] line 759
+      input : 香港中西区薄扶林道92号利嘉大厦利嘉大厦C座平台A单位
+      before: {'building_name': '利嘉大厦C座', 'estate_name': '利嘉大厦', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '利嘉大厦', 'block': 'C座', 'phase': ''}
+      ops   : ["block 'C座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [38] line 765
+      input : 新界，元朗區，馬田村272E號，麗昌花園，麗昌花園35座，38樓
+      before: {'building_name': '麗昌花園35座', 'estate_name': '麗昌花園', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '麗昌花園', 'block': '35座', 'phase': ''}
+      ops   : ["block '35座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [39] line 786
+      input : 新界西貢區竹洋路102號西沙小築西沙小築B2座21樓13B單位
+      before: {'building_name': '西沙小築B2座', 'estate_name': '西沙小築', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '西沙小築', 'block': 'B2座', 'phase': ''}
+      ops   : ["block 'B2座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [40] line 793
+      input : RmUC47; chek chue barracks block 13; chek chue barracks; 160 wong ma kok road; southern district; HK
+      before: {'building_name': 'chek chue barracks block 13', 'estate_name': 'chek chue barracks', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'chek chue barracks', 'block': 'block 13', 'phase': ''}
+      ops   : ["block 'block 13' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+------------------------------------------------------------------------
+
+File: validation.jsonl
+  Total records     : 39276
+  Records changed   : 2264
+  Block tokens moved: 1979
+  Phase tokens moved: 145
+  Cleared dup bname : 1803
+  JSON errors       : 0
+  Output            : data\validation_cleaned.jsonl
+
+  --- Sample changes (first 40) ---
+  [1] line 1
+      input : 新界  元朗区  元朗安宁路140号  紫荆楼第二期  53 层   j室
+      before: {'building_name': '紫荆楼第二期', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': '紫荆楼', 'estate_name': '', 'block': '', 'phase': '第二期'}
+      ops   : ["phase '第二期' ← building_name"]
+
+  [2] line 2
+      input : 80號、碧豪苑、碧豪苑A35座、44樓、7C房
+      before: {'building_name': '碧豪苑A35座', 'estate_name': '碧豪苑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '碧豪苑', 'block': 'A35座', 'phase': ''}
+      ops   : ["block 'A35座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [3] line 14
+      input : flat 11 47层 the hong kong polytechnic university block w 香港理工大学 育才道11号 yau tsim mong district kowloo
+      before: {'building_name': 'the hong kong polytechnic university block w', 'estate_name': '香港理工大学', 'block': '', 'phase': ''}
+      after : {'building_name': 'the hong kong polytechnic university', 'estate_name': '香港理工大学', 'block': 'block w', 'phase': ''}
+      ops   : ["block 'block w' ← building_name"]
+
+  [4] line 63
+      input : 3405, 39 floor, MOUNT AUSTIN ESTATE BLOCK H, MOUNT AUSTIN ESTATE, 5 MOUNT AUSTIN ROAD, CENTRAL & WES
+      before: {'building_name': 'MOUNT AUSTIN ESTATE BLOCK H', 'estate_name': 'MOUNT AUSTIN ESTATE', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'MOUNT AUSTIN ESTATE', 'block': 'BLOCK H', 'phase': ''}
+      ops   : ["block 'BLOCK H' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [5] line 89
+      input : flat 15C, 15 FLR, FLORAL VILLAS BLOCK H4, FLORAL VILLAS, 18 TSO WO ROAD, SAI KUNG DISTRICT, New Terr
+      before: {'building_name': 'FLORAL VILLAS BLOCK H4', 'estate_name': 'FLORAL VILLAS', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'FLORAL VILLAS', 'block': 'BLOCK H4', 'phase': ''}
+      ops   : ["block 'BLOCK H4' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [6] line 138
+      input : 香港中西区柯士甸山道24-28号丰林阁丰林阁M座4306室
+      before: {'building_name': '丰林阁M座', 'estate_name': '丰林阁', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '丰林阁', 'block': 'M座', 'phase': ''}
+      ops   : ["block 'M座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [7] line 139
+      input : UNIT 909, 9 FLOOR, KOWLOON EAST BARRACKS BLOCK 5, KOWLOON EAST BARRACKS, 200 WATERLOO ROAD, KOWLOON 
+      before: {'building_name': 'KOWLOON EAST BARRACKS BLOCK 5', 'estate_name': 'KOWLOON EAST BARRACKS', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'KOWLOON EAST BARRACKS', 'block': 'BLOCK 5', 'phase': ''}
+      ops   : ["block 'BLOCK 5' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [8] line 156
+      input : 新界元朗區天瑞路88號俊宏軒俊宏軒第一座18樓18J室
+      before: {'building_name': '俊宏軒第一座', 'estate_name': '俊宏軒', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '俊宏軒', 'block': '第一座', 'phase': ''}
+      ops   : ["block '第一座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [9] line 188
+      input : 九龙九龙城区漆咸道北388号升御门1座升御门
+      before: {'building_name': '升御门', 'estate_name': '升御门', 'block': '1座', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '升御门', 'block': '1座', 'phase': ''}
+      ops   : ['cleared building_name (duplicate of estate_name)']
+
+  [10] line 202
+      input : room D, P3/F, TSE KING HOUSE STAGE II, 150 YUEN LONG ON NING ROAD, YUEN LONG DISTRICT, New Territori
+      before: {'building_name': 'TSE KING HOUSE STAGE II', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': 'TSE KING II', 'estate_name': '', 'block': 'HOUSE STAGE', 'phase': ''}
+      ops   : ["block 'HOUSE STAGE' ← building_name"]
+
+  [11] line 216
+      input : rm E, 55/F, MARINA COVE BLOCK C12, MARINA COVE, 380 HIRAM'S HIGHWAY, SAI KUNG DISTRICT, New Territor
+      before: {'building_name': 'MARINA COVE BLOCK C12', 'estate_name': 'MARINA COVE', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'MARINA COVE', 'block': 'BLOCK C12', 'phase': ''}
+      ops   : ["block 'BLOCK C12' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [12] line 243
+      input : 新界离岛区长富街10-20号宝雅花园宝雅花园第六座53层8A单位
+      before: {'building_name': '宝雅花园第六座', 'estate_name': '宝雅花园', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '宝雅花园', 'block': '第六座', 'phase': ''}
+      ops   : ["block '第六座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [13] line 247
+      input : 新界沙田区马铃径2-88号宝栢苑一期第36座11层3454号房
+      before: {'building_name': '宝栢苑一期第36座', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': '宝栢苑', 'estate_name': '', 'block': '第36座', 'phase': '一期'}
+      ops   : ["phase '一期' ← building_name", "block '第36座' ← building_name"]
+
+  [14] line 290
+      input : Fragrant Villa House C Fragrant Villa 688 Clear Water Bay Road Sai Kung District N.T
+      before: {'building_name': 'Fragrant Villa House C', 'estate_name': 'Fragrant Villa', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'Fragrant Villa', 'block': 'House C', 'phase': ''}
+      ops   : ["block 'House C' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [15] line 303
+      input : Flat F 16 FLOOR BRIDAL TEA HOUSE HOTEL 69 GILLIES AVENUE SOUTH KOWLOON CITY DISTRICT KOWLOON
+      before: {'building_name': 'BRIDAL TEA HOUSE HOTEL', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': 'BRIDAL TEA', 'estate_name': '', 'block': 'HOUSE HOTEL', 'phase': ''}
+      ops   : ["block 'HOUSE HOTEL' ← building_name"]
+
+  [16] line 357
+      input : Flat A,37 FL,valencia gardens block 11,valencia gardens,23 hang hau wing lung road,sai kung district
+      before: {'building_name': 'valencia gardens block 11', 'estate_name': 'valencia gardens', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'valencia gardens', 'block': 'block 11', 'phase': ''}
+      ops   : ["block 'block 11' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [17] line 359
+      input : block b shing uk tsuen 49D shing uk tsuen yuen long district new territories
+      before: {'building_name': 'block b', 'estate_name': 'shing uk tsuen', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'shing uk tsuen', 'block': 'block b', 'phase': ''}
+      ops   : ["block 'block b' ← building_name"]
+
+  [18] line 369
+      input : 393, 46/F, GOLDEN LAKE VILLA BLOCK F, GOLDEN LAKE VILLA, 29 SILVER CAPE ROAD, SAI KUNG DISTRICT, New
+      before: {'building_name': 'GOLDEN LAKE VILLA BLOCK F', 'estate_name': 'GOLDEN LAKE VILLA', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'GOLDEN LAKE VILLA', 'block': 'BLOCK F', 'phase': ''}
+      ops   : ["block 'BLOCK F' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [19] line 386
+      input : neW TeRritorIes  3 Floor  碧豪苑A5座  mAple gardEnS  80  42号单位  元朗区
+      before: {'building_name': '碧豪苑A5座', 'estate_name': 'mAple gardEnS', 'block': '', 'phase': ''}
+      after : {'building_name': '碧豪苑', 'estate_name': 'mAple gardEnS', 'block': 'A5座', 'phase': ''}
+      ops   : ["block 'A5座' ← building_name"]
+
+  [20] line 388
+      input : 新界元朗區水蕉新村288號大棠花園大棠花園C1座6樓
+      before: {'building_name': '大棠花園C1座', 'estate_name': '大棠花園', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '大棠花園', 'block': 'C1座', 'phase': ''}
+      ops   : ["block 'C1座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [21] line 415
+      input : Rm 4907, 49/F, FLORAL VILLAS BLOCK H1, FLORAL VILLAS, 18 TSO WO ROAD, SAI KUNG DISTRICT, New Territo
+      before: {'building_name': 'FLORAL VILLAS BLOCK H1', 'estate_name': 'FLORAL VILLAS', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'FLORAL VILLAS', 'block': 'BLOCK H1', 'phase': ''}
+      ops   : ["block 'BLOCK H1' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [22] line 438
+      input : 新界  大埔  燕子里2號  農瑞村  農瑞村A1座  05號室55
+      before: {'building_name': '農瑞村A1座', 'estate_name': '農瑞村', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '農瑞村', 'block': 'A1座', 'phase': ''}
+      ops   : ["block 'A1座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [23] line 474
+      input : 新界元朗区天瑞路88号俊宏轩俊宏轩第七座22楼22K室
+      before: {'building_name': '俊宏轩第七座', 'estate_name': '俊宏轩', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '俊宏轩', 'block': '第七座', 'phase': ''}
+      ops   : ["block '第七座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [24] line 475
+      input : room C, 53/F, FIONA GARDEN BLOCK C1-3, FIONA GARDEN, 28 TSING TAI ROAD, TUEN MUN DISTRICT, New Terri
+      before: {'building_name': 'FIONA GARDEN BLOCK C1-3', 'estate_name': 'FIONA GARDEN', 'block': '', 'phase': ''}
+      after : {'building_name': 'FIONA GARDEN 3', 'estate_name': 'FIONA GARDEN', 'block': 'BLOCK C1', 'phase': ''}
+      ops   : ["block 'BLOCK C1' ← building_name"]
+
+  [25] line 516
+      input : 香港中西區柯士甸山道5號山景花園別墅山景花園別墅F座頂層1409室
+      before: {'building_name': '山景花園別墅F座', 'estate_name': '山景花園別墅', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '山景花園別墅', 'block': 'F座', 'phase': ''}
+      ops   : ["block 'F座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [26] line 523
+      input : FLAT AZ, 3 floor, SCENIC VIEW VILLA BLOCK 3, SCENIC VIEW VILLA, 25 SILVER CAPE ROAD, SAI KUNG DISTRI
+      before: {'building_name': 'SCENIC VIEW VILLA BLOCK 3', 'estate_name': 'SCENIC VIEW VILLA', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'SCENIC VIEW VILLA', 'block': 'BLOCK 3', 'phase': ''}
+      ops   : ["block 'BLOCK 3' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [27] line 543
+      input : 香港中西区山顶道74-76号东芦东芦B座33层1982号
+      before: {'building_name': '东芦B座', 'estate_name': '东芦', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '东芦', 'block': 'B座', 'phase': ''}
+      ops   : ["block 'B座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [28] line 574
+      input : 香港南區深水灣道63號深水灣道63號深水灣道63號29座25樓E及F室
+      before: {'building_name': '深水灣道63號29座', 'estate_name': '深水灣道63號', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '深水灣道63號', 'block': '29座', 'phase': ''}
+      ops   : ["block '29座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [29] line 606
+      input : 新界、屯门区、8号、帝御.金湾、帝御.金湾第5座、地库一层、B343车位
+      before: {'building_name': '帝御.金湾第5座', 'estate_name': '帝御.金湾', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '帝御.金湾', 'block': '第5座', 'phase': ''}
+      ops   : ["block '第5座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [30] line 610
+      input : Unit j, 57 FLR, BLOCK 3, CONCORDIA TSAT SING KONG, 128 KAM TAI ROAD, YUEN LONG DISTRICT, New Territo
+      before: {'building_name': 'BLOCK 3', 'estate_name': 'CONCORDIA TSAT SING KONG', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'CONCORDIA TSAT SING KONG', 'block': 'BLOCK 3', 'phase': ''}
+      ops   : ["block 'BLOCK 3' ← building_name"]
+
+  [31] line 612
+      input : 新界  元朗區  元朗安寧路148號  紫荊樓第二期  53 樓   j室
+      before: {'building_name': '紫荊樓第二期', 'estate_name': '', 'block': '', 'phase': ''}
+      after : {'building_name': '紫荊樓', 'estate_name': '', 'block': '', 'phase': '第二期'}
+      ops   : ["phase '第二期' ← building_name"]
+
+  [32] line 629
+      input : 新界，離島區，長貴路9號，桂濤花園，桂濤花園第2B座，41樓，K單位
+      before: {'building_name': '桂濤花園第2B座', 'estate_name': '桂濤花園', 'block': '', 'phase': ''}
+      after : {'building_name': '桂濤花園第2', 'estate_name': '桂濤花園', 'block': 'B座', 'phase': ''}
+      ops   : ["block 'B座' ← building_name"]
+
+  [33] line 635
+      input : 新界  西貢區  西貢公路380號  匡湖居  匡湖居J11座
+      before: {'building_name': '匡湖居J11座', 'estate_name': '匡湖居', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '匡湖居', 'block': 'J11座', 'phase': ''}
+      ops   : ["block 'J11座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [34] line 653
+      input : rm 7D  8 FL  marina cove block j39  marina cove  380 hiram's highway  sai kung district  new territo
+      before: {'building_name': 'marina cove block j39', 'estate_name': 'marina cove', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'marina cove', 'block': 'block j39', 'phase': ''}
+      ops   : ["block 'block j39' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [35] line 655
+      input : No. 433; 17 FL; Lung Mun Oasis Block 1; Lung Mun Oasis; 43 Lung Mun Road; Tuen Mun District; New Ter
+      before: {'building_name': 'Lung Mun Oasis Block 1', 'estate_name': 'Lung Mun Oasis', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'Lung Mun Oasis', 'block': 'Block 1', 'phase': ''}
+      ops   : ["block 'Block 1' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [36] line 668
+      input : RM 2907 29樓 The Cavaridge House 18 駿嶺薈 38 Lai Ping Road 沙田區 New Territories
+      before: {'building_name': 'The Cavaridge House 18', 'estate_name': '駿嶺薈', 'block': '', 'phase': ''}
+      after : {'building_name': 'The Cavaridge', 'estate_name': '駿嶺薈', 'block': 'House 18', 'phase': ''}
+      ops   : ["block 'House 18' ← building_name"]
+
+  [37] line 682
+      input : 新界西貢區銀岬路18號夏威夷花園夏威夷花園A8座9樓2447號
+      before: {'building_name': '夏威夷花園A8座', 'estate_name': '夏威夷花園', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '夏威夷花園', 'block': 'A8座', 'phase': ''}
+      ops   : ["block 'A8座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [38] line 691
+      input : 新界元朗區80號碧豪苑碧豪苑F8座62樓07單位
+      before: {'building_name': '碧豪苑F8座', 'estate_name': '碧豪苑', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': '碧豪苑', 'block': 'F8座', 'phase': ''}
+      ops   : ["block 'F8座' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [39] line 781
+      input : room 1863, 57 FLR, MARINA COVE BLOCK J32, MARINA COVE, 380 HIRAM'S HIGHWAY, SAI KUNG DISTRICT, New T
+      before: {'building_name': 'MARINA COVE BLOCK J32', 'estate_name': 'MARINA COVE', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'MARINA COVE', 'block': 'BLOCK J32', 'phase': ''}
+      ops   : ["block 'BLOCK J32' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+  [40] line 793
+      input : Room A60 High Park Block2 High Park 1 Hung On Lane Yuen Long District New Territories
+      before: {'building_name': 'High Park Block2', 'estate_name': 'High Park', 'block': '', 'phase': ''}
+      after : {'building_name': '', 'estate_name': 'High Park', 'block': 'Block2', 'phase': ''}
+      ops   : ["block 'Block2' ← building_name", 'cleared building_name (duplicate of estate_name)']
+
+------------------------------------------------------------------------

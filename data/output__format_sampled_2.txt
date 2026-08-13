@@ -1,0 +1,500 @@
+ROOMS E-F 4 FLR kan tau tsuen fanling north new territories House 350F | ROOMS E-F, 4 FLR | House 350F, KAN TAU TSUEN, Fanling, north, New Territories
+ROOM 956,16 FLR,391 reclamation street,austin,yau tsim mong,Kln. | ROOM 956, 16 FLR | 391, reclamation street, austin, yau tsim mong, Kln.
+新界区沙田沙田茂草岩44层35号村屋 | 新界区沙田沙田茂草岩35号村屋 | 44层
+rm f 56/F 16 cassia road shekkipmei sham shui po kowloon | rm f, 56/F | 16, cassia road, shekkipmei, sham shui po, kowloon
+SUITE 01  60 Floor  KORNHILL PLAZA  KORNHILL  2 KORNHILL ROAD  FORTRESS HILL  EASTERN  HK Island | SUITE 01, 60 Floor, KORNHILL PLAZA | KORNHILL, 2, KORNHILL ROAD, FORTRESS HILL, EASTERN, HK Island
+九龙慈云山环凤街17号凤祥楼21 层 15C房 | 九龙慈云山环凤街17号 | 凤祥楼21 层15C房
+港島  南  南灣道21號  康芷苑  康芷苑B座  k單位34樓 | 港島南南灣道21號康芷苑 | 康芷苑B座34樓k單位
+新界區， 荃灣， 馬灣， 大城石澗村， 丈量約份第281約地段2197號 | 新界區荃灣馬灣大城石澗村丈量約份第281約地段2197號 | 
+九龍， 深水埗， 西洋菜北街213號， 騏昌大廈， 9樓， 667號單位 | 九龍深水埗西洋菜北街213號 | 騏昌大廈9樓667號單位
+新界  屯门  扫管笏  屯门乡事会路64-66号  兴大楼  56层 | 新界屯门扫管笏屯门乡事会路64-66号 | 兴大楼56层
+新界区 屯门 35层 青松观路23号 屯门医院 铭琪癌症关顾中心 黄金海岸 WG | 新界区屯门黄金海岸青松观路23号屯门医院 | 铭琪癌症关顾中心35层WG
+新界 元朗 洪水桥 锦江路8号 通德学校 6 层  4D房 | 新界元朗洪水桥锦江路8号 | 通德学校6 层4D房
+新界區大埔大尾篤船灣詹屋401號天台 | 新界區大埔大尾篤船灣詹屋401號 | 天台
+新界 北 粉岭 大石磨村 第A座 15层 299号屋 | 新界北粉岭大石磨村299号屋 | 第A座15层
+Rm 11B 59 FL ibis north point 138 java road siu sai wan eastern hong kong | Rm 11B, 59 FL, ibis north point | 138, java road, siu sai wan, eastern, hong kong
+新界 西贡 宝琳 蚝涌第七巷9号 天台 | 新界西贡宝琳蚝涌第七巷9号 | 天台
+FLAT 15D, LEVEL 5, Grand Fortune Mansion, 1 Davis Street, Kennedytown, Central & Western, Hong Kong | FLAT 15D, LEVEL 5, Grand Fortune Mansion | 1, Davis Street, Kennedytown, Central & Western, Hong Kong
+7FLT 15 / LE CAP HSE 29 / LE CAP / 83 LAI PING RD / FO TAN / SHA TIN / NEW TERRITORIES | FLT 15, 7, LE CAP HSE 29 | LE CAP, 83, LAI PING RD, FO TAN, SHA TIN, NEW TERRITORIES
+新界， 屯门， 蓝地， 北朗75A号， gf | 新界屯门蓝地北朗75A号 | gf
+香港、東、炮台山、筲箕灣東大街161-163號、東輝大廈、a單位 | 香港東炮台山筲箕灣東大街161-163號 | 東輝大廈a單位
+新界葵青葵涌石梨街17號石籬(二)邨石欣樓10 樓  1013 室 | 新界葵青葵涌石梨街17號石籬(二)邨 | 石欣樓10 樓1013 室
+新界、離島、大嶼山 東涌、東涌海濱路12號、藍天海岸、16屋、水藍天、8C | 新界離島大嶼山 東涌東涌海濱路12號藍天海岸 | 水藍天16屋8C
+香港， 南， 石澳， 香島道40號 | 香港南石澳香島道40號 | 
+九龍， 油尖旺， 楓樹街5號， 南楓樓， 23樓， 14房 | 九龍油尖旺楓樹街5號 | 南楓樓23樓14房
+新界、北、聯和墟、上担水坑村、B1/F、13舖、333號 | 新界北聯和墟上担水坑村333號 | B1/F13舖
+新界、沙田、石門、插桅杆62號 | 新界沙田石門插桅杆62號 | 
+新界區， 西貢， 西貢， 北丫村， 第E座， 15樓 1512單位， 177A號屋 | 新界區西貢西貢北丫村177A號屋 | 第E座15樓1512單位
+新界區  葵青  葵涌  信芳街18-20號  月波樓  1667號 43樓 | 新界區葵青葵涌信芳街18-20號 | 月波樓43樓1667號
+SAI KOU BUILDING，64-66 LOCKHART ROAD，HAPPY VALLEY，WAN CHAI，HK | SAI KOU BUILDING | 64-66, LOCKHART ROAD, HAPPY VALLEY, WAN CHAI, HK
+新界 元朗 流浮山 莎文杜径 加州豪园 7屋 G/F | 新界元朗流浮山莎文杜径加州豪园 | 7屋G/F
+港岛中西坚尼地城皇后大道西170号17层  5C房 | 港岛中西坚尼地城皇后大道西170号 | 17层5C房
+九龍，九龍城，啟德，下鄉道50號，華景大廈，37樓，13d單位 | 九龍九龍城啟德下鄉道50號 | 華景大廈37樓13d單位
+香港，灣仔，大坑，司徒拔道45號，景賢里，景賢里，60樓，5 | 香港灣仔大坑司徒拔道45號景賢里 | 景賢里60樓5
+楊小坑96A號 掃管忽 屯門 新界 ground floor | 新界屯門掃管忽楊小坑96A號 | ground floor
+新界區 沙田 馬鞍山 耀沙路9號 雲海 雲海別墅 1洋房 PLUMERIA AVENUE 22 樓 ，02 | 新界區沙田馬鞍山耀沙路9號雲海 | 雲海別墅PLUMERIA AVENUE1洋房22 樓02
+41 floor 123 saI o Sai KuNg tAi pO N T | 41 floor | 123, saI o, Sai KuNg, tAi pO, N T
+九龙 油尖旺 芒角 埃华街70号 大同新邨 大成楼 37层 D及E室 | 九龙油尖旺芒角埃华街70号大同新邨 | 大成楼37层D及E室
+新界区  北  粉岭  虎地排19A号  天台 | 新界区北粉岭虎地排19A号 | 天台
+48Flat 03,  Harvest Mansion,  19 San Wai Street,  Kowloon,  Kowloon City,  Kowloontong | Flat 03, 48, Harvest Mansion | 19, San Wai Street, Kowloontong, Kowloon City, Kowloon
+新界区， 离岛， 大屿山， 昂平路， 莲池寺， 2D室27 | 新界区离岛大屿山昂平路 | 莲池寺272D室
+新界 元朗 流浮山 荔枝北路24号 锦绣花园 9层 HF室 | 新界元朗流浮山荔枝北路24号锦绣花园 | 9层HF室
+九龙深水埗深水埔福华街18号龙华大厦32层15c房 | 九龙深水埗深水埔福华街18号 | 龙华大厦32层15c房
+新界區大埔太和車灣村19樓第119約地段741A段號 | 新界大埔太和車灣村第119約地段741A段號 | 19樓
+新界，大埔，大尾篤，燕子里18號，海景山莊，1屋，57樓，H辦公室 | 新界大埔大尾篤燕子里18號海景山莊 | 1屋57樓H辦公室
+九龍九龍城黃埔戴亞街9號紅磡邨紅暉樓61樓1A房 | 九龍九龍城黃埔戴亞街9號紅磡邨 | 紅暉樓61樓1A房
+九龙， 深水埗， 美孚， 青山道116号， 65层， 08单位 | 九龙深水埗美孚青山道116号 | 65层08单位
+新界区离岛大屿山牛牯塱49号Gf | 新界区离岛大屿山牛牯塱49号 | Gf
+Rm 4B 2/f 100 hill road sheung wan central & western hong kong | Rm 4B, 2/f | 100, hill road, sheung wan, central & western, hong kong
+香港東鰂魚涌渣華道24E號建業大廈54樓14室 | 香港東鰂魚涌渣華道24E號 | 建業大廈54樓14室
+新界 元朗区 屏山 塘坊村 天台 66C号 | 新界元朗区屏山塘坊村66C号 | 天台
+flat AH  1 FL  house 25  boulevard de fontaine  the beverly hills  23 sam mun tsai road  tai po  new territories | flat AH, 1 FL, house 25, boulevard de fontaine | the beverly hills, 23, sam mun tsai road, tai po, new territories
+九龙区  九龙城  何文田  德民街37号  黄埔新邨  I座  乐华楼  30层 | 九龙区九龙城何文田德民街37号黄埔新邨 | 乐华楼I座30层
+九龙半岛九龙城九龙仔高山道74号富怡阁33层A室 | 九龙半岛九龙城九龙仔高山道74号 | 富怡阁33层A室
+新界葵青區葵涌石梨街6號石籬(二)邨石偉樓28 樓 / 2813 室 | 新界葵青區葵涌石梨街6號石籬(二)邨 | 石偉樓28 樓2813 室
+新界區離島大嶼山 梅窩梅窩碼頭路10號銀鑛中心大廈5樓04室 | 新界區離島大嶼山 梅窩梅窩碼頭路10號 | 銀鑛中心大廈5樓04室
+九龙区，黄大仙，横头磡，凤德道60号，57层，1640号单位 | 九龙区黄大仙横头磡凤德道60号 | 57层1640号单位
+新界 元朗 洪水桥 教育路97号 鸿发大楼 56 FLR unit d | 新界元朗洪水桥教育路97号 | 鸿发大楼56 FLRunit d
+新界马塘坳村5层 | 新界马塘坳村村屋114号 | 5层
+香港、中西、石塘咀、皇后大道西272號、得利大廈、28E | 香港中西石塘咀皇后大道西272號 | 得利大廈28E
+新界區， 大埔區， 吐露港， 汀角路83號， 樂善村， 5座， 1105室 11樓 | 新界區大埔區吐露港汀角路83號樂善村 | 5座11樓1105室
+九龙， 油尖旺， 尖沙咀， 巧翔街3号， 巧翔街垃圾收集站， 7层， I单位 | 九龙油尖旺尖沙咀巧翔街3号 | 巧翔街垃圾收集站7层I单位
+6/F FLAT 615 shing yat house kwai shing east estate 63 kwai shing circuit kwai chung kwai tsing new territories | FLAT 615, 6/F, shing yat house | kwai shing east estate, 63, kwai shing circuit, kwai chung, kwai tsing, new territories
+新界 元朗 落马洲 Q单位 23层 锦绣花园 锦绣花园D段第一街33号 | 新界元朗落马洲锦绣花园D段第一街33号锦绣花园 | 23层Q单位
+PARKING NO. L100 B1/F 11A ashley road mk yau tsim mong kowloon | PARKING NO. L100, B1/F | 11A, ashley road, mk, yau tsim mong, kowloon
+Flat015 ngong tong shan tsuen st sha tin district kln Lot 5236 S.A | UNIT 01, 5 floor | Lot 5236 S.A, Ngong Tong Shan Tsuen, ST, Sha Tin District, KLN
+香港、東、西灣河、環翠道、興華（二）邨、裕興樓、51樓、13單位 | 香港東西灣河環翠道興華（二）邨 | 裕興樓51樓13單位
+5 Floor 06  toi shan association building  167-169 hennessy road  wan chai  hong kong | 06, 5 Floor, toi shan association building | 167-169, hennessy road, wan chai, hong kong
+48 B1/F kam fat building 112A sha tsui road tw tsuen wan new territories | 48, B1/F, kam fat building | 112A, sha tsui road, tw, tsuen wan, new territories
+新界区大埔大尾督亚妈咀第4座38层385号村屋 | 新界区大埔大尾督亚妈咀385号村屋 | 第4座38层
+Block 4 Royal Peninsula 8 Hung Lai Road Ho Man Tin Kowloon City Kowloon | Block 4 | Royal Peninsula, 8, Hung Lai Road, Ho Man Tin, Kowloon City, Kowloon
+香港湾仔大坑永兴街31号永兴新楼44层  4C房 | 香港湾仔大坑永兴街31号 | 永兴新楼44层4C房
+新界 荃灣 深井 眾安街29號 秋雲大廈 | 新界荃灣深井眾安街29號 | 秋雲大廈
+九龙 深水埗 又一村 寿菊路2号 又一村学校 20层 2005室 | 九龙深水埗又一村寿菊路2号 | 又一村学校20层2005室
+香港区南香港仔碧荔道25-27号3屋荔花园46层11a室 | 香港区南香港仔碧荔道25-27号 | 荔花园3屋46层11a室
+元朗 八乡  元岗新村136号  嘉碧峰  12座  Gf  新界  元朗 | 新界元朗元朗 八乡元岗新村136号嘉碧峰 | 12座Gf
+新界屯门青山大榄涌村101号FLATB | 新界屯门青山大榄涌村101号 | FLATB
+rm 2571 41 FLOOR CENTRAL BUILDING SHOPPING ARCADE 1C PEDDER STREET KENNEDYTOWN CENTRAL & WESTERN DISTRICT HONG KONG | rm 2571, 41 FLOOR, CENTRAL BUILDING SHOPPING ARCADE | 1C, PEDDER STREET, KENNEDYTOWN, CENTRAL & WESTERN DISTRICT, HONG KONG
+新界区大埔区吐露港南华莆10号43层 | 新界区大埔区吐露港南华莆10号 | 43层
+九龍 油尖旺 芒角 金巴利街16號 地下  3 鋪 | 九龍油尖旺芒角金巴利街16號 | 地下3 鋪
+room 3002,30/F,Hopewell House,171 Hip Wo Street,Lamtin,Kwun Tong,Kowloon | room 3002, 30/F, Hopewell House | 171, Hip Wo Street, Lamtin, Kwun Tong, Kowloon
+香港、中西、山頂、種植道49號、8洋房、UNDERCLIFF、25 樓、 / B室 | 香港中西山頂種植道49號 | UNDERCLIFF8洋房25 樓B室
+FLT 5A  20 FLR  moRriSon halL  tHE UNivERsity of hOnG koNG jOcKey Club stUdent VIllagE 2  109 pok fu lam rOad  Peak  hong kong | FLT 5A, 20 FLR, moRriSon halL | tHE UNivERsity of hOnG koNG jOcKey Club stUdent VIllagE 2, 109, pok fu lam rOad, Peak, hong kong
+新界元朗元朗 屏山凤池村17A号乐园天台 | 新界元朗元朗 屏山凤池村17A号 | 乐园天台
+rm 299 26 FLR Wah Po Mansion 4 Ki Lung Street Prince Edward Yau Tsim Mong KLN | rm 299, 26 FLR, Wah Po Mansion | 4, Ki Lung Street, Prince Edward, Yau Tsim Mong, KLN
+九龍區，九龍城，啟德，佛光街68號，何文田邨，恬文樓，4415b | 九龍區九龍城啟德佛光街68號何文田邨 | 恬文樓4415b
+香港中西山頂皇后大道中171號合源中心 | 香港中西山頂皇后大道中171號 | 合源中心
+新界元朗區洪水橋山下村314號59樓5902室 | 新界元朗區洪水橋山下村314號 | 59樓5902室
+ROOFTOP  186 MA TIN TSUEN  SHAP PAT HEUNG, YUEN LONG  YUEN LONG DISTRICT  N.T | ROOFTOP | 186, MA TIN TSUEN, SHAP PAT HEUNG, YUEN LONG, YUEN LONG DISTRICT, N.T
+ROOM 11b,  45 FLR,  Yen Fu Mansion,  131 Hip Wo Street,  Kowloon Bay,  Kwun Tong,  Kln. | ROOM 11b, 45 FLR, Yen Fu Mansion | 131, Hip Wo Street, Kowloon Bay, Kwun Tong, Kln.
+FLT 1509,15A/F,33 cape road block e,33 cape road, cape road,pok fu lam,HKI | FLT 1509, 15A/F, 33 cape road block e | 33 cape road, cape road, pok fu lam, HKI
+GROUND FLOOR yuen ling saikung sai kung Hse 121A | GROUND FLOOR | Hse 121A, YUEN LING, Saikung, SAI KUNG
+香港  东  太古城  太古城道16号  太古城  星辉台  智星阁  49层  1c室 | 香港东太古城太古城道16号太古城 | 星辉台智星阁49层1c室
+九龙，九龙，马头涌道70号，中南大厦，28层，1149号室 | 九龙九龙马头涌道70号 | 中南大厦28层1149号室
+RM 13a，46 FLR，17A nga tsin wai road，kowloon tong，kowloon city，kowloon | RM 13a, 46 FLR | 17A, nga tsin wai road, kowloon tong, kowloon city, kowloon
+新界 ,离岛 ,坪洲 ,宝坪街12号 ,嘉晖花园 ,48层 ,10A房 | 新界离岛坪洲宝坪街12号 | 嘉晖花园48层10A房
+新界西贡康城𪨶顶村16号gf | 新界西贡康城𪨶顶村16号 | gf
+APT 2D,  Hong Lok Yuen,  36 Hong Lok Yuen Twelfth St.,  Lamtsuen,  Tai Po,  New Territories | APT 2D | Hong Lok Yuen, 36, Hong Lok Yuen Twelfth St., Lamtsuen, Tai Po, New Territories
+368 kan tau tsuen; kwu tung |  | 368, kan tau tsuen, kwu tung
+新界區 屯門區 藍地 龍門路101號 行政大樓 10樓 2563 | 新界區屯門區藍地龍門路101號 | 行政大樓10樓2563
+新界 西貢 坑口 百勝角路8號 消防處百勝角已婚人員宿舍 14樓 16號單位 | 新界西貢坑口百勝角路8號消防處百勝角已婚人員宿舍 | 14樓16號單位
+新界区  北  打鼓岭  平原河村  地下  村屋229号 | 新界区北打鼓岭平原河村村屋229号 | 地下
+九龍區，觀塘，藍田，通明街31號，鴻發大樓，46樓，C室 | 九龍區觀塘藍田通明街31號 | 鴻發大樓46樓C室
+新界，西貢區，西貢公路380號，匡湖居，匡湖居K34座，46樓 / 07辦公室 | 新界西貢區西貢公路380號匡湖居 | 匡湖居K34座46樓07辦公室
+新界区， 西贡区， 日出康城， 田下坳村， 6层， DD56地段582号 | 新界区西贡区日出康城田下坳村DD56地段582号 | 6层
+新界 屯門 黃金海岸 河傍街150號 利源樓 27樓 709號單位 | 新界屯門黃金海岸河傍街150號 | 利源樓27樓709號單位
+新界区北区沙头角觐龙村240号 | 新界区北区沙头角觐龙村240号 | 
+新界區、葵青、青衣、青敬路33號、盈翠半島、青衣城、40樓、2757號室 | 新界區葵青青衣青敬路33號盈翠半島 | 青衣城40樓2757號室
+Apt 6B; 54/F; hSE 89; PeTrUs aveNUE; thE vineYaRd; 23 NGaU TaM MEi rOad; Kam TIn; YUen lOng; NeW TERRitoRies | Apt 6B, 54/F, hSE 89, PeTrUs aveNUE | thE vineYaRd, 23, NGaU TaM MEi rOad, Kam TIn, YUen lOng, NeW TERRitoRies
+觀塘區秀茂坪月華街海景大廈842 | 觀塘區秀茂坪月華街 | 海景大廈842
+香港岛、湾仔、铜锣湾、司徒拔道、傲璇、10层、H室 | 香港岛湾仔铜锣湾司徒拔道傲璇 | 10层H室
+Flat C 12/F-13/F James S Lee Mansion 2A Prat Avenue Tsimshatsui Yau Tsim Mong Kowloon | Flat C, 12/F-13/F, James S Lee Mansion | 2A, Prat Avenue, Tsimshatsui, Yau Tsim Mong, Kowloon
+room A； 16/F； BLOCK 8； HUNG CHEONG HOUSE； HUNG FUK ESTATE； 1 HUNG YUEN ROAD； FAIRVIEW PARK； YUEN LONG； N.T | room A, 16/F, BLOCK 8, HUNG CHEONG HOUSE | HUNG FUK ESTATE, 1, HUNG YUEN ROAD, FAIRVIEW PARK, YUEN LONG, N.T
+新界  离岛  大屿山 东涌  富东街6号  富东邨  富东街市  低层地下  11单位 | 新界离岛大屿山 东涌富东街6号富东邨 | 富东街市低层地下11单位
+新界区，荃湾，享和街57-59号，都城大楼，32层，9A房 | 新界区荃湾享和街57-59号 | 都城大楼32层9A房
+24 FL,phase i,pak pai,tiukengleng,n.t. | 24 FL, Phase I | Hse 237, Pak Pai, Tiukengleng, Sai Kung, N.T.
+UNIT 302, 42 Floor, kwok hing building, 57-59 nam on street, quarry bay, eastern, hong kong | UNIT 302, 42 Floor, kwok hing building | 57-59, nam on street, quarry bay, eastern, hong kong
+九龍  黃大仙  慈雲山  78A號村屋 | 九龍黃大仙慈雲山78A號村屋 | 
+新界、离岛、长洲、横坑村19B号、天台 | 新界离岛长洲横坑村19B号 | 天台
+九龙，油尖旺，佐敦，弥敦道610号，荷李活商业中心，平台，P322车位 | 九龙油尖旺佐敦弥敦道610号 | 荷李活商业中心平台P322车位
+RmC65 8 TAI WAI NEW VILLAGE TAI WAI, SHA TIN SHA TIN NEW TERRITORIES | RmC, 65 | 8, TAI WAI NEW VILLAGE, TAI WAI, SHA TIN, SHA TIN, NEW TERRITORIES
+5 2nd lane sha kok mei polam sai kung new territories |  | 5, 2nd lane sha kok mei, polam, sai kung, new territories
+九龙油尖旺大角咀必发道98号昌盛工业大厦15层3166 | 九龙油尖旺大角咀必发道98号 | 昌盛工业大厦15层3166
+room 11，60 FLR，hong kong mansion，3 patersn street，tai hang，wan chai district，hong kong | room 11, 60 FLR, hong kong mansion | 3, patersn street, tai hang, wan chai district, hong kong
+新界北菜园角村地下313B号村屋 | 新界北菜园角村313B号村屋 | 地下
+九龙区 油尖旺区 尖沙咀 加连威老道21A-21B号 T单位 38层 德立大厦 | 九龙区油尖旺区尖沙咀加连威老道21A-21B号 | 德立大厦38层T单位
+24,B1/F,BLOCK D,TSUI NING HSE,TSUI WAN ESTATE,3 TSUI WAN STREET,TAIKOO SHING,EASTERN,HONG KONG | 24, B1/F, BLOCK D, TSUI NING HSE | TSUI WAN ESTATE, 3, TSUI WAN STREET, TAIKOO SHING, EASTERN, HONG KONG
+新界区元朗流浮山锦绣花园J段第二街74号锦绣花园2809房 | 新界区元朗流浮山锦绣花园J段第二街74号锦绣花园 | 2809房
+RM 3004 30/F Block F Wang Cheong House Wang Fuk Court 3821 Tai Po Road Yuen Chau Tsai, Tai Po Tai Po District New Territories | RM 3004, 30/F, Block F, Wang Cheong House | Wang Fuk Court, 3821, Tai Po Road, Yuen Chau Tsai, Tai Po, Tai Po District, New Territories
+港岛、东、杏花邨、明西街36号、雅怡阁、53层、K | 港岛东杏花邨明西街36号 | 雅怡阁53层K
+新界大埔太和廣福道35-39號美德大廈27樓2703室 | 新界大埔太和廣福道35-39號 | 美德大廈27樓2703室
+ROOFTOP, 52 fo tan village, fo tan, sha tin, sha tin district, new territories | ROOFTOP | 52, fo tan village, fo tan, sha tin, sha tin district, new territories
+新界  西贡  调景岭  白环  35层  村屋360号 | 新界西贡调景岭白环村屋360号 | 35层
+新界  大埔區  西貢  樟木頭23A號  48樓 | 新界大埔區西貢樟木頭23A號 | 48樓
+新界、元朗、屏山、盛屋村、25层、丈量约份第345约地段4809第1小分段号 | 新界元朗屏山盛屋村丈量约份第345约地段4809第1小分段号 | 25层
+九龙、观塘、蓝田、定安街43号、立兴大楼、51层 5112室 | 九龙观塘蓝田定安街43号 | 立兴大楼51层5112室
+Room B; 57 FL; li sing primary school; li sing primary school; 119 high street; the peak; central & western; HK | Room B, 57 FL, li sing primary school | li sing primary school, 119, high street, the peak, central & western, HK
+九龍半島油尖旺太子惠安街11號中英樓 | 九龍半島油尖旺太子惠安街11號 | 中英樓
+新界屯門兆康福亨村路8號豫豐花園11座20樓C房 | 新界屯門兆康福亨村路8號豫豐花園 | 11座20樓C房
+新界， 元朗， 天水围， 建德街37号， 时景花园， 29层， 07办公室 | 新界元朗天水围建德街37号 | 时景花园29层07办公室
+九龍區九龍城何文田打鼓嶺道34A號達德樓57樓03 | 九龍區九龍城何文田打鼓嶺道34A號 | 達德樓57樓03
+新界， 大埔， 科学园， 露屏路1号， 浅月湾二期， 84屋， 53 层，  / 05 室 | 新界大埔科学园露屏路1号浅月湾二期 | 84屋53 层05 室
+香港中西上环利源西街9-13号辉文大厦36层03单位 | 香港中西上环利源西街9-13号 | 辉文大厦36层03单位
+九龙油尖旺区大角咀洗衣街191号伊利莎大厦58层12办公室 | 九龙油尖旺区大角咀洗衣街191号 | 伊利莎大厦58层12办公室
+新界區西貢清水灣布袋澳64號30樓 | 新界區西貢清水灣布袋澳64號 | 30樓
+Apt 5A 43 & 44/F 31 tan chuk hang luen wo hui north new territories | Apt 5A, 43 & 44/F | 31, tan chuk hang, luen wo hui, north, new territories
+新界离岛大屿山海马径11号愉景湾碧涛18层K单位 | 新界离岛大屿山海马径11号愉景湾 | 碧涛18层K单位
+新界沙田區大圍耀沙路8號第2座45樓4511室 | 新界沙田區大圍耀沙路8號 | 第2座45樓4511室
+RM E 6 FLR man cheong building 35 man cheong street mongkok yau tsim mong district kowloon | RM E, 6 FLR, man cheong building | 35, man cheong street, mongkok, yau tsim mong district, kowloon
+FLT 3C 34 Floor tai kong building 8A san kan street shek wu hui， sheung shui north new territories | FLT 3C, 34 Floor, tai kong building | 8A, san kan street, shek wu hui， sheung shui, north, new territories
+九龍、油尖旺、柯士甸、廟街253-255號、世華商業大廈、50樓、C室 | 九龍油尖旺柯士甸廟街253-255號 | 世華商業大廈50樓C室
+unit 15; Alexandra Villa; Peak Road; Islands | unit 15, Alexandra Villa | Peak Road, Islands
+Rm L,11 floor,sham tseng east village,taiwohau,House No. 124 | Rm L, 11 floor | House No. 124, sham tseng east village, Taiwohau, TSUEN WAN
+29d  63 tseung kwan o village  tseung kwan o  sai kung  new territories | d, 29 | 63, tseung kwan o village, tseung kwan o, sai kung, new territories
+新界， 元朗， 洪水橋， 水車館街11號， 連勝大廈 | 新界元朗洪水橋水車館街11號 | 連勝大廈
+新界，屯門區，掃管忽，育青里2號，匡智屯門晨崗學校，匡智屯門晨崗學校（新翼），20樓，L單位 | 新界屯門區掃管忽育青里2號匡智屯門晨崗學校 | 匡智屯門晨崗學校（新翼）20樓L單位
+新界  元朗  新田  丹桂村8號  銀禧花園  銀禧花園B11座  8樓  h單位 | 新界元朗新田丹桂村8號銀禧花園 | 銀禧花園B11座8樓h單位
+Flat 1667 6 floor mai fung building 12 yan fong street kwai chung kwai tsing new territories | Flat 1667, 6 floor, mai fung building | 12, yan fong street, kwai chung, kwai tsing, new territories
+港岛，湾仔，加路连山道17号，礼加大楼，60层 | 港岛湾仔加路连山道17号 | 礼加大楼60层
+FLAT 7D,43 FL,tin sam villa,21 hung shui kiu main street,hung shui kiu, yuen long,yuen long,new territories | FLAT 7D, 43 FL, tin sam villa | 21, hung shui kiu main street, hung shui kiu, yuen long, yuen long, new territories
+1058, 19 floor, elgar mansion, 41-43 fort street, sai wan ho, eastern, hong kong | 1058, 19 floor, elgar mansion | 41-43, fort street, sai wan ho, eastern, hong kong
+港島  灣仔  天后  電氣道149號  海城洋樓  37樓  Y單位 | 港島灣仔天后電氣道149號 | 海城洋樓37樓Y單位
+SHOP 17, B2/F, tung hing building, 29 tung choi street, west kowloon, yau tsim mong, kowloon | SHOP 17, B2/F, tung hing building | 29, tung choi street, west kowloon, yau tsim mong, kowloon
+rm C 3/F-4/F 13 leung fai tin clear water bay sai kung district new territories | rm C, 3/F-4/F | 13, leung fai tin, clear water bay, sai kung district, new territories
+新界區  元朗  元朗  沙橋村  9樓  903單位  丈量約份第185約地段3034號 | 新界區元朗元朗沙橋村丈量約份第185約地段3034號 | 9樓903單位
+九龍區、九龍城、禧福道1號、116洋房、新德園、48樓、L單位 | 九龍區九龍城禧福道1號 | 新德園116洋房48樓L單位
+荃灣大窩口長索天台350號 | 荃灣大窩口長索350號 | 天台
+room 1011  10/F  Fung Yue Building  74 Kau Yuk Road  YL  Yuen Long  New Territories | room 1011, 10/F, Fung Yue Building | 74, Kau Yuk Road, YL, Yuen Long, New Territories
+新界、北区、皇后山、粉锦公路338号、歌赋岭、19屋、冬青径、7层M | 新界北区皇后山粉锦公路338号歌赋岭 | 冬青径19屋7层M
+Flat 06 21 floor sam tung uk tsuen tsuen wan tsuen wan nt 355 | Flat 06, 21 floor | 355, Sam Tung Uk Tsuen, Tsuen Wan, Tsuen Wan, nt
+Rm F 19 FLR 12 KENT ROAD HUNGHOM KOWLOON CITY KOWLOON | Rm F, 19 FLR | 12, KENT ROAD, HUNGHOM, KOWLOON CITY, KOWLOON
+UNIT 7C FR， 4 FLR， Choi Shek Lane Light Public Housing， 61 Kwun Tong Road， Kln Bay， Kwun Tong， Kowloon | UNIT 7C FR, 4 FLR, Choi Shek Lane Light Public Housing | 61, Kwun Tong Road, Kln Bay, Kwun Tong, Kowloon
+新界区、荃湾、汀九、德士古道62号、宝业大厦、17层、d室 | 新界区荃湾汀九德士古道62号 | 宝业大厦17层d室
+新界区， 西贡， 日出康城， 碧翠路30号， 宝珊苑， 宝珊苑10A， 47层， k室 | 新界区西贡日出康城碧翠路30号宝珊苑 | 宝珊苑10A47层k室
+duckling hill tiukengleng sai kung No. 48 |  | No. 48, Duckling Hill, Tiukengleng, Sai Kung
+新界 / 元朗 / 黄泥墩村70B号 / gf | 新界元朗黄泥墩村70B号 | gf
+unit 7C  PODIUM  Cheung Hing Building  43 Cheung Sha Wan Road  Lai Chi Kok  Sham Shui Po  Kowloon | unit 7C, PODIUM, Cheung Hing Building | 43, Cheung Sha Wan Road, Lai Chi Kok, Sham Shui Po, Kowloon
+香港島， 北， 皇后山， 亞公坳村， 地下， DD141地段2276號 | 香港北皇后山亞公坳村DD141地段2276號 | 地下
+新界; 大埔; 大美督; 寶鄉街59號; 寶盛樓; 25樓; 11C室 | 新界大埔大美督寶鄉街59號 | 寶盛樓25樓11C室
+新界，北，上水，沙岭145号，37层 | 新界北上水沙岭145号 | 37层
+Unit 05 3/f house 91 boulevard de cascade the beverly hills 23 sam mun tsai road tai mei tok tai po new territories | Unit 05, 3/f, house 91, boulevard de cascade | the beverly hills, 23, sam mun tsai road, tai mei tok, tai po, new territories
+九龍九龍城九龍仔何文田村45樓3297號室第259約地段1726號 | 九龍九龍城九龍仔何文田村第259約地段1726號 | 45樓3297號室
+港岛 南 鸭脷洲 莲花井山村 屋199号 | 港岛南鸭脷洲莲花井山村屋199号 | 
+九龙油尖旺佐敦晏架街3号置发楼37层01室 | 九龙油尖旺佐敦晏架街3号 | 置发楼37层01室
+香港  东  长康街23B号  丰华大厦  63层  02室 | 香港东长康街23B号 | 丰华大厦63层02室
+九龙油尖旺芒角晏架街95号渠务署晏架街污水泵房渠务署晏架街污水泵房 | 九龙油尖旺芒角晏架街95号渠务署晏架街污水泵房 | 渠务署晏架街污水泵房
+新界 北 上水 文閣村21號 35 樓 | 新界北上水文閣村21號 | 35 樓
+香港、湾仔区、跑马地、铜锣湾道142号、新发大厦、50层、DS室 | 香港湾仔区跑马地铜锣湾道142号 | 新发大厦50层DS室
+35 Floor,hong kong ling liang church kindergarten,6 leighton lane,wanchai,wan chai,hong kong | 35 Floor, hong kong ling liang church kindergarten | 6, leighton lane, wanchai, wan chai, hong kong
+港岛  中西区  中环  永吉街35号  恒丰大厦  32层  3202房 | 港岛中西区中环永吉街35号 | 恒丰大厦32层3202房
+新界 北 上水 古洞路28号 天峦 天峦 I 20屋 因特拉肯大道 1/F Flat D | 新界北上水古洞路28号天峦 | 天峦 I因特拉肯大道20屋1/FFlat D
+新界區葵青區葵涌上角街1號循道衛理亞斯理社會服務處 | 新界區葵青區葵涌上角街1號 | 循道衛理亞斯理社會服務處
+新界、上水、啟芳園村、地下、丈量約份第334約地段3871號 | 新界北上水啟芳園村丈量約份第334約地段3871號 | 地下
+45 Floor APT A Wang Yip Building 10 Ka Lok Street Kwun Tong Kowloon | APT A, 45 Floor, Wang Yip Building | 10, Ka Lok Street, Kwun Tong, Kowloon
+RM 2223 23/F sor see kau lohas park sai kung n.t. Lot No. 5613 S.A， D.D. 338 | RM 2223, 23/F | Lot No. 5613 S.A, D.D. 338, Sor See Kau, LOHAS Park, Sai Kung, N.T.
+港岛， 东， 柴湾， 华兰路4号， 惠安苑， F座， 52 层，  / 12 单位 | 港岛东柴湾华兰路4号惠安苑 | F座52 层12 单位
+新界 大埔 大埔 元洲仔段 大埔公路3821號 宏福苑 F座 宏昌閣 30樓 3004室 | 新界大埔大埔 元洲仔段大埔公路3821號宏福苑 | 宏昌閣F座30樓3004室
+新界， 元朗朗， 洪水橋， 元朗安興街24號， 京城閣， 6306號室 | 新界元朗朗洪水橋元朗安興街24號 | 京城閣6306號室
+新界、元朗區、天水圍、元崗新村60號、偉賢薈、偉賢薈十五座、31樓 | 新界元朗區天水圍元崗新村60號偉賢薈 | 偉賢薈十五座31樓
+洪水桥， 牛径19C号， 富丽豪苑， 富丽豪苑D座， 天台， 新界区， 元朗区 | 新界区元朗区洪水桥牛径19C号富丽豪苑 | 富丽豪苑D座天台
+南區  深水灣  赤柱大街122號  15樓  2415號 | 南區深水灣赤柱大街122號 | 15樓2415號
+17/F Flat 10C fuk shing building 23 fuk wa street stonecutters island sham shui po kowloon | Flat 10C, 17/F, fuk shing building | 23, fuk wa street, stonecutters island, sham shui po, kowloon
+新界， 元朗， 元朗 锦田， 祠塘村250号， 天台 | 新界元朗元朗 锦田祠塘村250号 | 天台
+新界北區沙頭角塘肚坪村26號 | 新界北區沙頭角塘肚坪村26號 | 
+新界、元朗、元朗 廈村、巷尾村22號、39/F-40/F、 - F室 | 新界元朗元朗 廈村巷尾村22號 | 39/F-40/FF室
+新界区屯门蓝地25号蒙地卡罗别墅蒙地卡罗别墅A6座4907单位 49层 | 新界区屯门蓝地25号蒙地卡罗别墅 | 蒙地卡罗别墅A6座49层4907单位
+ROOM 1218 29/f， hong lok yuen， 99 hong lok yuen eighteenth street， tp， tai po， N.T | ROOM 1218, 29/f | hong lok yuen, 99, hong lok yuen eighteenth street, tp, tai po, N.T
+ROOMS E-F 5 FLOOR TIMES MEDIA CENTRE 133 WAN CHAI ROAD SO KON PO WAN CHAI HONG KONG | ROOMS E-F, 5 FLOOR, TIMES MEDIA CENTRE | 133, WAN CHAI ROAD, SO KON PO, WAN CHAI, HONG KONG
+Rm 13 11/F 7 dai kwai street tai mei tok tai po N.T | Rm 13, 11/F | 7, dai kwai street, tai mei tok, tai po, N.T
+ROOM f 7 FL fung lin court 36B kweilin street laichikok sham shui po Kln. | ROOM f, 7 FL, fung lin court | 36B, kweilin street, laichikok, sham shui po, Kln.
+5 Floor 10A NG UK TSUEN TIN SHUI WAI YUEN LONG N.T. | 5 Floor | 10A, NG UK TSUEN, TIN SHUI WAI, YUEN LONG, N.T.
+新界  沙田区  马鞍山  耀沙路9号  云海  云海别墅  10洋房  LILY AVENUE  54层  14B室 | 新界沙田区马鞍山耀沙路9号云海 | 云海别墅LILY AVENUE10洋房54层14B室
+新界元朗东镇围53号16层 | 新界元朗东镇围53号 | 16层
+香港區，中西，石塘咀，荷李活道191號，華冠大廈，7 樓，  05 辦公室 | 香港區中西石塘咀荷李活道191號 | 華冠大廈7 樓05 辦公室
+中西  山顶  薄扶林道63号  63 POKFULAM  2座  10层  LC | 中西山顶薄扶林道63号63 POKFULAM | 2座10层LC
+中西  中環  太平山街2A號  太昌樓  44樓  15A單位 | 中西中環太平山街2A號 | 太昌樓44樓15A單位
+九龍區、九龍城、啟德、馬頭圍道27C號、隆基大樓、45樓、06室 | 九龍區九龍城啟德馬頭圍道27C號 | 隆基大樓45樓06室
+GROUND FLOOR, 97 fanling wai, sheungshui, north, new territories | GROUND FLOOR | 97, fanling wai, sheungshui, north, new territories
+香港南区鸭脷洲薄扶林村村屋30号 | 香港南区鸭脷洲薄扶林村村屋30号 | 
+九龍油尖旺通菜街29A號同興大廈k單位 | 九龍油尖旺通菜街29A號 | 同興大廈k單位
+GROUND FLOOR block c lo shu tin sha tin sha tin 347 | GROUND FLOOR, Block C | 347, Lo Shu Tin, Sha Tin, Sha Tin
+九龙区  九龙城  九龙仔  兰开夏道2号  九龙塘宣道小学  31层  1/2室 | 九龙区九龙城九龙仔兰开夏道2号 | 九龙塘宣道小学31层1/2室
+Flat A 34 floor tai chi court 132-134 austin road tsim sha tsui yau tsim mong district Kln. | Flat A, 34 floor, tai chi court | 132-134, austin road, tsim sha tsui, yau tsim mong district, Kln.
+68 San Wai Tsuen San Tin, Yuen Long Yuen Long District N T |  | 68, San Wai Tsuen, San Tin, Yuen Long, Yuen Long District, N T
+九龙，油尖旺，佐敦，广东道620号，德升大厦，54层，5402单位 | 九龙油尖旺佐敦广东道620号 | 德升大厦54层5402单位
+九龙， 油尖旺， 尖沙嘴， 奶路臣街16号， 启贤大厦， 3层， C单位 | 九龙油尖旺尖沙嘴奶路臣街16号 | 启贤大厦3层C单位
+1585 24 Floor; block 7; handsome court; 362-388 castle peak road; castle peak bay, tuen mun; tuen mun; N.T | 1585, 24 Floor, block 7 | handsome court, 362-388, castle peak road, castle peak bay, tuen mun, tuen mun, N.T
+RM. C 43 F  5洋房  windsor heights  18 kau to shan rd.  sha tin  new territories | new territoriessha tinkau to shan rd.18 | windsor heights5洋房43 FRM. C
+Apt h  33/F  tak hay building  3A tak cheong lane  tst  yau tsim mong  kowloon | Apt h, 33/F, tak hay building | 3A, tak cheong lane, tst, yau tsim mong, kowloon
+新界元朗新田新李屋村164D号村屋 | 新界元朗新田新李屋村164D号村屋 | 
+47 FL  hse 82  monterey  palm springs  cypress drive  tsw  yuen long  new territories | 47 FL, hse 82, monterey | palm springs, cypress drive, tsw, yuen long, new territories
+64H MAIN LIBRARY EXTENSION THE UNIVERSITY OF HONG KONG  BONHAM RD SAIYINGPUN CENTRAL & WESTERN H. K. | H, 64, MAIN LIBRARY EXTENSION | THE UNIVERSITY OF HONG KONG, BONHAM RD, SAIYINGPUN, CENTRAL & WESTERN, H. K.
+新界 大埔 吐露港 长牌墩 天台 丈量约份第328约地段第85号 | 新界大埔吐露港长牌墩丈量约份第328约地段第85号 | 天台
+九龙观塘秀茂坪联安街11号永毅大楼57层N | 九龙观塘秀茂坪联安街11号 | 永毅大楼57层N
+新界区恒锦街1号恒安邨恒安商场 恒安体育馆09 | 新界区恒锦街1号恒安邨 | 恒安商场 恒安体育馆09
+九龍 黃大仙區 慈雲山道80號 慈正邨 慈正邨服務設施大樓 02單位21 | 九龍黃大仙區慈雲山道80號慈正邨 | 慈正邨服務設施大樓2102單位
+11 FL  jOSs house bAy ( tAi mIU waN ) viLlaGe  CleaRwAteRBay  Sai kung dIStriCt  House 284 | 11 FL | House 284, JOSS HOUSE BAY ( TAI MIU WAN ) VILLAGE, Clearwaterbay, sai kung District
+新界區， 元朗， 建德街68號， 基督教宣道會徐澤林紀念小學， 24樓， 168號房 | 新界區元朗建德街68號 | 基督教宣道會徐澤林紀念小學24樓168號房
+香港 東 筲箕灣 海澤街15號 海暉廈 53FL | 香港東筲箕灣海澤街15號 | 海暉廈53FL
+九龍，黃大仙，慈雲山，彩虹道18號，彩虹唐樓，48樓，F室 | 九龍黃大仙慈雲山彩虹道18號 | 彩虹唐樓48樓F室
+RM 103 / 1/F-2/F / 129 ngAu kEng / Pat heUng, yueN lOnG / yuen Long / N. T. | RM 103, 1/F-2/F | 129, ngAu kEng, Pat heUng, yueN lOnG, yuen Long, N. T.
+九龙深水埗昂船洲福荣街115号福荣大厦3303房 | 九龙深水埗昂船洲福荣街115号 | 福荣大厦3303房
+新界，葵青，葵涌，念祖街3號，祖堯邨，啟恆樓，61樓K室 | 新界葵青葵涌念祖街3號祖堯邨 | 啟恆樓61樓K室
+新界，離島區，大嶼山 東涌，石榴埔27號 | 新界離島區大嶼山 東涌石榴埔27號 | 
+香港中西区兰桂坊8-11号昌商业大厦63层9d房 | 香港中西区兰桂坊8-11号 | 昌商业大厦63层9d房
+29/f 379C ping yeung ta kwu ling north N.T. | 29/f | 379C, ping yeung, ta kwu ling, north, N.T.
+RM 10B; 9/F-10/F; 20 Pak Kiu Tsai; TP; Tai Po; New Territories | RM 10B, 9/F-10/F | 20, Pak Kiu Tsai, TP, Tai Po, New Territories
+新界西贡区企壁山17号 | 新界西贡区企壁山17号 | 
+FLAT d 26/F Kam Po Building 69 Woosung Street West Kowloon Yau Tsim Mong Kowloon | FLAT d, 26/F, Kam Po Building | 69, Woosung Street, West Kowloon, Yau Tsim Mong, Kowloon
+新界元朗元朗 屏山吴屋村130号天台 | 新界元朗元朗 屏山吴屋村130号 | 天台
+新界區  北  聯和墟  智昌路9號  上水名都  柏林閣  37樓  2C房 | 新界區北聯和墟智昌路9號上水名都 | 柏林閣37樓2C房
+ROOM 4D； 44/F； GAY VILLA RESTAURANT； 1A TAI WAI ROAD； TAI WAI， SHA TIN； SHA TIN； NEW TERRITORIES | ROOM 4D, 44/F, GAY VILLA RESTAURANT | 1A, TAI WAI ROAD, TAI WAI， SHA TIN, SHA TIN, NEW TERRITORIES
+flat F； PODIUM； CREATIVE HUMANITIES HUB； THE HANG SENG UNIVERSITY OF HK； 9 HANG SHIN LINK； MAONSHAN； SHA TIN； N. T. | flat F, PODIUM, CREATIVE HUMANITIES HUB | THE HANG SENG UNIVERSITY OF HK, 9, HANG SHIN LINK, MAONSHAN, SHA TIN, N. T.
+# 2438, 23/F, li yuen building, 7 li yuen streey west, kennedy town, central & western district, H.K. | # 2438, 23/F, li yuen building | 7, li yuen streey west, kennedy town, central & western district, H.K.
+新界荃湾青龙头联仁街12号石碧新村12层F单位 | 新界荃湾青龙头联仁街12号 | 石碧新村12层F单位
+新界、大埔、大美督、鳳美圍、32樓、屋384E號 | 新界大埔大美督鳳美圍屋384E號 | 32樓
+新界、元朗、馬棠路10B號、16樓、02室 | 新界元朗馬棠路10B號 | 16樓02室
+new territories  荃湾  青龙头  48-56 wang lung st  宏龙工业大厦  9 F.  B及C室 | new territories荃湾青龙头wang lung st48-56 | 宏龙工业大厦9 F.B及C室
+香港島，中西，伊利近街12-14號，懷遠樓，40樓，4004室 | 香港島中西伊利近街12-14號 | 懷遠樓40樓4004室
+新界元朗錦田水尾村36樓DD132地段1133A分段號 | 新界元朗錦田水尾村DD132地段1133A分段號 | 36樓
+新界 沙田 馬鞍山 6001號 香港賽馬會沙田馬場 沙田電話投注附屬大樓 14樓 3089號單位 | 新界沙田馬鞍山6001號香港賽馬會沙田馬場 | 沙田電話投注附屬大樓14樓3089號單位
+新界区元朗元朗安兴街82号祥康楼12单位50 | 新界区元朗元朗安兴街82号 | 祥康楼5012单位
+新界區大埔大貴街7號大埔污水處理廠大埔污水處理廠淤泥脫水機房29 樓 | 新界區大埔大貴街7號大埔污水處理廠 | 大埔污水處理廠淤泥脫水機房29 樓
+GF Kau Lo Tau Tsuen Luenwohui North Lot No. 3499, D.D. 270 | GF | Lot No. 3499, D.D. 270, Kau Lo Tau Tsuen, Luenwohui, NORTH
+FLAT 1112,11/F,block 3,leung fat house,cheung fat estate,6 tam kon shan road,tsing yi,kwai tsing,new territories | FLAT 1112, 11/F, block 3, leung fat house | cheung fat estate, 6, tam kon shan road, tsing yi, kwai tsing, new territories
+新界 北 上水 新豐路122號 龍霞樓 5/6室9樓 | 新界北上水新豐路122號 | 龍霞樓9樓5/6室
+新界區 西貢區 清水灣 清水灣道684號 5屋 玫瑰小築 43樓 11C房 | 新界區西貢區清水灣清水灣道684號 | 玫瑰小築5屋43樓11C房
+香港 湾仔 扫杆埔 港湾道1号 香港会议展览中心 君悦大酒店 53层 5302室 | 香港湾仔扫杆埔港湾道1号香港会议展览中心 | 君悦大酒店53层5302室
+新界區，北區，上水，巡撫街8號，36樓， - A室 | 新界區北區上水巡撫街8號 | 36樓A室
+九龙半岛， 深水埗， 元州街403号， 义华大厦 | 九龙半岛深水埗元州街403号 | 义华大厦
+香港灣仔灣仔道148號32 樓 / 1287 號 | 香港灣仔灣仔道148號 | 32 樓1287 號
+1114C  99 Bonham  99 Bonham Strand  Shek Tong Tsui  Central & Western  HK | 14C, 11, 99 Bonham | 99, Bonham Strand, Shek Tong Tsui, Central & Western, HK
+九龙  油尖旺  尖沙嘴  吴松街166号  康信大厦  6层  H室 | 九龙油尖旺尖沙嘴吴松街166号 | 康信大厦6层H室
+UNIT 3257 6/F HonG Kong ChiNese WOmEN's Club WonG chan soOk YING memOriAl Care & atTeNtiOn hOmE FOr the ageD 6 Pik wAn road yAU ToNg KWun tonG Kln. | UNIT 3257, 6/F, HonG Kong ChiNese WOmEN's Club WonG chan soOk YING memOriAl Care & atTeNtiOn hOmE FOr the ageD | 6, Pik wAn road, yAU ToNg, KWun tonG, Kln.
+香港，中西，金鐘，荷李活道187號，華冠大廈，43樓 2252號 | 香港中西金鐘荷李活道187號 | 華冠大廈43樓2252號
+新界大埔西贡北大洞村4层11单位170F号 | 新界大埔西贡北大洞村170F号 | 4层11单位
+九龙九龙城区黄埔城南道39号41 层 / G室 | 九龙九龙城区黄埔城南道39号 | 41 层G室
+新界、元朗、洪水橋、裕景坊1號、寶發大廈、i號室11 | 新界元朗洪水橋裕景坊1號 | 寶發大廈11i號室
+九龍半島觀塘秀茂坪鴻圖道10號艾域林工業大廈10樓 | 九龍半島觀塘秀茂坪鴻圖道10號 | 艾域林工業大廈10樓
+香港、東、太古、油街13號、宏華閣、f室47樓 | 香港東太古油街13號 | 宏華閣47樓f室
+room 412 4 Floor LEI TIM HSE AP LEI CHAU ESTATE 322 AP LEI CHAU BRIDGE ROAD POK FU LAM SOUTHERN HONG KONG | room 412, 4 Floor, LEI TIM HSE | AP LEI CHAU ESTATE, 322, AP LEI CHAU BRIDGE ROAD, POK FU LAM, SOUTHERN, HONG KONG
+Flat N  55 FL  GREENLAND GARDEN SUBSTATION  GREENLAND GARDEN  15 SHEK PAI TAU ROAD  SOKWUNWAT  TUEN MUN  NT | Flat N, 55 FL, GREENLAND GARDEN SUBSTATION | GREENLAND GARDEN, 15, SHEK PAI TAU ROAD, SOKWUNWAT, TUEN MUN, NT
+rm F, 47/F, Tai Cheung Building,  Yuen Long Tung Tai Street, Fairview Park, Yuen Long | rm F, 47/F, Tai Cheung Building | Yuen Long Tung Tai Street, Fairview Park, Yuen Long
+FLAT 6/7 16 FL stone hill ( ma hang shan ) tsuen ap lei chau southern district hong kong Hse 195E | FLAT 6/7, 16 FL | Hse 195E, stone hill ( ma hang shan ) tsuen, Ap Lei Chau, southern District, HONG KONG
+新界區  大埔  西貢  井頭71號 | 新界區大埔西貢井頭71號 | 
+RM 3371 11 FLOOR, block 25, starview prime, double cove, 8 wu kai sha road, ma on shan, sha tin district, new territories | RM 3371, 11 FLOOR, block 25, starview prime | double cove, 8, wu kai sha road, ma on shan, sha tin district, new territories
+香港南区浅水湾石澳村ground floor | 香港南区浅水湾石澳村 | ground floor
+九龍區， 油尖旺， 油麻地， 友翔道1號， 御金‧國峯， 1座， 22樓，   2209單位 | 九龍區油尖旺油麻地友翔道1號御金‧國峯 | 1座22樓2209單位
+九龍 九龍城 啟德 蕪湖街58號 金達閣 11樓 1102房 | 九龍九龍城啟德蕪湖街58號 | 金達閣11樓1102房
+新界大埔西貢井頭106號33 樓 | 新界大埔西貢井頭106號 | 33 樓
+新界、荃湾、荃湾、三栋屋村、24层、第175约地段1521号 | 新界荃湾荃湾三栋屋村第175约地段1521号 | 24层
+香港 東 筲箕灣 海澤街7號 海暉廈 53FL | 香港東筲箕灣海澤街7號 | 海暉廈53FL
+Room 13b 58/F-59/F german swiss international school 11 guildford road central & western hong kong | Room 13b, 58/F-59/F, german swiss international school | 11, guildford road, central & western, hong kong
+九龍  九龍城區  九龍仔  沐安街18號  啟朗苑  A座  啟遙閣  9樓 1891 | 九龍九龍城區九龍仔沐安街18號啟朗苑 | 啟遙閣A座9樓1891
+九龙半岛九龙城黄埔侯王道65号联安楼ZH号室34 | 九龙半岛九龙城黄埔侯王道65号 | 联安楼34ZH号室
+九龍半島 油尖旺 佐敦 上海街144號 12單位19 | 九龍半島油尖旺佐敦上海街144號 | 1912單位
+九龙  深水埗  深水埔  长沙湾道555号  圣公会基福小学  B室 3层 | 九龙深水埗深水埔长沙湾道555号 | 圣公会基福小学3层B室
+香港島、中西區、上環、加列山道29號、8洋房、LA HACIENDA、E單位29 | 香港島中西區上環加列山道29號 | LA HACIENDA8洋房29E單位
+yen chun mansion； 24 portland street； yau tsim mong； KLN | yen chun mansion | 24, portland street, yau tsim mong, KLN
+香港岛 南 香港仔 五分洲村 31层 屋247C号 | 香港岛南香港仔五分洲村屋247C号 | 31层
+ A室14 樓 parkridge village discovery bay 7 parkland drive lantau island islands district new territories | new territoriesislands districtlantau islandparkland drive7discovery bay | parkridge village14 樓A室
+新界，葵青，葵涌，和宜合道230號，葵富大廈，3409號室 | 新界葵青葵涌和宜合道230號 | 葵富大廈3409號室
+新界区  屯门  黄金海岸  湖湖翠路201号  兆禧苑  C座  顺禧阁  19层  e单位 | 新界区屯门黄金海岸湖湖翠路201号兆禧苑 | 顺禧阁C座19层e单位
+新界區， 西貢， 坑口， 東灣山， 14樓， BO單位， 村屋369號 | 新界區西貢坑口東灣山村屋369號 | 14樓BO單位
+31/f,tai yam teng village,ma wan,tsuen wan,n.t.,Lot 5762 | 31/f | Lot 5762, Tai Yam Teng Village, Ma Wan, Tsuen Wan, n.t.
+新界，元朗區，元朗 屏山，山下村170號，33/F-34/F，3301房 | 新界元朗區元朗 屏山山下村170號 | 33/F-34/F3301房
+九龙半岛、九龙城、启德、嘉林边道5D号、嘉明园、17层、05 | 九龙半岛九龙城启德嘉林边道5D号 | 嘉明园17层05
+RM E ,10 FLOOR ,MARINA COVE BLOCK E3 ,MARINA COVE ,380 HIRAM'S HIGHWAY ,TSEUNG KWAN O ,N T ,SAI KUNG | RM E, 10 FLOOR, MARINA COVE BLOCK E3 | MARINA COVE, 380, HIRAM'S HIGHWAY, TSEUNG KWAN O, SAI KUNG, N T
+香港  中西  东街28-30号  东成楼  147号单位 24层 | 香港中西东街28-30号 | 东成楼24层147号单位
+新界  沙田  乌溪沙  绿怡径6号  绿怡居  12洋房  25层  29号室 | 新界沙田乌溪沙绿怡径6号绿怡居 | 12洋房25层29号室
+香港東英皇道169A號公主大廈17樓 j室 | 香港東英皇道169A號 | 公主大廈17樓j室
+Flat 02  50/F  132 tai san back street  cheung chau  islands  new territories | Flat 02, 50/F | 132, tai san back street, cheung chau, islands, new territories
+青龙头，  大河道57号，  卓明大厦，  5层，   - 06 室，  新界，  荃湾区 | 新界荃湾区青龙头大河道57号 | 卓明大厦5层06 室
+新界區，西貢區，將軍澳，大坳門村，6 樓，2799，丈量約份第40約地段第147號 | 新界區西貢區將軍澳大坳門村丈量約份第40約地段第147號 | 6樓2799
+新界区  离岛  大屿山 东涌  逸东街8号  逸东邨  逸楼  7层  1797号 | 新界区离岛大屿山 东涌逸东街8号逸东邨 | 逸楼7层1797号
+2 FL RM 859, fu tei ha tsuen, gold coast, tuen mun district, n.t., Lot 1623A in D.D. 376 | RM 859, 2 FL | Lot 1623A in D.D. 376, fu tei ha tsuen, Gold Coast, TUEN MUN DISTRICT, N.T.
+新界區、西貢、坑口、大嶺村、地下、168號F | 新界區西貢坑口大嶺村168號F | 地下
+九龍， 油尖旺， 尖沙嘴， 新填地街405號， 21樓， B房 | 九龍油尖旺尖沙嘴新填地街405號 | 21樓B房
+九龍; 黃大仙區; 鑽石山; 翠鳳街31號; 高層地下; 翠鳳樓; B室 | 九龍黃大仙區鑽石山翠鳳街31號 | 翠鳳樓高層地下B室
+36/F Room j  san hing tsuen  tuen mun  tuen mun  n.t.  Hse 43F | Room j, 36/F | Hse 43F, SAN HING TSUEN, TUEN MUN, tuen mun, N.T.
+九龍區， 觀塘， 藍田， 安秀道20號， 安泰邨， 1座， 明泰樓， 閣樓， A房 | 九龍區觀塘藍田安秀道20號安泰邨 | 明泰樓1座閣樓A房
+九龍區觀塘官塘瑞和街116號協和大廈15樓A辦公室 | 九龍區觀塘官塘瑞和街116號 | 協和大廈15樓A辦公室
+新界  朗  洪水橋  合益路44號  合益大廈  B2/f  18單位 | 新界朗洪水橋合益路44號 | 合益大廈B2/f18單位
+九龙慈云山环凤街29号凤祥楼21 层 15C房 | 九龙慈云山环凤街29号 | 凤祥楼21 层15C房
+Apt 14 42 FLOOR 329A tai tsoi yuen road db islands N.T | Apt 14, 42 FLOOR | 329A, tai tsoi yuen road, db, islands, N.T
+Rm 1543 30 FL hang mei tsuen ping shan yuen long n.t. Lot No. 1034 S.A, D.D. 91 | Rm 1543, 30 FL | Lot No. 1034 S.A, D.D. 91, Hang Mei Tsuen, Ping Shan, Yuen Long, N.T.
+STORE 27， GF， luen yick bld， 25 tung st， shek tong tsui， central & western， H K | STORE 27, GF, luen yick bld | 25, tung st, shek tong tsui, central & western, H K
+大窝口 大坝街73号 | 大窝口大坝街73号 | 
+15 floor block c phase 3 tai no sheung yeung sai kung Hse 109 | 15 floor, Block C, Phase 3 | Hse 109, TAI NO SHEUNG YEUNG, Sai Kung
+新界区大埔大美督广福坊35号广福楼9 层 06单位 | 新界区大埔大美督广福坊35号 | 广福楼9 层06单位
+柴灣砵甸乍山278號 | 香港島東柴灣砵甸乍山278號 | 
+香港区 西贡 将军澳 南果洲 6层 89号 | 香港西贡将军澳南果洲89号 | 6层
+G/F,C2 ho sheung heung,sheung shui,north,N. T. | G/F | C2, ho sheung heung, sheung shui, north, N. T.
+ROOM 2088 15/f po sin house upper wong tai sin estate 8 wong tai sin road wong tai sin san po kong Kln | ROOM 2088, 15/f, po sin house | upper wong tai sin estate, 8, wong tai sin road, san po kong, wong tai sin, Kln
+20/F,138 Aberdeen Main Road,Wong Chuk Hang,Southern,H. K. | 20/F | 138, Aberdeen Main Road, Wong Chuk Hang, Southern, H. K.
+新界， 沙田區， 馬鞍山， 穗禾路26-28號， 華翠園， 華翠園5座， 12樓 1279號 | 新界沙田區馬鞍山穗禾路26-28號華翠園 | 華翠園5座12樓1279號
+UnitF59, mei tak building, 33 kwong fuk road, tai po, N. T. | UnitF, 59, mei tak building | 33, kwong fuk road, tai po, N. T.
+Flata7 462 SHANGHAI STREET TAIKOKTSUI YAU TSIM MONG DISTRICT Kln | Flata, 7 | 462, SHANGHAI STREET, TAIKOKTSUI, YAU TSIM MONG DISTRICT, Kln
+九龙九龙城何文田沐宁街9号龙誉会所18层，1802 单位 | 九龙九龙城何文田沐宁街9号龙誉 | 会所18层1802 单位
+新界区大埔西贡北樟木头天台373号屋 | 新界大埔西贡北樟木头373号屋 | 天台
+香港區， 灣仔， 跑馬地， 聖佛蘭士街9號， 寶豐大廈， 30樓， H房 | 香港區灣仔跑馬地聖佛蘭士街9號 | 寶豐大廈30樓H房
+Unit 5B, House 2, The Palisades, 19 Pik Sha Road, Silverstrand, Sai Kung, Sai Kung, New Territories | Unit 5B, House 2, The Palisades | 19, Pik Sha Road, Silverstrand, Sai Kung, Sai Kung, New Territories
+FLT B 19 floor 110 jaffe road wanchai wan chai hong kong | FLT B, 19 floor | 110, jaffe road, wanchai, wan chai, hong kong
+room 1C，14/f，FAIRVIEW PARK，153 BAUHINIA ROAD WEST，LAU FAU SHAN，YUEN LONG，NEW TERRITORIES | room 1C, 14/f | FAIRVIEW PARK, 153, BAUHINIA ROAD WEST, LAU FAU SHAN, YUEN LONG, NEW TERRITORIES
+新界元朗元朗 屏山孖峰嶺路18號翠叠軒1座13 樓，G室 | 新界元朗元朗 屏山孖峰嶺路18號翠叠軒 | 1座13 樓G室
+新界区 屯门 青山 顺风围249号 2/f-3/f L房 | 新界区屯门青山顺风围249号 | 2/f-3/fL房
+香港  孖沙街11號  MERCER 9  26樓  10/11室 | 香港孖沙街11號 | MERCER 926樓10/11室
+59 Floor Flat 09 Chong Yip Centre Block B Chong Yip Centre 423-425 Queen'S Road West Kennedytown Central & Western HK Island | Flat 09, 59 Floor, Chong Yip Centre Block B | Chong Yip Centre, 423-425, Queen'S Road West, Kennedytown, Central & Western, HK Island
+九龍區， 深水埗， 石硤尾， 長沙灣道240號， 金華大廈， 3樓5b室 | 九龍區深水埗石硤尾長沙灣道240號 | 金華大廈3樓5b室
+新界，元朗，元朗 八乡，横台山散村77号，55层 | 新界元朗元朗 八乡横台山散村77号 | 55层
+GF,hse a,212 fung kat heung,kam tin, yuen long,yuen long,new territories | GF, hse a | 212, fung kat heung, kam tin, yuen long, yuen long, new territories
+APT A,20/F,wai on building,2 wai yan street,pak shek kok,tai po,new territories | APT A, 20/F, wai on building | 2, wai yan street, pak shek kok, tai po, new territories
+UNIT H  26 FLOOR  MAN YIU BUILDING  36 MAN YUEN STREET  TST  YAU TSIM MONG DISTRICT  Kln. | UNIT H, 26 FLOOR, MAN YIU BUILDING | 36, MAN YUEN STREET, TST, YAU TSIM MONG DISTRICT, Kln.
+rm 3908  39/F  100 sheung ling pei  tung chung, lantau island  islands  N. T. | rm 3908, 39/F | 100, sheung ling pei, tung chung, lantau island, islands, N. T.
+room l 49 FL wetland seasons bay t3b wetland seasons bay 1 wetland park road kamtin yuen long new territories | room l, 49 FL, wetland seasons bay t3b | wetland seasons bay, 1, wetland park road, kamtin, yuen long, new territories
+34/F tsZ waN sHan tSz WAn shaN Wong tai Sin kln. House No. 73 | 34/F | House No. 73, tsz wan shan, Tsz Wan Shan, Wong Tai Sin, kln.
+新界西贡日出康城飞云路7号飞鹅花园D座飞鹅花园D6座B1/f31室 | 新界西贡日出康城飞云路7号飞鹅花园D座 | 飞鹅花园D6座B1/f31室
+新界区元朗天水围天瑞路88号俊宏轩幼稚园62 层  3395 号室 | 新界区元朗天水围天瑞路88号俊宏轩 | 幼稚园62 层3395 号室
+新界区、大埔、林村、船湾詹屋38号、船湾詹屋、大埔船湾詹屋村村公所 | 新界区大埔林村船湾詹屋38号船湾詹屋 | 大埔船湾詹屋村村公所
+元朗厦村市富怡花园3B座24层 | 元朗厦村市富怡花园 | 3B座24层
+香港區 中西區 西營盤 山道54A號 適安大廈  / 3A房44樓 | 香港區中西區西營盤山道54A號 | 適安大廈44樓3A房
+新界区 西贡 清水湾 西贡公路380号 匡湖居 匡湖居J32座 | 新界区西贡清水湾西贡公路380号匡湖居 | 匡湖居J32座
+九龙半岛，观塘，官塘，通明街66号，华发大楼，60层，6001房 | 九龙半岛观塘官塘通明街66号 | 华发大楼60层6001房
+63 floor FLAT 18  kam wo mansion  50 kowloon city road  kaitak  kowloon city  kowloon | FLAT 18, 63 floor, kam wo mansion | 50, kowloon city road, kaitak, kowloon city, kowloon
+新界區，屯門，掃管笏，屯門鄉事會路2A號，安定邨，順德聯誼會梁銶琚中學，26樓，03室 | 新界區屯門掃管笏屯門鄉事會路2A號安定邨 | 順德聯誼會梁銶琚中學26樓03室
+SHOP 21  B2/F  Kellie Mansion  157 Po Kong Village Road  Choihung  Wong Tai Sin District  Kowloon | SHOP 21, B2/F, Kellie Mansion | 157, Po Kong Village Road, Choihung, Wong Tai Sin District, Kowloon
+R/F; mong yue kok; clearwaterbay; sai kung; Lot 3789B in D.D. 344 | R/F | Lot 3789B in D.D. 344, MONG YUE KOK, Clearwaterbay, sai kung
+新界大埔大尾篤康樂園第六街8號康樂園59樓F單位 | 新界大埔大尾篤康樂園第六街8號康樂園 | 59樓F單位
+九龍，元朗，錦田，和生圍，17樓，09至10室，43號 | 九龍元朗錦田和生圍43號 | 17樓09至10室
+香港， 东， 小西湾， 锦屏街65号， 锦屏楼， 11层，  11a房 | 香港东小西湾锦屏街65号锦屏楼 | 11层11a房
+R/F  95 LOK LO HA  SIU LEK YUEN  SHA TIN  N.T. | R/F | 95, LOK LO HA, SIU LEK YUEN, SHA TIN, N.T.
+香港岛， 中西， 上环， 德己立街55号， 10层， 02 | 香港岛中西上环德己立街55号 | 10层02
+Flats 4/5, 2/f, block 5, san sang san tsuen, lau fau shan, yuen long, 349D | Flats 4/5, 2/f, Block 5 | 349D, San Sang San Tsuen, Lau Fau Shan, Yuen Long
+西貢西貢北潭村11樓14單位地段3146A段號 | 西貢西貢北潭村地段3146A段號 | 11樓14單位
+新界元朗元朗 十八鄉大棠村119號天台 | 新界元朗元朗 十八鄉大棠村119號 | 天台
+FLT J； 51 FLOOR； man shing building； 134 kau yuk road； lok ma chau； yuen long； new territories | FLT J, 51 FLOOR, man shing building | 134, kau yuk road, lok ma chau, yuen long, new territories
+新界區 元朗 新田 米埔隴村 第2期 3樓 K室 村屋230D號 | 新界區元朗新田米埔隴村村屋230D號 | 第2期3樓K室
+14 FLR Flat 1410； block b； fai king house； king ming court； 6 tsui lam road； tseung kwan o； sai kung； new territories | Flat 1410, 14 FLR, block b, fai king house | king ming court, 6, tsui lam road, tseung kwan o, sai kung, new territories
+新界区, 沙田, 乌溪沙, 沙角街5号, 沙角邨, 鱼鹰楼, 57层, 1559号房 | 新界区沙田乌溪沙沙角街5号沙角邨 | 鱼鹰楼57层1559号房
+新界大埔林村汀丽路42号南坑汀丽路变电站52层09办公室 | 新界大埔林村汀丽路42号南坑 | 汀丽路变电站52层09办公室
+港島、南、香港仔、赤柱崗道9號、2洋房、海灣園、29樓、2910房 | 港島南香港仔赤柱崗道9號 | 海灣園2洋房29樓2910房
+新界区大埔西贡北西澳村18层6b室地段3149号 | 新界区大埔西贡北西澳村地段3149号 | 18层6b室
+57 FLOOR ROOM 07, SHuI cheUnG buiLding, 225 qUeEN's rOaD eAST, so kon Po, Wan chai, H.K. | ROOM 07, 57 FLOOR, SHuI cheUnG buiLding | 225, qUeEN's rOaD eAST, so kon Po, Wan chai, H.K.
+APT 21 7 & 8/F 309B MA TIN TSUEN SHAP PAT HEUNG, YUEN LONG YUEN LONG DISTRICT NEW TERRITORIES | APT 21, 7 & 8/F | 309B, MA TIN TSUEN, SHAP PAT HEUNG, YUEN LONG, YUEN LONG DISTRICT, NEW TERRITORIES
+11C NAM WA PO,LAM TSUEN,TAI PO DISTRICT,NEW TERRITORIES |  | 11C, NAM WA PO, LAM TSUEN, TAI PO DISTRICT, NEW TERRITORIES
+九龍半島深水埗區石硤尾延坪道2號帝景峰帝景軒帝景軒2座23A樓7B單位 | 九龍半島深水埗區石硤尾延坪道2號帝景峰 | 帝景軒帝景軒2座23A樓7B單位
+GROUND FLOOR,61 WANG TOI SHAN LO UK TSUEN,LAU FAU SHAN,YUEN LONG,NEW TERRITORIES | GROUND FLOOR | 61, WANG TOI SHAN LO UK TSUEN, LAU FAU SHAN, YUEN LONG, NEW TERRITORIES
+新界， 新田， 山下村323B號 | 新界新田山下村323B號 | 
+FLATS I & J 26/f sam ying building 21 tai po road mei foo sham shui po kowloon | FLATS I & J, 26/f, sam ying building | 21, tai po road, mei foo, sham shui po, kowloon
+Room e 18/F block g lai sau house ching lai court 264 lai king hill road laichikok sham shui po Kln. | Room e, 18/F, block g, lai sau house | ching lai court, 264, lai king hill road, laichikok, sham shui po, Kln.
+GROUND FLOOR; siu lam san tsuen; castlepeak; tuen mun; hk; Lot 2531A in D.D. 400 | GROUND FLOOR | Lot 2531A in D.D. 400, siu lam san tsuen, Castlepeak, TUEN MUN, Hk
+香港岛， 南， 石澳， 南湾坊23号， 香港国际学校 | 香港岛南石澳南湾坊23号 | 香港国际学校
+新界 ，离岛 ，大屿山 长沙 ，长富街33号 ，16屋 ，海桐苑 ，36 层 ， - I室 | 新界离岛大屿山 长沙长富街33号 | 海桐苑16屋36 层I室
+新界，荃湾，马湾，荃贵街17号，富丽花园，商场，45层，C-D室 | 新界荃湾马湾荃贵街17号富丽花园 | 商场45层C-D室
+香港，湾仔区，扫杆埔，骆克道492号，顺禧铜锣湾中心，41层，f室 | 香港湾仔区扫杆埔骆克道492号 | 顺禧铜锣湾中心41层f室
+Flat h 43 FLR House L Evergreen Garden 12-50 Ma Lok Path ST Sha Tin District New Territories | Flat h, 43 FLR, House L, Evergreen Garden | 12-50, Ma Lok Path, ST, Sha Tin District, New Territories
+香港  大埔  大埔墟  難過水  9號村屋 | 香港大埔大埔墟難過水9號村屋 | 
+33 floor UNIT 4C Precious Blood Primary School 72 Sing Woo Road Wanchai Wan Chai Hong Kong | UNIT 4C, 33 floor, Precious Blood Primary School | 72, Sing Woo Road, Wanchai, Wan Chai, Hong Kong
+40/F; 18A to yuen wai; castlepeak; tuen mun; new territories | 40/F | 18A, to yuen wai, castlepeak, tuen mun, new territories
+香港區  東  北角  太榮路1號  太古城  星輝臺  天星閣  57樓  661號室 | 香港區東北角太榮路1號太古城 | 星輝臺天星閣57樓661號室
+九龙半岛、九龙城、九龙城道62号、龙祥阁、41O | 九龙半岛九龙城九龙城道62号 | 龙祥阁41O
+九龙， 九龙城区， 九龙塘， 鸿运街4号， 18层，  - D-E室 | 九龙九龙城区九龙塘鸿运街4号 | 18层D-E室
+Unit F，25/F-26/F，House 35，Maple Drive，The Green，338 Fan Kam Road，Sheungshui，North，New Territories | Unit F, 25/F-26/F, House 35, Maple Drive | The Green, 338, Fan Kam Road, Sheungshui, North, New Territories
+新界區 北區 打鼓嶺 老鼠嶺村 地下 27號F | 新界北區打鼓嶺老鼠嶺村27號F | 地下
+新界 元朗 元朗 屏山 唐人新村路116號 柏巒 37屋 25樓 1820號室 | 新界元朗元朗 屏山唐人新村路116號柏巒 | 37屋25樓1820號室
+新界，屯門區，藍地，2號，國際十字路會，21樓，2107房 | 新界屯門區藍地2號國際十字路會 | 21樓2107房
+flat k  59 FL  SUN SHING MANSION  33 QUEEN'S ROAD WEST  SAI YING PUN  CENTRAL & WESTERN  H.K. | flat k, 59 FL, SUN SHING MANSION | 33, QUEEN'S ROAD WEST, SAI YING PUN, CENTRAL & WESTERN, H.K.
+九龍  深水埗  又一村  蘭秀道22號  美孚新邨  第五期  12樓  E室 | 九龍深水埗又一村蘭秀道22號美孚新邨 | 第五期12樓E室
+新界西貢區坑口康健路133號48樓9A室 | 新界西貢區坑口康健路133號 | 48樓9A室
+九龙， 九龙城区， 土瓜湾， 谭公道130号， 恒康大厦， 36层， 11D室 | 九龙九龙城区土瓜湾谭公道130号 | 恒康大厦36层11D室
+新界元朗锦田天瑞一邨瑞财楼低层地下  19房 | 新界元朗锦田天瑞一邨 | 瑞财楼低层地下19房
+香港 ,南區 ,大潭 ,黃麻角道88號 ,富豪海灣 ,富豪海灣D28 ,6樓 ,d室 | 香港南區大潭黃麻角道88號富豪海灣 | 富豪海灣D286樓d室
+九龍區，油尖旺區，芒角，大角咀村，地下，屋124號 | 九龍油尖旺區芒角大角咀村屋124號 | 地下
+大嶼山,  水口17號,  52樓,  新界,  離島區 | 新界離島區大嶼山水口17號 | 52樓
+HONG YUE COURT 9 WATER STREET MID LEVELS CENTRAL & WESTERN HONG KONG | HONG YUE COURT | 9, WATER STREET, MID LEVELS, CENTRAL & WESTERN, HONG KONG
+Room 3 5/F tower 1 the metropolis residence the metropolis 8 metropolis drive tsim sha tsui yau tsim mong kowloon | Room 3, 5/F, tower 1, the metropolis residence | the metropolis, 8, metropolis drive, tsim sha tsui, yau tsim mong, kowloon
+新界， 屯門， 青山， 建發街13號， 建發工業中心， 22樓， 2208室 | 新界屯門青山建發街13號 | 建發工業中心22樓2208室
+新界荃灣區荃灣段海浪徑8號3屋44 樓  30 單位 | 新界荃灣區荃灣段海浪徑8號 | 3屋44 樓30 單位
+香港灣仔天后大坑道345號嘉園8樓15C室 | 香港灣仔天后大坑道345號 | 嘉園8樓15C室
+九龍半島， 黃大仙， 慈雲山， 瓊東街2號， 38樓， 07單位 | 九龍半島黃大仙慈雲山瓊東街2號 | 38樓07單位
+38Flat 01 HOUSE 3 LE BLEU COASTAL SKYLINE 12 TUNG CHUNG WATERFRONT ROAD TUNG CHUNG, LANTAU ISLAND ISLANDS N.T. | Flat 01, 38, HOUSE 3, LE BLEU | COASTAL SKYLINE, 12, TUNG CHUNG WATERFRONT ROAD, TUNG CHUNG, LANTAU ISLAND, ISLANDS, N.T.
+荃湾,  深井,  新界,  沙嘴道305号,  众安大厦,  地下,  ，45 鋪 | 新界荃湾深井沙嘴道305号 | 众安大厦地下45 鋪
+新界元朗元朗 十八乡大棠路150号瑞霞花园3座48层C房 | 新界元朗元朗 十八乡大棠路150号瑞霞花园 | 3座48层C房
+九龙; 广厦; 浙江街52A号; 土瓜湾; 九龙城; 6001房 | 九龙九龙城土瓜湾浙江街52A号 | 广厦6001房
+250A PAK SHA TSUEN,FAIRVIEW PARK,YUEN LONG,N T |  | 250A, PAK SHA TSUEN, FAIRVIEW PARK, YUEN LONG, N T
+新界  屯門  兆康  管翠路18號 | 新界屯門兆康管翠路18號 | 
+新界北粉嶺粉嶺圍139號28-29/FF房 | 新界北粉嶺粉嶺圍139號 | 28-29/FF房
+九龙半岛、油尖旺、尖沙嘴、大角咀道153号、中美楼、18层、1912号室 | 九龙半岛油尖旺尖沙嘴大角咀道153号 | 中美楼18层1912号室
+九龍半島深水埗昂船洲荔灣道1號荔枝角公園游泳池3H | 九龍半島深水埗昂船洲荔灣道1號 | 荔枝角公園游泳池3H
+香港區灣仔掃桿埔港灣道27號灣仔游泳池 | 香港區灣仔掃桿埔港灣道27號 | 灣仔游泳池
+Flat DI 52/f Tai Fung Building Cosmopolitan Estates 35 Tai Tsun Street MK Yau Tsim Mong KLN | Flat DI, 52/f, Tai Fung Building | Cosmopolitan Estates, 35, Tai Tsun Street, MK, Yau Tsim Mong, KLN
+九龍城區  九龍  何文田  浙江街13號  慈恩學校  20-21/f  14房 | 九龍九龍城區何文田浙江街13號 | 慈恩學校20-21/f14房
+50 Tai Po Tau Taipo Tai Po New Territories |  | 50, Tai Po Tau, Taipo, Tai Po, New Territories
+新界, 元朗, 元朗 屏山, 上章圍201號, 屏湖山莊 | 新界元朗元朗 屏山上章圍201號 | 屏湖山莊
+新界 荃灣 深井 德華街26號 TIM WAH BUILDING 54/F 2417 | 新界荃灣深井德華街26號 | TIM WAH BUILDING54/F2417
+UNIT 3148 6/F PAK SHEK AU | UNIT 3148, 6/F | No. 155, pak shek au, North
+FLAT 2A,58 FL,Tsui Yuen Mansion,6 Kwong Wa Street,Tsimshatsui,Yau Tsim Mong,KLN | FLAT 2A, 58 FL, Tsui Yuen Mansion | 6, Kwong Wa Street, Tsimshatsui, Yau Tsim Mong, KLN
+新界，大埔，白石角，九龍坑90B號，B室60 | 新界大埔白石角九龍坑90B號 | 60B室
+新界區葵青葵涌華星街2-6號安達工業大廈 | 新界區葵青葵涌華星街2-6號 | 安達工業大廈
+香港，南，浅水湾，海洋公园道18号，香港警察学院，香港警察学院J座西翼，58层，F单位 | 香港南浅水湾海洋公园道18号香港警察学院 | 香港警察学院J座西翼58层F单位
+香港、湾仔区、金龙台1号、聚龙阁、54层、J及K室 | 香港湾仔区金龙台1号 | 聚龙阁54层J及K室
+26 Floor; ng kwu leng; tsing lung tau; tsuen wan; new territories; House 182 | 26 Floor | House 182, NG KWU LENG, Tsing Lung Tau, Tsuen Wan, New Territories
+香港灣仔銅鑼灣天后廟道70號5樓11B室 | 香港灣仔銅鑼灣天后廟道70號 | 5樓11B室
+九龍北膊头下地下屋285号 | 九龍北膊头下屋285号 | 地下
+Apt 1005  10 FLOOR  720 shanghai street  yaumatei  yau tsim mong  kowloon | Apt 1005, 10 FLOOR | 720, shanghai street, yaumatei, yau tsim mong, kowloon
+新界元朗区洪水桥61号元朗潭尾建造业输入劳工宿舍元朗潭尾建造业输入劳工宿舍B512 层，09 室 | 新界元朗区洪水桥61号元朗潭尾建造业输入劳工宿舍 | 元朗潭尾建造业输入劳工宿舍B512 层09 室
+新界  元朗  流浮山  大江埔95號  39-40/f  B單位 | 新界元朗流浮山大江埔95號 | 39-40/fB單位
+新界區、離島、大嶼山、水口54號、53-54/f、5c房 | 新界區離島大嶼山水口54號 | 53-54/f5c房
+新界區 離島 大嶼山 梅窩 鹿地塘43A號 B座 GROUND FLOOR | 新界區離島大嶼山 梅窩鹿地塘43A號 | B座GROUND FLOOR
+港島 灣仔 天后 駱克道311號 廣榮樓 | 港島灣仔天后駱克道311號 | 廣榮樓
+新界  葵青  葵涌  高芳街29号  高芳楼  1层  2467号房 | 新界葵青葵涌高芳街29号 | 高芳楼1层2467号房
+港岛 湾仔 扫杆埔 皇后大道东200号 囍汇 3座 g房46层 | 港岛湾仔扫杆埔皇后大道东200号囍汇 | 3座46层g房
+新界  屯門  兆康  掃管笏路88號  16樓  01單位 | 新界屯門兆康掃管笏路88號 | 16樓01單位
+Rm 3403 34/f scoUT AssoCIatIOn of hong KonG hoNG kONg IsLand nOrthErN dISTrict 42 ManSIoN street henGfaCHuEN EasTern Hong kOnG | Rm 3403, 34/f, scoUT AssoCIatIOn of hong KonG hoNG kONg IsLand nOrthErN dISTrict | 42, ManSIoN street, henGfaCHuEN, EasTern, Hong kOnG
+九龍 九龍城區 黃埔 承富里2號 澐璟 第6座 51樓 5104辦公室 | 九龍九龍城區黃埔承富里2號澐璟 | 第6座51樓5104辦公室
+新界区,  荃湾,  汀九,  兆和街6号,  和盛楼,  22层,  b室 | 新界区荃湾汀九兆和街6号 | 和盛楼22层b室
+大埔區； 新界區； 大埔； 白牛石上村； 地下； 136號 | 新界區大埔區大埔白牛石上村136號 | 地下
+新界、西貢、日出康城、南圍14號、天台 | 新界西貢日出康城南圍14號 | 天台
+香港中西中环干诺道中13-14号欧陆贸易中心11层15A室 | 香港中西中环干诺道中13-14号 | 欧陆贸易中心11层15A室
+新界區離島東涌馬灣涌村第C座丈量約份第331約地段3039號 | 新界區離島東涌馬灣涌村丈量約份第331約地段3039號 | 第C座
+港岛 湾仔 轩尼诗道505号 电业城 28层 2808单位 | 港岛湾仔轩尼诗道505号 | 电业城28层2808单位
+新界 大埔 大埔 大埔滘段 大埔公路4641號 保良局田家炳千禧小學 31樓  / l單位 | 新界大埔大埔 大埔滘段大埔公路4641號 | 保良局田家炳千禧小學31樓l單位
+香港岛， 南区， 香港仔， 打烂埕顶山村， 20层， 81号 | 香港岛南区香港仔打烂埕顶山村81号 | 20层
+FLT 6208，62 FL，manly mansion，69B robinson road，shektongtsui，central & western，hong kong | FLT 6208, 62 FL, manly mansion | 69B, robinson road, shektongtsui, central & western, hong kong
+Apt 7d, 18 floor, HSE 11, LATOUR AVENUE, THE VINEYARD, 23 NGAU TAM MEI ROAD, YUEN LONG, NEW TERRITORIES | Apt 7d, 18 floor, HSE 11, LATOUR AVENUE | THE VINEYARD, 23, NGAU TAM MEI ROAD, YUEN LONG, NEW TERRITORIES
+Unit H M/F rising billion mansion 2C larch street yau tsim mong kowloon | Unit H, M/F, rising billion mansion | 2C, larch street, yau tsim mong, kowloon
+# 6 54 FL house 39 boulevard de cascade the beverly hills 23 sam mun tsai road pak shek kok | # 6, 54 FL, house 39, boulevard de cascade | the beverly hills, 23, sam mun tsai road, pak shek kok
+新界、屯門區、兆康、管翠路18號、凱和山、凱和山12號洋房、42樓、 / K室 | 新界屯門區兆康管翠路18號凱和山 | 凱和山12號洋房42樓K室
+新界、離島、長洲、山邊路6A號、34 樓、  D房 | 新界離島長洲山邊路6A號 | 34 樓D房
+九龍半島，深水埗，石硤尾，大埔道242號，金宇大樓，61樓2C單位 | 九龍半島深水埗石硤尾大埔道242號 | 金宇大樓61樓2C單位
+FLAT 901 9/F block 1 wan poon hse chai wan estate 300 san ha street siu sai wan eastern H. K. | FLAT 901, 9/F, block 1, wan poon hse | chai wan estate, 300, san ha street, siu sai wan, eastern, H. K.
+新界 北 sha tau kok 莲麻坑73号 26层 | 新界北sha tau kok莲麻坑73号 | 26层
+新界大埔吐露港圍頭村328號康樂花園39樓 | 新界大埔吐露港圍頭村328號康樂花園 | 39樓
+Rm 1005 10/F House 1 Cypress Drive The Green 338 Fan Kam Road Fanling North New Territories | Rm 1005, 10/F, House 1, Cypress Drive | The Green, 338, Fan Kam Road, Fanling, North, New Territories
+the pottinger hong kong 21 stanley street mid levels central & western district H K | the pottinger hong kong | 21, stanley street, mid levels, central & western district, H K
+新界  大埔  太和  山塘新村26號  Gf | 新界大埔太和山塘新村26號 | Gf
+8 floor Room 2D,NORTH POINT GOVERNMENT PRIMARY SCHOOL,NORTH POINT GOVERNMENT PRIMARY SCHOOL,888 KING'S ROAD,CHAI WAN,EASTERN,HKI | Room 2D, 8 floor, NORTH POINT GOVERNMENT PRIMARY SCHOOL | NORTH POINT GOVERNMENT PRIMARY SCHOOL, 888, KING'S ROAD, CHAI WAN, EASTERN, HKI
+7 FL; hang hau village; clearwater bay; sai kung; NT; Hse 184 | 7 FL | Hse 184, hang hau village, Clearwater Bay, Sai Kung, Nt
+九龙，九龙城，何文田，下乡道44号，华景大厦，13d单位37 | 九龙九龙城何文田下乡道44号 | 华景大厦3713d单位
+香港南深水灣深水灣道48號27洋房文禮苑19樓10b單位 | 香港南深水灣深水灣道48號 | 文禮苑27洋房19樓10b單位
+九龍  油尖旺  尖沙咀  56 Fuk Tsun Street  a室37樓 | 九龍油尖旺尖沙咀Fuk Tsun Street56 | 37樓a室
+新界屯門掃管忽青山村96E號覺塵禪寺覺塵禪寺功德堂天台 | 新界屯門掃管忽青山村96E號覺塵禪寺 | 覺塵禪寺功德堂天台
+天台; 115 tseng lan shue; clear water bay; sai kung; N T | N Tsai kungclear water baytseng lan shue115 | 天台
+room 7a，34/F，37 to yuen street，sham shui po，kowloon | room 7a, 34/F | 37, to yuen street, sham shui po, kowloon
+香港  中西  西環  柯甸山道8號  51樓  R單位 | 香港中西西環柯甸山道8號 | 51樓R單位
+九龍  九龍城  黃埔  大環道10號  聖匠中學    2308 室23樓 | 九龍九龍城黃埔大環道10號 | 聖匠中學23樓2308 室
+九龙，深水埗区，石硖尾，荔枝角道243号，耀昌隆大楼，J室34层 | 九龙深水埗区石硖尾荔枝角道243号 | 耀昌隆大楼34层J室
+香港， 灣仔區， 掃桿埔， 藍塘道155號， 翠園， 57樓D室 | 香港灣仔區掃桿埔藍塘道155號 | 翠園57樓D室
+新界區北古洞新塘莆1A號Ground Floor | 新界區北古洞新塘莆1A號 | Ground Floor
+ROOM 5B 25 floor,chi fai cour,31-35 tai po road,sham shui po,Kln | ROOM 5B, 25 floor, chi fai cour | 31-35, tai po road, sham shui po, Kln
+345B; Tung Ming Building; 40-42 Des Voeux Road Central; Sheung Wan; Central & Western; Hong Kong | 5B, 34, Tung Ming Building | 40-42, Des Voeux Road Central, Sheung Wan, Central & Western, Hong Kong
+新界， 葵青， 荔景， 葵涌邨， 11-12座， 芷葵樓， 16樓， 1624室 | 新界葵青荔景葵涌邨 | 芷葵樓11-12座16樓1624室
+九龙， 九龙城， 九龙仔， 马头围道216A号， 漆马大厦， f房17 | 九龙九龙城九龙仔马头围道216A号 | 漆马大厦17f房
+新界北横山脚下村第II期  804室 8 层175F号村屋 | 新界北横山脚下村175F号村屋 | 第II期8层804室
+Flat 7c 35 floor TOWER 2 COURT B THE HORIZON 18 FO CHUN ROAD TP TAI PO DISTRICT NEW TERRITORIES | Flat 7c, 35 floor, TOWER 2, COURT B | THE HORIZON, 18, FO CHUN ROAD, TP, TAI PO DISTRICT, NEW TERRITORIES
+新界  沙田  大圍  麗坪路18號  名日.九肚山  15樓  I室 | 新界沙田大圍麗坪路18號名日.九肚山 | 15樓I室
+UNIT 15 32 FL kam shek building 62 shek yam road kwai chung kwai tsing N. T. | UNIT 15, 32 FL, kam shek building | 62, shek yam road, kwai chung, kwai tsing, N. T.
+新界區，屯門區，掃管笏，南朗41號 | 新界區屯門區掃管笏南朗41號 | 
+新界  北  皇后山  直門頭  43樓  屋36B號 | 新界北皇后山直門頭屋36B號 | 43樓
+新界，北，上水，古洞路33號，天巒，天巒 II，23屋，日內瓦大道東，平台，C87車位 | 新界北上水古洞路33號天巒 | 天巒 II日內瓦大道東23屋平台C87車位
+Room 6405; 64 FLOOR; maple gardens block a68; maple gardens; 80; lokmachau; yuen long; NT | Room 6405, 64 FLOOR, maple gardens block a68 | maple gardens, 80, lokmachau, yuen long, NT
