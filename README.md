@@ -92,9 +92,9 @@ Three model variants are provided:
 
 | Notebook                    | Model                     |
 |-----------------------------|---------------------------|
-| `train_bilstm.ipynb`        | BiLSTM                    |
+| `train_bilstmV7.ipynb`        | BiLSTM                    |
 | `train_bert.ipynb`          | XLM-RoBERTa-base          |
-| `train_bert_largeV2.ipynb`  | XLM-RoBERTa-large         |
+| `train_bert_largeV4.ipynb`  | XLM-RoBERTa-large         |
 
 Simply open the desired notebook and run all cells.  
 The notebooks expect the three JSONL files produced by `merge_data.py` to be present in the working directory.
