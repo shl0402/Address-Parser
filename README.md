@@ -31,22 +31,22 @@ Sample data is generated from two Lands Department sources:
 
 ```bash
 # Build the initial dataset from GeoJSON
-python build_hk_address_dataset.py \
+python build_hk_address_dataset_edit.py \
     --input-dir geojson \
     --output-dir hk_address_dataset
 
 # Convert to compact JSONL format (region as plain text)
-python extract_compact_hk_address_jsonl.py \
+python extract_compact_hk_address_jsonl_edit.py \
     --input hk_address_dataset/train.jsonl \
     --output compact_train.jsonl \
     --region-format text
 
-python extract_compact_hk_address_jsonl.py \
+python extract_compact_hk_address_jsonl_edit.py \
     --input hk_address_dataset/test.jsonl \
     --output compact_test.jsonl \
     --region-format text
 
-python extract_compact_hk_address_jsonl.py \
+python extract_compact_hk_address_jsonl_edit.py \
     --input hk_address_dataset/validation.jsonl \
     --output compact_validation.jsonl \
     --region-format text
@@ -57,6 +57,7 @@ python extract_compact_hk_address_jsonl.py \
 ```bash
 python village_dataset_gen.py      # version 1
 python village_dataset_genV2.py    # version 2 (more villages)
+python village_dataset_genV3_edit.py    # version 3 (ammended and merged v1 and v2)
 ```
 
 ### 2.3 Merge everything
