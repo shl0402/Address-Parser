@@ -65,11 +65,23 @@ python village_dataset_genV2.py    # version 2 (more villages)
 python merge_data.py
 ```
 
-This produces the final training-ready files:
+This produces the merged data files:
 
 - `train.jsonl`
 - `validation.jsonl`
 - `test.jsonl`
+
+### 2.4 Data Augmentation and Cleaning
+
+```bash
+python clean_address_jsonl.py
+```
+
+This produces the final training-ready files:
+
+- `train_cleaned.jsonl`
+- `validation_cleaned.jsonl`
+- `test_cleaned.jsonl`
 
 ---
 
