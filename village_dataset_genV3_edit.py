@@ -4829,7 +4829,7 @@ def separator_for(style: str, language: str, rng: random.Random) -> str:
     if style == "comma":
         return rng.choice([", ", ",", "; "]) if language == "en" else rng.choice(["，", "、", "， "])
     if style == "space":
-        return rng.choice([" ", "  "])
+        return " "
     if style == "mixed":
         return rng.choice([", ", "，", "; ", " / ", "  "])
     if style == "compact":
@@ -4845,8 +4845,13 @@ def render_chunks(
     cursor = 0
     for index, chunk in enumerate(chunks):
         if index:
-            parts.append(separator)
-            cursor += len(separator)
+            # avoid accidental double space when the previous atom already ends with whitespace
+            if (separator.strip() == ""  # pure space(s)
+                    and parts and parts[-1] and parts[-1][-1].isspace()):
+                pass
+            else:
+                parts.append(separator)
+                cursor += len(separator)
         for atom in chunk.atoms:
             start = cursor
             parts.append(atom.text)
@@ -5377,7 +5382,13 @@ class VillageAugmenter:
         ):
             for chunk in chunks:
                 if chunk.kind == "unit" and chunk.atoms:
-                    messy = rng.choice([" ", "  ", " / ", " - ", "，"])
+                    messy = weighted_choice(rng, [
+                        (" ", 70),
+                        ("  ", 30),  # only 30 %
+                        (" / ", 15),
+                        (" - ", 10),
+                        ("，", 50),
+                    ])
                     chunk.atoms.insert(0, Atom(messy, None))
                 if chunk.kind in {"floor", "unit"}:
                     for atom in chunk.atoms:
@@ -5586,7 +5597,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=script_dir / "processed_data" / "auto_train_villageV3.jsonl",
+        default=script_dir / "auto_train_villageV3.jsonl",
     )
     parser.add_argument(
         "--gazetteer-text",

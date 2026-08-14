@@ -36,7 +36,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, BinaryIO, Iterator, Mapping, Sequence
 
-
 LOGGER = logging.getLogger("hk_address_dataset")
 DATASET_SCHEMA_VERSION = "1.3.0"
 
@@ -66,12 +65,12 @@ KNOWN_PREMISES_KEYS = {
 
 EN_ABBREVIATIONS = {
     "APARTMENT": ("APT",),
-    "BUILDING": ("BLDG","BLD",),
+    "BUILDING": ("BLDG", "BLD",),
     "BLOCK": ("BLK",),
     "DISTRICT": ("DIST",),
     "FLAT": ("FLT", "UNIT", "RM"),
-    "FLOOR": ("FL", "F", "/F", "FLR","LVL", "LEVEL"),
-    "HOUSE": ("HSE","HS"),
+    "FLOOR": ("FL", "F", "/F", "FLR", "LVL", "LEVEL"),
+    "HOUSE": ("HSE", "HS"),
     "ESTATE": ("EST",),
     "ROAD": ("RD",),
     "ROOM": ("RM",),
@@ -85,7 +84,7 @@ EN_ABBREVIATIONS = {
 # floor forms are represented, but ordinary flats still remain the largest
 # synthetic family.  These weights are not claims about Hong Kong prevalence.
 STANDARD_3D_WEIGHTS: tuple[tuple[str, int], ...] = (
-    ("standard_flat", 35),       # Heavily favor standard flats
+    ("standard_flat", 35),  # Heavily favor standard flats
     ("standard_room", 10),
     ("number_only_unit", 3),
     ("hao_shi_unit", 10),
@@ -106,9 +105,9 @@ STANDARD_3D_WEIGHTS: tuple[tuple[str, int], ...] = (
 )
 
 VILLAGE_3D_WEIGHTS: tuple[tuple[str, int], ...] = (
-    ("ground_floor_no_unit", 40), # Heavily favor G/F for villages
-    ("whole_floor", 30),          # Heavily favor whole floors
-    ("roof", 15),                 # Favor rooftops
+    ("ground_floor_no_unit", 40),  # Heavily favor G/F for villages
+    ("whole_floor", 30),  # Heavily favor whole floors
+    ("roof", 15),  # Favor rooftops
     ("duplex_floor", 10),
     ("standard_flat", 5),
 )
@@ -166,9 +165,9 @@ CHINESE_REGION_VARIATIONS = {
 # when another useful anchor remains.
 COMPONENT_OMISSION_WEIGHTS: dict[str, int] = {
     "region": 100,
-    "building_number": 80,   # High chance of dropping building numbers
-    "sub_district": 55,
-    "district": 68,
+    "building_number": 50,  # High chance of dropping building numbers
+    "sub_district": 35,
+    "district": 36,
     "phase": 1,
     "building": 26,
     "street": 24,
@@ -215,18 +214,20 @@ SUB_DISTRICT_MAP = {
             "Central", "Admiralty", "Sheung Wan", "Sai Ying Pun", "Shek Tong Tsui",
             "Kennedy Town", "The Peak", "Mid-Levels",
             # Variations & Additions
-            "Sheungwan", "Saiyingpun", "Shektongtsui", "Kennedytown", "Mid Levels", "Midlevels", "Peak", "Sai Wan"
+            "Sheungwan", "Saiyingpun", "Shektongtsui", "Kennedytown", "Mid Levels", "Midlevels", "Peak", "Sai Wan",
+            "SYP", "KT",
         ],
         "EASTERN DISTRICT": [
             "Taikoo", "North Point", "Quarry Bay", "Chai Wan", "Shau Kei Wan", "Fortress Hill",
             # Variations & Additions
-            "Taikoo Shing", "Northpoint", "Quarrybay", "Chaiwan", "Shaukeiwan", "Fortresshill",
+            "Taikoo Shing", "Northpoint", "Quarrybay", "Chaiwan", "Shaukeiwan", "Fortresshill", "SWH", "SKW",
             "Heng Fa Chuen", "Hengfachuen", "Sai Wan Ho", "Saiwanho", "Siu Sai Wan", "Siusaiwan", "Braemar Hill", "NP"
         ],
         "SOUTHERN DISTRICT": [
             "Aberdeen", "Ap Lei Chau", "Wong Chuk Hang", "Repulse Bay", "Stanley", "Pok Fu Lam", "Cyberport",
             # Variations & Additions
-            "Apleichau", "Wongchukhang", "Repulsebay", "Pokfulam", "Shek O", "Chung Hom Kok", "Deep Water Bay", "Tai Tam"
+            "Apleichau", "Wongchukhang", "Repulsebay", "Pokfulam", "Shek O", "Chung Hom Kok", "Deep Water Bay",
+            "Tai Tam"
         ],
         "WAN CHAI DISTRICT": [
             "Wan Chai", "Causeway Bay", "Happy Valley", "Tin Hau", "Tai Hang",
@@ -238,7 +239,8 @@ SUB_DISTRICT_MAP = {
         "KOWLOON CITY DISTRICT": [
             "Kowloon City", "To Kwa Wan", "Hung Hom", "Ho Man Tin", "Kowloon Tong",
             # Variations & Additions
-            "Kowlooncity", "Tokwawan", "Hunghom", "Homantin", "Kowloontong", "Kai Tak", "Kaitak", "Whampoa", "Kowloon Tsai", "KLT"
+            "Kowlooncity", "Tokwawan", "Hunghom", "Homantin", "Kowloontong", "Kai Tak", "Kaitak", "Whampoa",
+            "Kowloon Tsai", "KLT"
         ],
         "KWUN TONG DISTRICT": [
             "Kwun Tong", "Ngau Tau Kok", "Kowloon Bay", "Lam Tin", "Yau Tong",
@@ -248,7 +250,8 @@ SUB_DISTRICT_MAP = {
         "SHAM SHUI PO DISTRICT": [
             "Sham Shui Po", "Cheung Sha Wan", "Lai Chi Kok", "Mei Foo", "Shek Kip Mei",
             # Variations & Additions
-            "Shamshuipo", "Cheungshawan", "Laichikok", "Meifoo", "Shekkipmei", "SSP", "Yau Yat Chuen", "Stonecutters Island"
+            "Shamshuipo", "Cheungshawan", "Laichikok", "Meifoo", "Shekkipmei", "SSP", "Yau Yat Chuen",
+            "Stonecutters Island"
         ],
         "WONG TAI SIN DISTRICT": [
             "Wong Tai Sin", "Diamond Hill", "Choi Hung", "San Po Kong", "Tsz Wan Shan",
@@ -263,9 +266,11 @@ SUB_DISTRICT_MAP = {
 
         # New Territories
         "ISLANDS DISTRICT": [
-            "Tung Chung", "Discovery Bay", "Chek Lap Kok", "Tai O", "Mui Wo", "Cheung Chau", "Lamma Island", "Peng Chau",
+            "Tung Chung", "Discovery Bay", "Chek Lap Kok", "Tai O", "Mui Wo", "Cheung Chau", "Lamma Island",
+            "Peng Chau",
             # Variations & Additions
-            "Tungchung", "Discoverybay", "Cheklapkok", "Taio", "Muiwo", "Cheungchau", "Lamma", "Pengchau", "DB", "Pui O", "Tong Fuk", "Lantau", "Lantau Island"
+            "Tungchung", "Discoverybay", "Cheklapkok", "Taio", "Muiwo", "Cheungchau", "Lamma", "Pengchau", "DB",
+            "Pui O", "Tong Fuk", "Lantau", "Lantau Island"
         ],
         "KWAI TSING DISTRICT": [
             "Kwai Fong", "Kwai Hing", "Kwai Chung", "Tsing Yi", "Lai King",
@@ -275,22 +280,26 @@ SUB_DISTRICT_MAP = {
         "NORTH DISTRICT": [
             "Sheung Shui", "Fanling", "Luen Wo Hui", "Sha Tau Kok", "Ta Kwu Ling",
             # Variations & Additions
-            "Sheungshui", "Luenwohui", "Shataukok", "Takwuling", "Kwu Tung", "Kwutung", "Queen's Hill", "Queens Hill", "Ping Che"
+            "Sheungshui", "Luenwohui", "Shataukok", "Takwuling", "Kwu Tung", "Kwutung", "Queen's Hill", "Queens Hill",
+            "Ping Che"
         ],
         "SAI KUNG DISTRICT": [
-            "Sai Kung", "Tseung Kwan O", "Hang Hau", "Po Lam", "LOHAS Park", "Clear Water Bay",
+            "Sai Kung", "Tseung Kwan O", "Hang Hau", "Po Lam", "LOHAS Park", "Clear Water Bay", "Hang hau",
             # Variations & Additions
-            "Saikung", "Tseungkwano", "Hanghau", "Polam", "Clearwater Bay", "Clearwaterbay", "TKO", "LOHAS", "Tiu Keng Leng", "Tiukengleng"
+            "Saikung", "Tseungkwano", "Hanghau", "Polam", "Clearwater Bay", "Clearwaterbay", "TKO", "LOHAS",
+            "Tiu Keng Leng", "Tiukengleng", "TKL", "HH"
         ],
         "SHA TIN DISTRICT": [
             "Sha Tin", "Tai Wai", "Fo Tan", "Ma On Shan", "Siu Lek Yuen", "Shek Mun",
             # Variations & Additions
-            "Shatin", "Taiwai", "Fotan", "Maonshan", "Siulekyuen", "Shekmun", "MOS", "ST", "Wu Kai Sha", "Wukaisha", "Shatin Wai", "City One", "Hin Keng"
+            "Shatin", "Taiwai", "Fotan", "Maonshan", "Siulekyuen", "Shekmun", "MOS", "ST", "Wu Kai Sha", "Wukaisha",
+            "Shatin Wai", "City One", "Hin Keng"
         ],
         "TAI PO DISTRICT": [
             "Tai Po Market", "Tai Wo", "Tolo Harbour", "Tai Mei Tuk", "Lam Tsuen",
             # Variations & Additions
-            "Tai Po", "Taipo", "Taipo Market", "Taiwo", "Taimeituk", "Tai Mei Tok", "Lamtsuen", "Pak Shek Kok", "Pakshekkok", "Science Park", "TP"
+            "Tai Po", "Taipo", "Taipo Market", "Taiwo", "Taimeituk", "Tai Mei Tok", "Lamtsuen", "Pak Shek Kok",
+            "Pakshekkok", "Science Park", "TP"
         ],
         "TSUEN WAN DISTRICT": [
             "Tsuen Wan", "Tai Wo Hau", "Sham Tseng", "Ting Kau", "Ma Wan",
@@ -305,14 +314,17 @@ SUB_DISTRICT_MAP = {
         "YUEN LONG DISTRICT": [
             "Yuen Long", "Tin Shui Wai", "Hung Shui Kiu", "Kam Tin", "San Tin", "Lau Fau Shan",
             # Variations & Additions
-            "Yuenlong", "Tinshuiwai", "Hungshuikiu", "Kamtin", "Santin", "Laufaushan", "YL", "TSW", "Lok Ma Chau", "Lokmachau", "Fairview Park"
+            "Yuenlong", "Tinshuiwai", "Hungshuikiu", "Kamtin", "Santin", "Laufaushan", "YL", "TSW", "Lok Ma Chau",
+            "Lokmachau", "Fairview Park"
         ]
     },
     "zh-Hant": {
         # 香港島
         "中西區": ["中環", "金鐘", "上環", "西營盤", "石塘咀", "堅尼地城", "山頂", "半山", "西環"],
-        "東區": ["太古", "北角", "鰂魚涌", "柴灣", "筲箕灣", "炮台山", "太古城", "杏花邨", "西灣河", "小西灣", "寶馬山"],
-        "南區": ["香港仔", "鴨脷洲", "黃竹坑", "淺水灣", "赤柱", "薄扶林", "數碼港", "鴨利洲", "石澳", "舂磡角", "深水灣", "大潭"],
+        "東區": ["太古", "北角", "鰂魚涌", "柴灣", "筲箕灣", "炮台山", "太古城", "杏花邨", "西灣河", "小西灣",
+                 "寶馬山"],
+        "南區": ["香港仔", "鴨脷洲", "黃竹坑", "淺水灣", "赤柱", "薄扶林", "數碼港", "鴨利洲", "石澳", "舂磡角",
+                 "深水灣", "大潭"],
         "灣仔區": ["灣仔", "銅鑼灣", "跑馬地", "天后", "大坑", "掃桿埔"],
 
         # 九龍
@@ -323,7 +335,8 @@ SUB_DISTRICT_MAP = {
         "油尖旺區": ["旺角", "油麻地", "尖沙咀", "佐敦", "太子", "大角咀", "柯士甸", "尖沙嘴", "芒角", "西九龍"],
 
         # 新界
-        "離島區": ["東涌", "愉景灣", "赤鱲角", "大澳", "梅窩", "長洲", "南丫島", "坪洲", "赤獵角", "赤臘角", "貝澳", "塘福", "大嶼山"],
+        "離島區": ["東涌", "愉景灣", "赤鱲角", "大澳", "梅窩", "長洲", "南丫島", "坪洲", "赤獵角", "赤臘角", "貝澳",
+                   "塘福", "大嶼山"],
         "葵青區": ["葵芳", "葵興", "葵涌", "青衣", "荔景"],
         "北區": ["上水", "粉嶺", "聯和墟", "沙頭角", "打鼓嶺", "古洞", "皇后山", "坪輋"],
         "西貢區": ["西貢", "將軍澳", "坑口", "寶琳", "日出康城", "清水灣", "康城", "調景嶺"],
@@ -337,7 +350,8 @@ SUB_DISTRICT_MAP = {
         # 香港岛
         "中西区": ["中环", "金钟", "上环", "西营盘", "石塘咀", "坚尼地城", "山顶", "半山", "西环"],
         "东区": ["太古", "北角", "鲗鱼涌", "柴湾", "筲湾", "炮台山", "太古城", "杏花邨", "西湾河", "小西湾", "宝马山"],
-        "南区": ["香港仔", "鸭脷洲", "黄竹坑", "浅水湾", "赤柱", "薄扶林", "数码港", "鸭利洲", "石澳", "舂磡角", "深水湾", "大潭"],
+        "南区": ["香港仔", "鸭脷洲", "黄竹坑", "浅水湾", "赤柱", "薄扶林", "数码港", "鸭利洲", "石澳", "舂磡角",
+                 "深水湾", "大潭"],
         "湾仔区": ["湾仔", "铜锣湾", "跑马地", "天后", "大坑", "扫杆埔"],
 
         # 九龙
@@ -348,7 +362,8 @@ SUB_DISTRICT_MAP = {
         "油尖旺区": ["旺角", "油麻地", "尖沙咀", "佐敦", "太子", "大角咀", "柯士甸", "尖沙嘴", "芒角", "西九龙"],
 
         # 新界
-        "离岛区": ["东涌", "愉景湾", "赤鱲角", "大澳", "梅窝", "长洲", "南丫岛", "坪洲", "赤猎角", "赤腊角", "贝澳", "塘福", "大屿山"],
+        "离岛区": ["东涌", "愉景湾", "赤鱲角", "大澳", "梅窝", "长洲", "南丫岛", "坪洲", "赤猎角", "赤腊角", "贝澳",
+                   "塘福", "大屿山"],
         "葵青区": ["葵芳", "葵兴", "葵涌", "青衣", "荔景"],
         "北区": ["上水", "粉岭", "联和墟", "沙头角", "打鼓岭", "古洞", "皇后山", "坪輋"],
         "西贡区": ["西贡", "将军澳", "坑口", "宝琳", "日出康城", "清水湾", "康城", "调景岭"],
@@ -473,7 +488,7 @@ def stable_digest(*parts: Any) -> str:
 
 
 def stable_unit_interval(*parts: Any) -> float:
-    return int(stable_digest(*parts)[:16], 16) / float(16**16)
+    return int(stable_digest(*parts)[:16], 16) / float(16 ** 16)
 
 
 def stable_rng(*parts: Any) -> random.Random:
@@ -519,7 +534,7 @@ def find_premises_address(feature: Mapping[str, Any]) -> Mapping[str, Any] | Non
                 return current
             for key, value in current.items():
                 if key_normal_form(key) == "premisesaddress" and isinstance(
-                    value, Mapping
+                        value, Mapping
                 ):
                     return value
                 if isinstance(value, (Mapping, list)):
@@ -538,9 +553,9 @@ def extract_coordinates(feature: Mapping[str, Any]) -> dict[str, Any]:
     longitude: float | None = None
     latitude: float | None = None
     if (
-        isinstance(coords, Sequence)
-        and not isinstance(coords, (str, bytes))
-        and len(coords) >= 2
+            isinstance(coords, Sequence)
+            and not isinstance(coords, (str, bytes))
+            and len(coords) >= 2
     ):
         try:
             longitude = float(coords[0])
@@ -586,7 +601,7 @@ def normalize_three_d_item(item: Any, language: str) -> dict[str, str]:
 
 
 def normalize_address_components(
-    premises: Mapping[str, Any], language: str
+        premises: Mapping[str, Any], language: str
 ) -> dict[str, Any]:
     """Flatten one ALS language object without losing its real 3D array."""
 
@@ -726,11 +741,11 @@ def load_tqdm() -> Any:
 
 
 def iter_features_from_binary(
-    stream: BinaryIO,
-    source_ref: SourceRef,
-    *,
-    size_hint: int | None,
-    ijson_module: Any | None,
+        stream: BinaryIO,
+        source_ref: SourceRef,
+        *,
+        size_hint: int | None,
+        ijson_module: Any | None,
 ) -> Iterator[Mapping[str, Any]]:
     """Yield Feature objects from one FeatureCollection."""
 
@@ -767,12 +782,12 @@ def iter_features_from_binary(
         ) from exc
 
     if (
-        isinstance(root, Mapping)
-        and key_normal_form(get_ci(root, "type")) == "featurecollection"
+            isinstance(root, Mapping)
+            and key_normal_form(get_ci(root, "type")) == "featurecollection"
     ):
         features = get_ci(root, "features", default=[])
     elif (
-        isinstance(root, Mapping) and key_normal_form(get_ci(root, "type")) == "feature"
+            isinstance(root, Mapping) and key_normal_form(get_ci(root, "type")) == "feature"
     ):
         features = [root]
     elif isinstance(root, list):
@@ -805,7 +820,7 @@ def discover_inputs(input_dir: Path, recursive: bool, output_dir: Path) -> list[
 
 
 def iter_all_features(
-    paths: Sequence[Path], *, input_dir: Path, max_features: int | None
+        paths: Sequence[Path], *, input_dir: Path, max_features: int | None
 ) -> Iterator[tuple[Mapping[str, Any], SourceRef, int]]:
     ijson_module = import_ijson()
     emitted = 0
@@ -822,8 +837,8 @@ def iter_all_features(
                         info
                         for info in archive.infolist()
                         if not info.is_dir()
-                        and Path(info.filename).suffix.casefold()
-                        in {".geojson", ".json"}
+                           and Path(info.filename).suffix.casefold()
+                           in {".geojson", ".json"}
                     ),
                     key=lambda info: info.filename.casefold(),
                 )
@@ -833,12 +848,12 @@ def iter_all_features(
                     source_ref = SourceRef(display_name, info.filename)
                     with archive.open(info, "r") as stream:
                         for index, feature in enumerate(
-                            iter_features_from_binary(
-                                stream,
-                                source_ref,
-                                size_hint=info.file_size,
-                                ijson_module=ijson_module,
-                            )
+                                iter_features_from_binary(
+                                    stream,
+                                    source_ref,
+                                    size_hint=info.file_size,
+                                    ijson_module=ijson_module,
+                                )
                         ):
                             yield feature, source_ref, index
                             emitted += 1
@@ -848,12 +863,12 @@ def iter_all_features(
             source_ref = SourceRef(display_name)
             with path.open("rb") as stream:
                 for index, feature in enumerate(
-                    iter_features_from_binary(
-                        stream,
-                        source_ref,
-                        size_hint=path.stat().st_size,
-                        ijson_module=ijson_module,
-                    )
+                        iter_features_from_binary(
+                            stream,
+                            source_ref,
+                            size_hint=path.stat().st_size,
+                            ijson_module=ijson_module,
+                        )
                 ):
                     yield feature, source_ref, index
                     emitted += 1
@@ -862,11 +877,11 @@ def iter_all_features(
 
 
 def count_all_features(
-    paths: Sequence[Path],
-    *,
-    input_dir: Path,
-    max_features: int | None,
-    tqdm_factory: Any,
+        paths: Sequence[Path],
+        *,
+        input_dir: Path,
+        max_features: int | None,
+        tqdm_factory: Any,
 ) -> int:
     """First pass: count source features so generation can show a percentage."""
 
@@ -878,7 +893,7 @@ def count_all_features(
     )
     try:
         for _feature, _source_ref, _feature_index in iter_all_features(
-            paths, input_dir=input_dir, max_features=max_features
+                paths, input_dir=input_dir, max_features=max_features
         ):
             count += 1
             progress.update(1)
@@ -991,7 +1006,7 @@ def atoms_with_space(*items: tuple[str, str | None]) -> list[Atom]:
 
 
 def build_chunks(
-    components: Mapping[str, Any], language: str, three_d: Mapping[str, Any] | None
+        components: Mapping[str, Any], language: str, three_d: Mapping[str, Any] | None
 ) -> list[Chunk]:
     chunks: list[Chunk] = []
 
@@ -1124,7 +1139,7 @@ def separator_for(style: str, language: str, rng: random.Random) -> str:
 
 
 def render_chunks(
-    chunks: Sequence[Chunk], separator: str
+        chunks: Sequence[Chunk], separator: str
 ) -> tuple[str, list[dict[str, Any]]]:
     text_parts: list[str] = []
     entities: list[dict[str, Any]] = []
@@ -1151,7 +1166,12 @@ def render_chunks(
 
 
 def apply_localized_district(chunks: list[Chunk], effective_language: str, rng: random.Random) -> str | None:
-    """Randomly assign a localized sub-district and add it as a distinct new chunk."""
+    """Add a plausible sub-district drawn from SUB_DISTRICT_MAP when none exists.
+
+    Used so the model sees the full range of real Hong Kong sub-district names
+    (including ones that ALS rarely supplies as LocationName).  The value is
+    synthetic and is never treated as verified locality truth.
+    """
     # Already have a sub-district (from ALS location fallback or prior pass) — do not double up.
     if any(chunk.kind == "sub_district" for chunk in chunks):
         return None
@@ -1174,7 +1194,9 @@ def apply_localized_district(chunks: list[Chunk], effective_language: str, rng: 
     current_district_text = chunks[district_idx].atoms[0].text
     matched_official = None
 
-    for official_dist in lang_map.keys():
+    # Prefer exact / longest match so "九龍城區" does not accidentally match a
+    # shorter key that is a substring of another district name.
+    for official_dist in sorted(lang_map.keys(), key=len, reverse=True):
         if official_dist.upper() in current_district_text.upper():
             matched_official = official_dist
             break
@@ -1198,7 +1220,12 @@ def apply_localized_district(chunks: list[Chunk], effective_language: str, rng: 
     if not sub_districts:
         return None
 
-    assigned_sub = rng.choice(sub_districts)
+    # Shuffle then pick so every listed sub-district has equal chance and
+    # the fixed map order does not create a bias across many examples.
+    candidates = list(sub_districts)
+    rng.shuffle(candidates)
+    assigned_sub = candidates[0]
+
     new_chunk = Chunk(
         kind="sub_district",
         atoms=[Atom(assigned_sub, "SUB_DISTRICT")],
@@ -1355,6 +1382,7 @@ def apply_chinese_region_variation(chunks: Sequence[Chunk], fallback_language: s
                     scenario_added = "chinese_region_variation"
     return scenario_added
 
+
 def apply_region_abbreviation(chunks: Sequence[Chunk], rng: random.Random) -> bool:
     """Use a short English region code in a minority of augmented inputs."""
     for chunk in chunks:
@@ -1368,11 +1396,12 @@ def apply_region_abbreviation(chunks: Sequence[Chunk], rng: random.Random) -> bo
                 return True
     return False
 
+
 def apply_floor_unit_fusion(
-    chunks: list[Chunk],
-    three_d: Mapping[str, Any] | None,
-    language: str,
-    rng: random.Random,
+        chunks: list[Chunk],
+        three_d: Mapping[str, Any] | None,
+        language: str,
+        rng: random.Random,
 ) -> str | None:
     """Sometimes fuse floor + unit into compact / inverted forms.
 
@@ -1397,19 +1426,19 @@ def apply_floor_unit_fusion(
 
     # Do not fuse across a code-switch boundary
     if (
-        floor_chunk.source_language
-        and unit_chunk.source_language
-        and floor_chunk.source_language != unit_chunk.source_language
+            floor_chunk.source_language
+            and unit_chunk.source_language
+            and floor_chunk.source_language != unit_chunk.source_language
     ):
         return None
 
     chunk_lang = (
-        floor_chunk.source_language
-        or unit_chunk.source_language
-        or language
+            floor_chunk.source_language
+            or unit_chunk.source_language
+            or language
     )
     is_en = chunk_lang == "en" or (
-        chunk_lang is not None and not str(chunk_lang).startswith("zh")
+            chunk_lang is not None and not str(chunk_lang).startswith("zh")
     )
 
     floor_num = clean_text(three_d.get("floor_num"))
@@ -1509,9 +1538,9 @@ def apply_floor_unit_fusion(
             # with whitespace – avoids double spaces that shift offsets.
             first_ends_space = atoms and atoms[-1].text and atoms[-1].text[-1].isspace()
             second_starts_space = (
-                second_atoms
-                and second_atoms[0].text
-                and second_atoms[0].text[0].isspace()
+                    second_atoms
+                    and second_atoms[0].text
+                    and second_atoms[0].text[0].isspace()
             )
             if not first_ends_space and not second_starts_space:
                 atoms.append(Atom(" ", None))
@@ -1645,13 +1674,13 @@ def reorder_chunks(chunks: list[Chunk], rng: random.Random) -> tuple[list[Chunk]
 
 
 def mix_language_chunks(
-    base_chunks: Sequence[Chunk],
-    alternate_chunks: Sequence[Chunk],
-    *,
-    base_language: str,
-    alternate_language: str,
-    mode: str,
-    rng: random.Random,
+        base_chunks: Sequence[Chunk],
+        alternate_chunks: Sequence[Chunk],
+        *,
+        base_language: str,
+        alternate_language: str,
+        mode: str,
+        rng: random.Random,
 ) -> tuple[list[Chunk], list[dict[str, str]], str]:
     """Replace whole semantic chunks with their parallel-language versions."""
 
@@ -1724,7 +1753,7 @@ def _latin_typo(text: str, rng: random.Random) -> tuple[str, str] | None:
     operation = rng.choice(["delete", "transpose", "repeat", "keyboard_neighbour"])
     if operation == "transpose" and len(word) >= 4:
         index = rng.randrange(1, len(word) - 1)
-        changed = word[:index] + word[index + 1] + word[index] + word[index + 2 :]
+        changed = word[:index] + word[index + 1] + word[index] + word[index + 2:]
     elif operation == "repeat":
         index = rng.randrange(1, len(word))
         changed = word[:index] + word[index] + word[index:]
@@ -1741,12 +1770,12 @@ def _latin_typo(text: str, rng: random.Random) -> tuple[str, str] | None:
         replacement = rng.choice(QWERTY_NEIGHBOURS[original.casefold()])
         if original.isupper():
             replacement = replacement.upper()
-        changed = word[:index] + replacement + word[index + 1 :]
+        changed = word[:index] + replacement + word[index + 1:]
     else:
         operation = "delete"
         index = rng.randrange(1, len(word))
-        changed = word[:index] + word[index + 1 :]
-    return text[: match.start()] + changed + text[match.end() :], operation
+        changed = word[:index] + word[index + 1:]
+    return text[: match.start()] + changed + text[match.end():], operation
 
 
 def _han_typo(text: str, rng: random.Random) -> tuple[str, str] | None:
@@ -1757,12 +1786,12 @@ def _han_typo(text: str, rng: random.Random) -> tuple[str, str] | None:
         return None
     index = rng.choice(positions)
     if rng.random() < 0.72:
-        return text[:index] + text[index + 1 :], "delete_character"
+        return text[:index] + text[index + 1:], "delete_character"
     return text[:index] + text[index] + text[index:], "repeat_character"
 
 
 def introduce_minor_typo(
-    chunks: Sequence[Chunk], rng: random.Random
+        chunks: Sequence[Chunk], rng: random.Random
 ) -> dict[str, str] | None:
     """Apply one recoverable-looking typo to a name, never to floor/unit truth."""
 
@@ -1780,8 +1809,8 @@ def introduce_minor_typo(
             if atom.label not in eligible_labels:
                 continue
             if (
-                re.search(r"[A-Za-z]{4,}", atom.text)
-                or len(re.findall(r"[\u3400-\u9fff]", atom.text)) >= 2
+                    re.search(r"[A-Za-z]{4,}", atom.text)
+                    or len(re.findall(r"[\u3400-\u9fff]", atom.text)) >= 2
             ):
                 candidates.append((chunk, atom))
     if not candidates:
@@ -1806,6 +1835,7 @@ def introduce_minor_typo(
         "original": original,
         "corrupted": atom.text,
     }
+
 
 def synthetic_three_d(
         group_id: str, language: str, seed: int, key: Any, is_village: bool = False
@@ -2241,7 +2271,7 @@ def unit_shape(profile: Mapping[str, Any] | None) -> str:
 
 
 def address_shapes(
-    components: Mapping[str, Any], three_d: Mapping[str, Any] | None
+        components: Mapping[str, Any], three_d: Mapping[str, Any] | None
 ) -> list[str]:
     shapes: list[str] = []
     if clean_text(components.get("village_name")):
@@ -2251,7 +2281,7 @@ def address_shapes(
     if clean_text(components.get("estate_name")):
         shapes.append("estate")
     if clean_text(components.get("block_no")) or clean_text(
-        components.get("block_descriptor")
+            components.get("block_descriptor")
     ):
         shapes.append("block")
     if clean_text(components.get("building_name")):
@@ -2259,7 +2289,7 @@ def address_shapes(
     else:
         shapes.append("no_building_name")
     if clean_text(components.get("phase_name")) or clean_text(
-        components.get("phase_no")
+            components.get("phase_no")
     ):
         shapes.append("phase")
     case = three_d_case(three_d)
@@ -2268,10 +2298,10 @@ def address_shapes(
 
 
 def choose_split(
-    group_id: str,
-    seed: int,
-    train_ratio: float,
-    validation_ratio: float,
+        group_id: str,
+        seed: int,
+        train_ratio: float,
+        validation_ratio: float,
 ) -> str:
     value = stable_unit_interval(seed, group_id, "split")
     if value < train_ratio:
@@ -2282,7 +2312,7 @@ def choose_split(
 
 
 def component_payload(
-    components: Mapping[str, Any], three_d: Mapping[str, Any] | None
+        components: Mapping[str, Any], three_d: Mapping[str, Any] | None
 ) -> dict[str, Any]:
     payload = {
         key: value for key, value in components.items() if key != "three_d_addresses"
@@ -2296,7 +2326,7 @@ def component_payload(
 
 
 def sanitize_component_payload(
-    payload: dict[str, Any], chunks: Sequence[Chunk]
+        payload: dict[str, Any], chunks: Sequence[Chunk]
 ) -> dict[str, Any]:
     """Clear source fields whose semantic chunk/label is absent from the input.
 
@@ -2339,43 +2369,44 @@ def sanitize_component_payload(
 
     return sanitized
 
+
 def build_training_example(
-    *,
-    components: Mapping[str, Any],
-    language: str,
-    three_d: Mapping[str, Any] | None,
-    three_d_source: str,
-    split: str,
-    group_id: str,
-    geo_address: str,
-    csu_id: str,
-    coordinates: Mapping[str, Any],
-    source_ref: SourceRef,
-    feature_index: int,
-    variant_index: int,
-    profile_index: int,
-    variants_per_address: int,
-    messy_rate: float,
-    typo_rate: float,
-    component_drop_rate: float,
-    region_abbreviation_rate: float,
-    fullwidth_punctuation_rate: float,
-    chinese_separator_noise_rate: float,
-    synthetic_subdistrict_rate: float,
-    district_suffix_noise_rate: float,
-    chinese_region_variation_rate: float,
-    floor_unit_fusion_rate: float,
-    canonical_floor_unit_fusion_rate: float,
-    english_upper_rate: float,
-    english_title_rate: float,
-    english_lower_rate: float,
-    english_mixed_rate: float,
-    seed: int,
-    alternate_components: Mapping[str, Any] | None = None,
-    alternate_language: str | None = None,
-    alternate_three_d: Mapping[str, Any] | None = None,
-    output_language: str | None = None,
-    mix_mode: str | None = None,
+        *,
+        components: Mapping[str, Any],
+        language: str,
+        three_d: Mapping[str, Any] | None,
+        three_d_source: str,
+        split: str,
+        group_id: str,
+        geo_address: str,
+        csu_id: str,
+        coordinates: Mapping[str, Any],
+        source_ref: SourceRef,
+        feature_index: int,
+        variant_index: int,
+        profile_index: int,
+        variants_per_address: int,
+        messy_rate: float,
+        typo_rate: float,
+        component_drop_rate: float,
+        region_abbreviation_rate: float,
+        fullwidth_punctuation_rate: float,
+        chinese_separator_noise_rate: float,
+        synthetic_subdistrict_rate: float,
+        district_suffix_noise_rate: float,
+        chinese_region_variation_rate: float,
+        floor_unit_fusion_rate: float,
+        canonical_floor_unit_fusion_rate: float,
+        english_upper_rate: float,
+        english_title_rate: float,
+        english_lower_rate: float,
+        english_mixed_rate: float,
+        seed: int,
+        alternate_components: Mapping[str, Any] | None = None,
+        alternate_language: str | None = None,
+        alternate_three_d: Mapping[str, Any] | None = None,
+        output_language: str | None = None,
+        mix_mode: str | None = None,
 ) -> dict[str, Any]:
     effective_language = output_language or language
     rng = stable_rng(
@@ -2413,8 +2444,8 @@ def build_training_example(
     is_structurally_messy = False
 
     if (
-        variant_index > 0
-        and rng.random() < chinese_separator_noise_rate
+            variant_index > 0
+            and rng.random() < chinese_separator_noise_rate
     ):
         for chunk in chunks:
             # Only apply this to Chinese components
@@ -2434,8 +2465,10 @@ def build_training_example(
                             atom.text = re.sub(r"(\d+)([\u4e00-\u9fa5]+)", r"\1 \2", atom.text)
 
         scenarios.append("chinese_messy_separation")
-    # Synthetic sub-districts are opt-in because a district alone is not enough
-    # to infer the address's true locality.
+    # Synthetic sub-districts teach the model the real vocabulary of
+    # Hong Kong sub-districts.  Applied whenever the address has a
+    # recognisable district and no existing sub-district chunk.
+    # Rate is controlled by --synthetic-subdistrict-rate (default 0.30).
     local_district_rng = stable_rng(
         seed,
         group_id,
@@ -2445,10 +2478,7 @@ def build_training_example(
         mix_mode or "",
         "local_district"
     )
-    if (
-        variant_index > 0
-        and local_district_rng.random() < synthetic_subdistrict_rate
-    ):
+    if local_district_rng.random() < synthetic_subdistrict_rate:
         local_scenario = apply_localized_district(
             chunks, effective_language, local_district_rng
         )
@@ -2491,7 +2521,7 @@ def build_training_example(
             if has_english:
                 operations.extend(["abbreviation"])
             for operation in rng.sample(
-                operations, min(operation_count, len(operations))
+                    operations, min(operation_count, len(operations))
             ):
                 if operation == "reorder":
                     chunks, mode = reorder_chunks(chunks, rng)
@@ -2594,15 +2624,15 @@ def build_training_example(
         )
         abbreviation_eligible = variant_index > 0
     if (
-        abbreviation_eligible
-        and abbreviation_rng.random() < adjusted_region_abbreviation_rate
-        and apply_region_abbreviation(chunks, abbreviation_rng)
+            abbreviation_eligible
+            and abbreviation_rng.random() < adjusted_region_abbreviation_rate
+            and apply_region_abbreviation(chunks, abbreviation_rng)
     ):
         scenarios.append("english_region_abbreviation")
 
     if (
-        abbreviation_eligible
-        and abbreviation_rng.random() < chinese_region_variation_rate
+            abbreviation_eligible
+            and abbreviation_rng.random() < chinese_region_variation_rate
     ):
         chinese_scenario = apply_chinese_region_variation(
             chunks, effective_language, abbreviation_rng
@@ -2737,9 +2767,9 @@ def build_training_example(
         "address_shapes": address_shapes(components, three_d),
         "scenario": list(dict.fromkeys(scenarios)),
         "is_messy": (
-            is_structurally_messy
-            or corruption is not None
-            or bool(omitted_component_kinds)
+                is_structurally_messy
+                or corruption is not None
+                or bool(omitted_component_kinds)
         ),
         "is_structurally_messy": is_structurally_messy,
         "has_omission": bool(omitted_component_kinds),
@@ -2767,11 +2797,11 @@ def build_training_example(
 
 
 def select_real_three_d(
-    profiles: Sequence[Mapping[str, Any]],
-    maximum: int,
-    *,
-    seed: int,
-    group_id: str,
+        profiles: Sequence[Mapping[str, Any]],
+        maximum: int,
+        *,
+        seed: int,
+        group_id: str,
 ) -> list[Mapping[str, Any]]:
     if maximum <= 0 or len(profiles) <= maximum:
         return list(profiles)
@@ -2784,11 +2814,11 @@ def select_real_three_d(
 
 
 def select_real_three_d_indices(
-    profile_count: int,
-    maximum: int,
-    *,
-    seed: int,
-    group_id: str,
+        profile_count: int,
+        maximum: int,
+        *,
+        seed: int,
+        group_id: str,
 ) -> list[int]:
     indices = list(range(profile_count))
     if maximum <= 0 or profile_count <= maximum:
@@ -2801,11 +2831,11 @@ def select_real_three_d_indices(
 
 
 def derive_group_id(
-    premises: Mapping[str, Any],
-    components_by_language: Mapping[str, Mapping[str, Any]],
-    coordinates: Mapping[str, Any],
-    source_ref: SourceRef,
-    feature_index: int,
+        premises: Mapping[str, Any],
+        components_by_language: Mapping[str, Mapping[str, Any]],
+        coordinates: Mapping[str, Any],
+        source_ref: SourceRef,
+        feature_index: int,
 ) -> tuple[str, str, str]:
     geo_address = clean_text(get_ci(premises, "GeoAddress"))
     csu_info = ensure_mapping(get_ci(premises, "BuildingCsuInformation"))
@@ -2936,8 +2966,8 @@ class Audit:
             for region in observed_regions:
                 self.by_observed_region[region] += 1
             if any(
-                canonical_region(region, "en") in ENGLISH_REGION_ABBREVIATIONS
-                for region in observed_regions
+                    canonical_region(region, "en") in ENGLISH_REGION_ABBREVIATIONS
+                    for region in observed_regions
             ):
                 self.counts["examples_with_observed_english_region"] += 1
         else:
@@ -2947,7 +2977,7 @@ class Audit:
 
 
 def counter_rows(
-    counter: Counter[str], limit: int | None = None
+        counter: Counter[str], limit: int | None = None
 ) -> list[tuple[str, int]]:
     rows = counter.most_common(limit)
     return [(key or "<missing>", count) for key, count in rows]
@@ -2964,16 +2994,16 @@ def markdown_table(rows: Sequence[tuple[str, int]], left_title: str) -> str:
 
 
 def write_audit_files(
-    output_dir: Path,
-    audit: Audit,
-    *,
-    input_paths: Sequence[Path],
-    args: argparse.Namespace,
+        output_dir: Path,
+        audit: Audit,
+        *,
+        input_paths: Sequence[Path],
+        args: argparse.Namespace,
 ) -> None:
     overlap = (
-        (audit.groups_by_split["train"] & audit.groups_by_split["validation"])
-        | (audit.groups_by_split["train"] & audit.groups_by_split["test"])
-        | (audit.groups_by_split["validation"] & audit.groups_by_split["test"])
+            (audit.groups_by_split["train"] & audit.groups_by_split["validation"])
+            | (audit.groups_by_split["train"] & audit.groups_by_split["test"])
+            | (audit.groups_by_split["validation"] & audit.groups_by_split["test"])
     )
     total_examples = audit.counts["examples"]
     messy_rate = (
@@ -3079,7 +3109,7 @@ def write_audit_files(
                 "dataset_schema_version": DATASET_SCHEMA_VERSION,
                 "span_labels": LABELS,
                 "bio_labels": ["O"]
-                + [f"{prefix}-{label}" for label in LABELS for prefix in ("B", "I")],
+                              + [f"{prefix}-{label}" for label in LABELS for prefix in ("B", "I")],
                 "offset_unit": "Unicode code points",
             },
             ensure_ascii=False,
@@ -3213,56 +3243,56 @@ before choosing sampling weights.
 def write_dataset_card(output_dir: Path) -> None:
     card = """# Hong Kong multilingual address-component dataset
 
-## Files
+    ## Files
 
-- `train.jsonl`, `validation.jsonl`, `test.jsonl`: augmented span-labelled data.
-- `structured_records.jsonl`: loss-minimized extraction of each source feature,
-  including all real ALS 3D arrays before training-time sampling.
-- `rejects.jsonl`: records that could not be used, with reasons.
-- `labels.json`: span labels and their BIO equivalents.
-- `audit_summary.json`, `audit_report.md`: distributions and leakage checks.
-- `schema_paths.json`: observed source paths for schema-drift review.
+    - `train.jsonl`, `validation.jsonl`, `test.jsonl`: augmented span-labelled data.
+    - `structured_records.jsonl`: loss-minimized extraction of each source feature,
+      including all real ALS 3D arrays before training-time sampling.
+    - `rejects.jsonl`: records that could not be used, with reasons.
+    - `labels.json`: span labels and their BIO equivalents.
+    - `audit_summary.json`, `audit_report.md`: distributions and leakage checks.
+    - `schema_paths.json`: observed source paths for schema-drift review.
 
-## Training fields
+    ## Training fields
 
-Use `text` as model input and `entities` as character-span supervision.
-`observed_components` contains only component text actually present in the
-input; an omitted component has no entity and no observed output. Each entity's
-`component_kind` distinguishes shared labels such as street versus village
-`BUILDING_NUMBER`. `components` clears source subfields whose owning
-chunk/label was omitted; it is audit metadata, not the training target.
-`parallel_components` retains canonical bilingual source metadata for mixed
-rows. Keep examples with the same `group_id` in one split; the generator
-already enforces this.
+    Use `text` as model input and `entities` as character-span supervision.
+    `observed_components` contains only component text actually present in the
+    input; an omitted component has no entity and no observed output. Each entity's
+    `component_kind` distinguishes shared labels such as street versus village
+    `BUILDING_NUMBER`. `components` clears source subfields whose owning
+    chunk/label was omitted; it is audit metadata, not the training target.
+    `parallel_components` retains canonical bilingual source metadata for mixed
+    rows. Keep examples with the same `group_id` in one split; the generator
+    already enforces this.
 
-`has_omission` and `omitted_component_kinds` record incomplete inputs. English
-regions are canonicalized to `Hong Kong`, `Kowloon`, and `New Territories`,
-while abbreviations are generated only as a minority scenario.
+    `has_omission` and `omitted_component_kinds` record incomplete inputs. English
+    regions are canonicalized to `Hong Kong`, `Kowloon`, and `New Territories`,
+    while abbreviations are generated only as a minority scenario.
 
-Rows whose `language` starts with `mixed-` contain component-level Chinese and
-English switching. `parallel_components` keeps both canonical language forms,
-`component_languages` identifies the source language of each rendered chunk,
-and `mix_mode` describes whether one component, the 3D portion, or roughly half
-the address was switched.
+    Rows whose `language` starts with `mixed-` contain component-level Chinese and
+    English switching. `parallel_components` keeps both canonical language forms,
+    `component_languages` identifies the source language of each rendered chunk,
+    and `mix_mode` describes whether one component, the 3D portion, or roughly half
+    the address was switched.
 
-`has_typo` rows contain exactly one low-rate typo in an address name. The
-`corruptions` array preserves the original and corrupted text. Floor, unit, and
-building-number identifiers are never typo-corrupted.
+    `has_typo` rows contain exactly one low-rate typo in an address name. The
+    `corruptions` array preserves the original and corrupted text. Floor, unit, and
+    building-number identifiers are never typo-corrupted.
 
-`three_d_source` has three possible values:
+    `three_d_source` has three possible values:
 
-- `als`: floor/unit data is present in the government record.
-- `synthetic`: floor/unit syntax was generated to teach parsing only.
-- `none`: a valid 2D/no-floor/no-unit example.
+    - `als`: floor/unit data is present in the government record.
+    - `synthetic`: floor/unit syntax was generated to teach parsing only.
+    - `none`: a valid 2D/no-floor/no-unit example.
 
-`floor_shape` and `unit_shape` expose coarse audit categories such as ground,
-basement, duplex/range, alphabetic unit, leading-zero unit, and combined units.
+    `floor_shape` and `unit_shape` expose coarse audit categories such as ground,
+    basement, duplex/range, alphabetic unit, leading-zero unit, and combined units.
 
-Never use `synthetic` rows as evidence that a physical flat, floor, or shop
-exists. For exact address resolution, combine a token classifier with retrieval
-against the address gazetteer; a classifier alone cannot reliably invent or
-validate arbitrary 3D premises.
-"""
+    Never use `synthetic` rows as evidence that a physical flat, floor, or shop
+    exists. For exact address resolution, combine a token classifier with retrieval
+    against the address gazetteer; a classifier alone cannot reliably invent or
+    validate arbitrary 3D premises.
+    """
     (output_dir / "DATASET_CARD.md").write_text(card, encoding="utf-8")
 
 
@@ -3356,7 +3386,7 @@ def build_dataset(args: argparse.Namespace) -> Path:
 
     try:
         for feature, source_ref, feature_index in iter_all_features(
-            input_paths, input_dir=input_dir, max_features=args.max_features
+                input_paths, input_dir=input_dir, max_features=args.max_features
         ):
             if generation_progress is not None:
                 generation_progress.update(1)
@@ -3394,7 +3424,7 @@ def build_dataset(args: argparse.Namespace) -> Path:
                 language
                 for language in LANGUAGE_ORDER
                 if language in components_by_language
-                and address_has_content(components_by_language[language])
+                   and address_has_content(components_by_language[language])
             ]
             if not usable_languages:
                 audit.counts["rejected_features"] += 1
@@ -3495,15 +3525,15 @@ def build_dataset(args: argparse.Namespace) -> Path:
                         is_village = bool(clean_text(components.get("village_name")))
 
                         if (
-                            profile is None
-                            and stable_unit_interval(
-                                args.seed,
-                                group_id,
-                                profile_index,
-                                variant_index,
-                                "synthetic_gate",
-                            )
-                            < args.synthetic_3d_rate
+                                profile is None
+                                and stable_unit_interval(
+                            args.seed,
+                            group_id,
+                            profile_index,
+                            variant_index,
+                            "synthetic_gate",
+                        )
+                                < args.synthetic_3d_rate
                         ):
                             profile = synthetic_three_d(
                                 group_id, language, args.seed, (profile_index, variant_index), is_village
@@ -3549,18 +3579,18 @@ def build_dataset(args: argparse.Namespace) -> Path:
                         audit.observe_example(example)
 
             if (
-                args.mixed_variants_per_address > 0
-                and "en" in usable_languages
-                and any(language.startswith("zh-") for language in usable_languages)
+                    args.mixed_variants_per_address > 0
+                    and "en" in usable_languages
+                    and any(language.startswith("zh-") for language in usable_languages)
             ):
                 english_components = components_by_language["en"]
                 english_profiles = ensure_list(
                     english_components.get("three_d_addresses")
                 )
                 for chinese_language in (
-                    language
-                    for language in ("zh-Hant", "zh-Hans")
-                    if language in usable_languages
+                        language
+                        for language in ("zh-Hant", "zh-Hans")
+                        if language in usable_languages
                 ):
                     chinese_components = components_by_language[chinese_language]
                     chinese_profiles = ensure_list(
@@ -3648,7 +3678,7 @@ def build_dataset(args: argparse.Namespace) -> Path:
                             mode_pool = (
                                 MIX_MODES
                                 if english_profile is not None
-                                and chinese_profile is not None
+                                   and chinese_profile is not None
                                 else MIX_MODES[2:]
                             )
                             mode_index = int(
@@ -3740,7 +3770,7 @@ def build_dataset(args: argparse.Namespace) -> Path:
                                 audit.counts["empty_examples_skipped"] += 1
                                 continue
                             if not ensure_mapping(example.get("provenance")).get(
-                                "code_switched"
+                                    "code_switched"
                             ):
                                 audit.counts["code_switch_not_applicable_skipped"] += 1
                                 continue
@@ -3860,10 +3890,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--synthetic-subdistrict-rate",
         type=float,
-        default=0.0,
+        default=0.30,
         help=(
-            "Opt-in probability of adding a plausible but unverified sub-district "
-            "when ALS supplies none; zero preserves source truth"
+            "Probability of injecting a sub-district drawn from SUB_DISTRICT_MAP "
+            "when the address has a recognisable district and no existing "
+            "sub-district (ALS LocationName or prior synthetic).  The value is "
+            "never treated as verified locality; it only teaches the model the "
+            "real vocabulary of Hong Kong sub-districts.  Set to 0 to disable."
         ),
     )
     parser.add_argument(
@@ -3919,10 +3952,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--seed", type=int, default=20260714, help="Deterministic seed")
     parser.add_argument("--train-ratio", type=float, default=0.80)
     parser.add_argument("--validation-ratio", type=float, default=0.10)
-    parser.add_argument("--english-upper-rate", type=float, default=0.15, help="Relative weight for all-caps English text")
-    parser.add_argument("--english-title-rate", type=float, default=0.25, help="Relative weight for Title Case English text")
-    parser.add_argument("--english-lower-rate", type=float, default=0.55, help="Relative weight for lowercase English text")
-    parser.add_argument("--english-mixed-rate", type=float, default=0.05, help="Relative weight for mixed-case English text")
+    parser.add_argument("--english-upper-rate", type=float, default=0.15,
+                        help="Relative weight for all-caps English text")
+    parser.add_argument("--english-title-rate", type=float, default=0.25,
+                        help="Relative weight for Title Case English text")
+    parser.add_argument("--english-lower-rate", type=float, default=0.55,
+                        help="Relative weight for lowercase English text")
+    parser.add_argument("--english-mixed-rate", type=float, default=0.05,
+                        help="Relative weight for mixed-case English text")
     parser.add_argument(
         "--simplified",
         action=argparse.BooleanOptionalAction,
