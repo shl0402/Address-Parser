@@ -56,7 +56,11 @@ python extract_compact_hk_address_jsonl_edit.py \
 
 ```bash
 python village_dataset_gen.py      # version 1
+```
+```bash
 python village_dataset_genV2.py    # version 2 (more villages)
+```
+```bash
 python village_dataset_genV3_edit.py    # version 3 (ammended and merged v1 and v2)
 ```
 
