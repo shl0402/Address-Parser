@@ -96,8 +96,8 @@ Three model variants are provided:
 | `train_bert.ipynb`          | XLM-RoBERTa-base          |
 | `train_bert_largeV4.ipynb`  | [XLM-RoBERTa-large](https://huggingface.co/shl0402/large-roberta-address-parser)         |
 
-Simply open the desired notebook and run all cells.  
-The notebooks expect the three JSONL files produced by `merge_data.py` to be present in the working directory.
+Simply open the desired notebook and run first cell to train.  
+The notebooks expect the three JSONL files produced by in the above to be present in the working directory.
 
 ---
 
