@@ -103,7 +103,7 @@ The notebooks expect the three JSONL files produced by `merge_data.py` to be pre
 
 ## 4. Inference & Evaluation
 
-Use `split_test.ipynb`.
+Use `bilstm_parser.py`.
 
 The key function is `split_address(...)`, which:
 
