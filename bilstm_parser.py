@@ -595,7 +595,7 @@ class HKAddressParserBiLSTM:
 if __name__ == "__main__":
     # Example: load one of the finished trials from the grid search
     # Change the path and the hyper-parameters to match the trial you want
-    MODEL_DIR = "bilstm_v7_lr0.00015_do0.4_wd1e-05_h256_l1"
+    MODEL_DIR = "bilstm_v7"
 
     print(f"Loading model from {MODEL_DIR}...")
     parser = HKAddressParserBiLSTM(
