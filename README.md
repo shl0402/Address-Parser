@@ -60,6 +60,7 @@ python village_dataset_gen.py      # version 1
 ```bash
 python village_dataset_genV2.py    # version 2 (more villages)
 ```
+Version 3 is suggested
 ```bash
 python village_dataset_genV3_edit.py    # version 3 (ammended and merged v1 and v2)
 ```
