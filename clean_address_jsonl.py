@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 Clean + Augment Hong Kong address JSONL data.
@@ -6,6 +7,14 @@ Clean + Augment Hong Kong address JSONL data.
    - Moves block / phase tokens that were incorrectly placed inside
      building_name or estate_name into the correct dedicated fields,
      then strips them from the name fields.
+   - Fixes street_name that incorrectly includes building_number
+     (common data error): strips the number from street_name, or
+     extracts a trailing building number from street_name into the
+     building_number field when the latter is empty.
+   - Ensures the structured output forms a strict non-overlapping
+     partition of the input text (required for BIO NER).  Records
+     that still contain repeated / overlapping entity values after
+     cleaning are reported and removed from the output JSONL.
 
 2. Data Augmentation (optional, controlled by variables below)
    - With probability AUGMENT_PROB, randomly wrap 1 or more address
@@ -29,7 +38,7 @@ Usage:
                                   [--no-augment] [--seed 42]
 
 Produces:
-    <name>_cleaned.jsonl          (cleaned + optionally augmented)
+    <name>_cleaned.jsonl          (cleaned + optionally augmented; invalid partitions removed)
     cleaning_report.txt
 """
 
@@ -93,6 +102,12 @@ BLOCK_PATTERNS = [
     re.compile(r"([0-9A-Za-z]{1,4}屋)", re.UNICODE),
 ]
 
+# Trailing building-number pattern (Arabic / Chinese digits + optional 號)
+BUILDING_NUMBER_TAIL = re.compile(
+    r"([0-9０-９一二三四五六七八九十百千零]+號?)\s*$",
+    re.UNICODE,
+)
+
 
 def _find_best(text: str, patterns: List[re.Pattern]) -> Optional[Tuple[str, int, int]]:
     """Prefer rightmost, then longest match."""
@@ -132,6 +147,51 @@ def extract_block(text: str) -> Optional[Tuple[str, str]]:
     return cleaned, token.strip()
 
 
+def _strip_or_extract_building_number(
+    street: str, bnum: str
+) -> Tuple[str, str, Optional[str]]:
+    """
+    If building_number is present inside street_name, strip it out of street.
+    If building_number is empty but street ends with a number(+號), extract it.
+    Returns (new_street, new_bnum, change_description or None).
+    """
+    street = (street or "").strip()
+    bnum = (bnum or "").strip()
+
+    if not street:
+        return street, bnum, None
+
+    # Case 1: building_number already set and appears inside street → strip
+    if bnum and bnum in street:
+        # Prefer suffix (most common: "...街29號")
+        if street.endswith(bnum):
+            new_street = street[: -len(bnum)].rstrip(" -–—/，,")
+            new_street = re.sub(r"\s{2,}", " ", new_street).strip()
+            if new_street != street:
+                return new_street, bnum, f"stripped '{bnum}' from street_name (suffix)"
+        else:
+            # Remove rightmost occurrence
+            idx = street.rfind(bnum)
+            if idx >= 0:
+                before = street[:idx].rstrip(" -–—/，,")
+                after = street[idx + len(bnum) :].lstrip(" -–—/，,")
+                new_street = re.sub(r"\s{2,}", " ", (before + " " + after).strip()).strip()
+                if new_street != street:
+                    return new_street, bnum, f"stripped '{bnum}' from street_name"
+
+    # Case 2: no building_number, try to extract a trailing number from street
+    if not bnum:
+        m = BUILDING_NUMBER_TAIL.search(street)
+        if m:
+            extracted = m.group(1).strip()
+            new_street = street[: m.start()].rstrip(" -–—/，,")
+            new_street = re.sub(r"\s{2,}", " ", new_street).strip()
+            if new_street and extracted:
+                return new_street, extracted, f"extracted building_number '{extracted}' ← street_name"
+
+    return street, bnum, None
+
+
 def clean_record(rec: Dict[str, Any]) -> Tuple[Dict[str, Any], List[str]]:
     """Clean one record. Returns (new_record, list_of_change_descriptions)."""
     changes: List[str] = []
@@ -139,11 +199,9 @@ def clean_record(rec: Dict[str, Any]) -> Tuple[Dict[str, Any], List[str]]:
     if not isinstance(out, dict):
         return rec, changes
 
-    line1 = out.get("line1")
-    if not isinstance(line1, dict):
-        return rec, changes
+    new_line1 = dict(out.get("line1") or {})
+    new_line2 = dict(out.get("line2") or {})
 
-    new_line1 = dict(line1)
     bname = (new_line1.get("building_name") or "").strip()
     ename = (new_line1.get("estate_name") or "").strip()
     block = (new_line1.get("block") or "").strip()
@@ -204,15 +262,105 @@ def clean_record(rec: Dict[str, Any]) -> Tuple[Dict[str, Any], List[str]]:
         new_line1["building_name"] = ""
         changes.append("cleared building_name (duplicate of estate_name)")
 
-    for key in ("building_name", "estate_name", "block", "phase"):
+    # 6. Fix street_name that embeds building_number (or extract number when missing)
+    street = (new_line2.get("street_name") or "").strip()
+    bnum = (new_line2.get("building_number") or "").strip()
+    new_street, new_bnum, desc = _strip_or_extract_building_number(street, bnum)
+    if desc:
+        new_line2["street_name"] = new_street
+        new_line2["building_number"] = new_bnum
+        changes.append(desc)
+
+    # Final strip of all string fields
+    for key in ("building_name", "estate_name", "block", "phase", "flat", "floor"):
         if key in new_line1 and isinstance(new_line1[key], str):
             new_line1[key] = new_line1[key].strip()
+    for key in (
+        "building_number",
+        "street_name",
+        "village_name",
+        "sub_district",
+        "district",
+        "region",
+    ):
+        if key in new_line2 and isinstance(new_line2[key], str):
+            new_line2[key] = new_line2[key].strip()
 
     new_out = dict(out)
     new_out["line1"] = new_line1
+    new_out["line2"] = new_line2
     new_rec = dict(rec)
     new_rec["output"] = new_out
     return new_rec, changes
+
+
+# ---------------------------------------------------------------------------
+# Partition validation (required for BIO NER)
+# ---------------------------------------------------------------------------
+
+def validate_partition(rec: Dict[str, Any]) -> Tuple[bool, str]:
+    """
+    Verify that every non-empty label value is an exact substring of the input
+    and that the chosen spans do not overlap.  Longer values are assigned
+    first so that a container (e.g. street containing a number) will claim
+    the span and cause the nested value to fail unless it was already cleaned.
+
+    Returns (is_valid, reason).  reason is empty on success.
+    """
+    input_text = rec.get("input") or ""
+    if not input_text:
+        return False, "empty input"
+
+    out = rec.get("output") or {}
+    line1 = out.get("line1") or {}
+    line2 = out.get("line2") or {}
+
+    components: List[Tuple[str, str]] = []
+    for section, d in (("line1", line1), ("line2", line2)):
+        if not isinstance(d, dict):
+            continue
+        for k, v in d.items():
+            v = (v or "").strip()
+            if v:
+                components.append((f"{section}.{k}", v))
+
+    if not components:
+        return True, ""
+
+    # Longer first → containers claim span before nested pieces
+    comps_sorted = sorted(components, key=lambda x: (-len(x[1]), x[0]))
+
+    used: List[Tuple[int, int]] = []  # (start, end) exclusive
+
+    for fname, val in comps_sorted:
+        # Collect all exact occurrences
+        starts: List[int] = []
+        pos = 0
+        while True:
+            idx = input_text.find(val, pos)
+            if idx < 0:
+                break
+            starts.append(idx)
+            pos = idx + 1
+
+        if not starts:
+            return False, f"value '{val}' ({fname}) not found in input"
+
+        # Pick the first occurrence that does not overlap any already used span
+        chosen = None
+        for s in starts:
+            e = s + len(val)
+            overlaps = any(max(s, us) < min(e, ue) for us, ue in used)
+            if not overlaps:
+                chosen = (s, e)
+                break
+
+        if chosen is None:
+            return False, f"no non-overlapping span left for '{val}' ({fname})"
+
+        used.append(chosen)
+
+    return True, ""
 
 
 # ---------------------------------------------------------------------------
@@ -380,6 +528,7 @@ def process_file(
 ) -> Dict[str, Any]:
     stats = Counter()
     sample_changes: List[Dict[str, Any]] = []
+    sample_removed: List[Dict[str, Any]] = []
     rng = random.Random(seed)
 
     with src.open("r", encoding="utf-8") as fin, dst.open("w", encoding="utf-8") as fout:
@@ -399,11 +548,56 @@ def process_file(
             # ---- 1. Cleaning ----
             cleaned, clean_changes = clean_record(rec)
 
-            # ---- 2. Augmentation (updates both input AND the matching output tags) ----
+            # ---- 2. Partition validation (strict non-overlapping spans) ----
+            is_valid, reason = validate_partition(cleaned)
+            if not is_valid:
+                stats["removed"] += 1
+                if len(sample_removed) < max_samples:
+                    l1 = cleaned["output"].get("line1") or {}
+                    l2 = cleaned["output"].get("line2") or {}
+                    sample_removed.append(
+                        {
+                            "line": line_no,
+                            "input": (cleaned.get("input") or "")[:160],
+                            "reason": reason,
+                            "labels": {
+                                "flat": l1.get("flat", ""),
+                                "floor": l1.get("floor", ""),
+                                "block": l1.get("block", ""),
+                                "building_name": l1.get("building_name", ""),
+                                "phase": l1.get("phase", ""),
+                                "estate_name": l1.get("estate_name", ""),
+                                "building_number": l2.get("building_number", ""),
+                                "street_name": l2.get("street_name", ""),
+                                "district": l2.get("district", ""),
+                                "region": l2.get("region", ""),
+                            },
+                            "clean_ops": clean_changes,
+                        }
+                    )
+                continue
+
+            # ---- 3. Augmentation (updates both input AND the matching output tags) ----
             aug_desc = ""
             if do_augment:
                 cleaned, aug_desc = augment_record(cleaned, rng)
                 if aug_desc:
+                    # Re-validate after augmentation (should almost always pass)
+                    is_valid2, reason2 = validate_partition(cleaned)
+                    if not is_valid2:
+                        stats["removed"] += 1
+                        if len(sample_removed) < max_samples:
+                            sample_removed.append(
+                                {
+                                    "line": line_no,
+                                    "input": (cleaned.get("input") or "")[:160],
+                                    "reason": f"after_augment: {reason2}",
+                                    "labels": {},
+                                    "clean_ops": clean_changes,
+                                    "aug_ops": aug_desc,
+                                }
+                            )
+                        continue
                     stats["augmented"] += 1
 
             if clean_changes:
@@ -415,13 +609,15 @@ def process_file(
                         stats["moved_block"] += 1
                     if "cleared building_name" in c:
                         stats["cleared_dup_bname"] += 1
+                    if "street_name" in c or "building_number" in c:
+                        stats["fixed_street_bnum"] += 1
 
             if clean_changes or aug_desc:
                 if len(sample_changes) < max_samples:
                     # richer sample that also shows flat / floor / building_number
-                    l1_before = rec["output"]["line1"]
+                    l1_before = rec["output"].get("line1") or {}
                     l2_before = rec["output"].get("line2") or {}
-                    l1_after = cleaned["output"]["line1"]
+                    l1_after = cleaned["output"].get("line1") or {}
                     l2_after = cleaned["output"].get("line2") or {}
                     sample_changes.append(
                         {
@@ -436,6 +632,7 @@ def process_file(
                                 "phase": l1_before.get("phase", ""),
                                 "estate_name": l1_before.get("estate_name", ""),
                                 "building_number": l2_before.get("building_number", ""),
+                                "street_name": l2_before.get("street_name", ""),
                             },
                             "after": {
                                 "flat": l1_after.get("flat", ""),
@@ -445,6 +642,7 @@ def process_file(
                                 "phase": l1_after.get("phase", ""),
                                 "estate_name": l1_after.get("estate_name", ""),
                                 "building_number": l2_after.get("building_number", ""),
+                                "street_name": l2_after.get("street_name", ""),
                             },
                             "clean_ops": clean_changes,
                             "aug_ops": aug_desc,
@@ -453,10 +651,10 @@ def process_file(
 
             fout.write(json.dumps(cleaned, ensure_ascii=False) + "\n")
 
-
     return {
         "stats": dict(stats),
         "samples": sample_changes,
+        "removed_samples": sample_removed,
         "src": str(src),
         "dst": str(dst),
     }
@@ -464,7 +662,7 @@ def process_file(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Clean block/phase fields and optionally augment inputs with parentheses"
+        description="Clean block/phase/street fields, enforce non-overlapping partitions for BIO NER, and optionally augment inputs with parentheses"
     )
     parser.add_argument(
         "--input-dir",
@@ -499,7 +697,7 @@ def main() -> None:
         "--max-samples",
         type=int,
         default=40,
-        help="How many sample changes to keep in the report",
+        help="How many sample changes / removals to keep in the report",
     )
     args = parser.parse_args()
 
@@ -539,7 +737,9 @@ def main() -> None:
         report_lines.append(f"  Block tokens moved   : {st.get('moved_block', 0)}")
         report_lines.append(f"  Phase tokens moved   : {st.get('moved_phase', 0)}")
         report_lines.append(f"  Cleared dup bname    : {st.get('cleared_dup_bname', 0)}")
+        report_lines.append(f"  Fixed street/bnum    : {st.get('fixed_street_bnum', 0)}")
         report_lines.append(f"  Records augmented    : {st.get('augmented', 0)}")
+        report_lines.append(f"  Records removed      : {st.get('removed', 0)}  (partition / repeat violations)")
         report_lines.append(f"  JSON errors          : {st.get('json_error', 0)}")
         report_lines.append(f"  Output               : {result['dst']}")
         report_lines.append("")
@@ -555,6 +755,17 @@ def main() -> None:
                 report_lines.append(f"      clean ops    : {s['clean_ops']}")
                 report_lines.append(f"      aug ops      : {s['aug_ops']}")
                 report_lines.append("")
+        if result.get("removed_samples"):
+            report_lines.append(f"  --- Sample REMOVED records (first {len(result['removed_samples'])}) ---")
+            for i, s in enumerate(result["removed_samples"], 1):
+                report_lines.append(f"  [{i}] line {s['line']}")
+                report_lines.append(f"      input        : {s['input']}")
+                report_lines.append(f"      reason       : {s['reason']}")
+                report_lines.append(f"      labels       : {s.get('labels', {})}")
+                report_lines.append(f"      clean ops    : {s.get('clean_ops', [])}")
+                if s.get("aug_ops"):
+                    report_lines.append(f"      aug ops      : {s['aug_ops']}")
+                report_lines.append("")
         report_lines.append("-" * 72)
         report_lines.append("")
 
@@ -568,7 +779,9 @@ def main() -> None:
         print(
             f"{Path(r['src']).name}: "
             f"cleaned={st.get('changed', 0)}/{st.get('total', 0)}, "
+            f"fixed_street={st.get('fixed_street_bnum', 0)}, "
             f"augmented={st.get('augmented', 0)}, "
+            f"removed={st.get('removed', 0)}, "
             f"block={st.get('moved_block', 0)}, phase={st.get('moved_phase', 0)}"
         )
 
