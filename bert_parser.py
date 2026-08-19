@@ -360,26 +360,21 @@ class HKAddressParserBERT:
                 if k not in ("district", "region", "sub_district"):
                     split_conf *= c
 
-        is_reversed = False
-        if is_chinese:
-            seen_second = False
-            for g in resolved_groups:
-                if g == "micro":
-                    seen_second = True
-                elif g == "macro" and seen_second:
-                    is_reversed = True
-                    break
-        else:
-            seen_second = False
-            for g in resolved_groups:
-                if g == "macro":
-                    seen_second = True
-                elif g == "micro" and seen_second:
-                    is_reversed = True
-                    break
-
         line1 = macro_string if is_chinese else micro_string
         line2 = micro_string if is_chinese else macro_string
+
+        # NEW STRICT CHRONOLOGICAL CHECK
+        def normalize_for_check(text):
+            if not text:
+                return ""
+            return re.sub(r'[\s,/\\\-;\.，。、；]+', '', str(text).lower())
+
+        norm_original = normalize_for_check(original_input)
+        norm_output = normalize_for_check(line1 + line2)
+
+        # If the raw character sequence doesn't match perfectly, it was reformatted/interleaved
+        is_reversed = (norm_original != norm_output)
+
         return line1, line2, split_conf, list(logic_keys_used), is_reversed
 
     def parse_batch(self, address_pairs, batch_size=32):
