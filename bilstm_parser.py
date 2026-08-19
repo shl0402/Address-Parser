@@ -231,6 +231,12 @@ class HKAddressParserBiLSTM:
         return [m.group() for m in re.finditer(
             r'[a-zA-Z]+|[0-9]+|[\u4e00-\u9fff]|[^\s]', input_text)]
 
+    # def _tokenize_text(self, input_text):
+    #     tokens = []
+    #     for match in re.finditer(r'[a-zA-Z0-9]+|[\u4e00-\u9fff]|[^\s]', input_text):
+    #         tokens.append(match.group())
+    #     return tokens
+
     def _prepare_batch(self, batch_texts):
         batch_tokens = [self._tokenize_text(t) for t in batch_texts]
         max_seq_len = max((len(t) for t in batch_tokens), default=1)
@@ -433,41 +439,21 @@ class HKAddressParserBiLSTM:
                 if k not in ("district", "region", "sub_district"):
                     split_conf *= c
 
-        # ------------------------------------------------------------------
-        # Robust is_reversed detection (no dependence on character offsets)
-        # For Chinese we expect the resolved group sequence to be:
-        #     (macro)* (micro)*
-        # For English we expect:
-        #     (micro)* (macro)*
-        # Any inversion or interleaving (a "second" group appearing before
-        # a later "first" group) is flagged as reversed / non-simple split.
-        # This correctly catches cases such as:
-        #   天爾天7座50樓h9 啟德協調道62號
-        #   → Line1 (macro) containing both early + late tokens
-        #   → Line2 (micro) containing the middle tokens
-        # ------------------------------------------------------------------
-        is_reversed = False
-        if is_chinese:
-            # expected order of groups: macro then micro
-            seen_second = False
-            for g in resolved_groups:
-                if g == "micro":
-                    seen_second = True
-                elif g == "macro" and seen_second:
-                    is_reversed = True
-                    break
-        else:
-            # expected order of groups: micro then macro
-            seen_second = False
-            for g in resolved_groups:
-                if g == "macro":
-                    seen_second = True
-                elif g == "micro" and seen_second:
-                    is_reversed = True
-                    break
-
         line1 = macro_string if is_chinese else micro_string
         line2 = micro_string if is_chinese else macro_string
+
+        # NEW STRICT CHRONOLOGICAL CHECK
+        def normalize_for_check(text):
+            if not text:
+                return ""
+            return re.sub(r'[\s,/\\\-;\.，。、；]+', '', str(text).lower())
+
+        norm_original = normalize_for_check(original_input)
+        norm_output = normalize_for_check(line1 + line2)
+
+        # If the raw character sequence doesn't match perfectly, it was reformatted/interleaved
+        is_reversed = (norm_original != norm_output)
+
         return line1, line2, split_conf, list(logic_keys_used), is_reversed
 
     def parse_batch(self, address_pairs, batch_size=32):
@@ -519,6 +505,11 @@ class HKAddressParserBiLSTM:
                 char_confs = [0.0] * len(address_str)
                 start_indices = [m.start() for m in re.finditer(
                     r'[a-zA-Z]+|[0-9]+|[\u4e00-\u9fff]|[^\s]', address_str)]
+                # start_indices = [
+                #     m.start() for m in re.finditer(
+                #         r'[a-zA-Z0-9]+|[\u4e00-\u9fff]|[^\s]', address_str
+                #     )
+                # ]
 
                 for j, tag_id in enumerate(pred_ids):
                     if j >= len(start_indices):
@@ -533,6 +524,7 @@ class HKAddressParserBiLSTM:
 
                 parsed_entities = []
                 for match in re.finditer(r"([a-zA-Z]+|[0-9]+|[\u4e00-\u9fff]|[^\s])(\s*)", address_str):
+                # for match in re.finditer(r'([a-zA-Z0-9]+|[\u4e00-\u9fff]|[^\s])(\s*)', address_str):
                     token_str = match.group(1)
                     trailing = match.group(2)
                     start_idx = match.start(1)
@@ -607,6 +599,7 @@ if __name__ == "__main__":
         ("27LD, Block 5, Hemera, Lohas Park, Lohas Road 1, TKO, HK", ""),
         ("21A / 5th Fl., Metroplaza Tower A, Nº 223 Hing Fong Road, Kwai Fong, N.T.", ""),
         ("長洲東灣東堤小築彌敦道一百二十三12座H室5樓", ""),
+        ("長洲東灣東堤小築彌敦道一百二十三号12座H室5樓", ""),
         ("深水埗白田街123至125白田邨1号楼, ４０４室Part 1", ""),
         ("Flat A, UG, Happy Mansion, 28 Lockhart Road, Wan Chai, Hong Kong", ""),
     ]
