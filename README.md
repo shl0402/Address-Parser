@@ -31,22 +31,22 @@ Sample data is generated from two Lands Department sources:
 
 ```bash
 # Build the initial dataset from GeoJSON
-python build_hk_address_dataset.py \
+python build_hk_address_dataset_edit.py \
     --input-dir geojson \
     --output-dir hk_address_dataset
 
 # Convert to compact JSONL format (region as plain text)
-python extract_compact_hk_address_jsonl.py \
+python extract_compact_hk_address_jsonl_edit.py \
     --input hk_address_dataset/train.jsonl \
     --output compact_train.jsonl \
     --region-format text
 
-python extract_compact_hk_address_jsonl.py \
+python extract_compact_hk_address_jsonl_edit.py \
     --input hk_address_dataset/test.jsonl \
     --output compact_test.jsonl \
     --region-format text
 
-python extract_compact_hk_address_jsonl.py \
+python extract_compact_hk_address_jsonl_edit.py \
     --input hk_address_dataset/validation.jsonl \
     --output compact_validation.jsonl \
     --region-format text
@@ -56,7 +56,13 @@ python extract_compact_hk_address_jsonl.py \
 
 ```bash
 python village_dataset_gen.py      # version 1
+```
+```bash
 python village_dataset_genV2.py    # version 2 (more villages)
+```
+Version 3 is suggested
+```bash
+python village_dataset_genV3_edit.py    # version 3 (ammended and merged v1 and v2)
 ```
 
 ### 2.3 Merge everything
@@ -65,11 +71,23 @@ python village_dataset_genV2.py    # version 2 (more villages)
 python merge_data.py
 ```
 
-This produces the final training-ready files:
+This produces the merged data files:
 
 - `train.jsonl`
 - `validation.jsonl`
 - `test.jsonl`
+
+### 2.4 Data Augmentation and Cleaning
+
+```bash
+python clean_address_jsonl.py
+```
+
+This produces the final training-ready files:
+
+- `train_cleaned.jsonl`
+- `validation_cleaned.jsonl`
+- `test_cleaned.jsonl`
 
 ---
 
@@ -79,18 +97,18 @@ Three model variants are provided:
 
 | Notebook                    | Model                     |
 |-----------------------------|---------------------------|
-| `train_bilstm.ipynb`        | BiLSTM                    |
+| `train_bilstmV7.ipynb`        | [BiLSTM](https://huggingface.co/shl0402/bilstm_v7)                    |
 | `train_bert.ipynb`          | XLM-RoBERTa-base          |
-| `train_bert_largeV2.ipynb`  | XLM-RoBERTa-large         |
+| `train_bert_largeV4.ipynb`  | [XLM-RoBERTa-large](https://huggingface.co/shl0402/large-roberta-address-parser)         |
 
-Simply open the desired notebook and run all cells.  
-The notebooks expect the three JSONL files produced by `merge_data.py` to be present in the working directory.
+Simply open the desired notebook and run first cell to train.  
+The notebooks expect the three JSONL files produced by in the above to be present in the working directory.
 
 ---
 
 ## 4. Inference & Evaluation
 
-Use `split_test.ipynb`.
+Use `bilstm_parser.py`.
 
 The key function is `split_address(...)`, which:
 

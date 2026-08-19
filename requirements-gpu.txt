@@ -1,0 +1,36 @@
+# Hong Kong Address Parser — GPU (CUDA) install for TRAINING
+# Python 3.10–3.12. Pick the CUDA wheel that matches `nvidia-smi`.
+#
+# Default below is CUDA 12.6 (cu126), which is the usual match for
+# torch 2.7.1. If `nvidia-smi` reports CUDA 12.8 driver support you can
+# switch the extra-index-url and the torch pin:
+#   --extra-index-url https://download.pytorch.org/whl/cu128
+#   torch==2.7.1+cu128
+#
+# Install:
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -U pip
+#   pip install -r requirements-gpu.txt
+
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+torch==2.7.1+cu126
+pytorch-crf==0.7.2
+transformers==5.14.0
+datasets==5.0.0
+tqdm==4.68.4
+numpy>=2.0.0,<3
+sentencepiece>=0.2.0
+protobuf>=5.0.0
+safetensors>=0.5.0
+huggingface_hub>=0.34.0
+tokenizers>=0.21.0
+filelock>=3.16.0
+regex>=2024.0.0
+pyyaml>=6.0.0
+requests>=2.32.0
+packaging>=24.0
+ipykernel>=6.29.0
+ipywidgets==8.1.5
+jupyter>=1.1.0
+notebook>=7.3.0
