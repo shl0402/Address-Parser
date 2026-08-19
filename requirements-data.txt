@@ -1,0 +1,12 @@
+# Optional extras for the dataset_preparation scripts
+# (build_hk_address_dataset_edit.py, village_dataset_gen*.py, merge_data.py, …)
+#
+# Install on top of requirements.txt / requirements-gpu.txt:
+#   pip install -r requirements-data.txt
+
+pandas>=2.2.0
+geojson>=3.1.0
+shapely>=2.0.0
+pypdf>=5.0.0
+pdfplumber>=0.11.0
+tqdm>=4.68.4
